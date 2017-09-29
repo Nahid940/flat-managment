@@ -96,15 +96,15 @@
             <li class="active"> <a href="view/admin/index.php"><i class="icon-home"></i>Home</a></li>
             <li><a href="#dashvariants" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Add </a>
               <ul id="dashvariants" class="collapse list-unstyled">
-                <li><a href="view/admin/owner/manager/create.php">Manager</a></li>
-                <li><a href="view/admin/owner/staff/create.php">Staff</a></li>
+                <li><a href="view/admin/view/admin/owner/manager/create.php">Add new Manager</a></li>
+<!--                <li><a href="view/admin/owner/staff/create.php">Staff</a></li>-->
                 <li><a href="#">Page</a></li>
               </ul>
             </li>
          
-            <li> <a href="view/admin/owner/expenditure/view.php"> <i class="icon-grid"></i>Expenditure </a></li>
-			  <li> <a href="view/admin/owner/query/view.php"> <i class="icon-grid"></i>Query</a></li>
-			  <li> <a href="view/admin/owner/sendmessage/create.php"> <i class="icon-grid"></i>Send Message</a></li>
+            <li> <a href="view/admin/view/admin/owner/expenditure/view.php"> <i class="icon-grid"></i>Expenditure </a></li>
+			  <li> <a href="view/admin/view/admin/owner/query/view.php"> <i class="icon-grid"></i>Query</a></li>
+			  <li> <a href="view/admin/view/admin/owner/sendmessage/create.php"> <i class="icon-grid"></i>Send Message</a></li>
 			   
           <!--  <li> <a href="assets/charts.html"> <i class="fa fa-bar-chart"></i>Charts </a></li>
             <li> <a href="assets/forms.html"> <i class="icon-padnote"></i>Forms </a></li>

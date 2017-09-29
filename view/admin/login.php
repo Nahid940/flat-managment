@@ -23,20 +23,19 @@ include_once '../../vendor/autoload.php';
 <!--   action="loginUser.php-->
    <div class="container">
    <div class="row">
-   
-   
-   <div class="col-md-6 col-sm-4 wrapper">
-      <div class="jumbotron">
-       
-        <h2>
-           Manage your residence smartly !!
-       </h2>
-      <img src="images/buildings.png" alt="" style="width:300px;height:300px">
-      </div>   
-   </div>
-   
-   <div class="col-md-6 wrapper">
 
+
+<!--   <div class="col-md-6 col-sm-4 wrapper">-->
+<!--      <div class="jumbotron">-->
+<!--       -->
+<!--        <h2>-->
+<!--           Manage your residence smartly !!-->
+<!--       </h2>-->
+<!--      <img src="images/buildings.png" alt="" style="width:300px;height:300px">-->
+<!--      </div>   -->
+<!--   </div>-->
+   
+   <div class="col-md-8 col-md-offset-2 wrapper">
        <div class="panel panel-login">
            <div class="panel-heading">
                <div class="row">
@@ -56,16 +55,23 @@ include_once '../../vendor/autoload.php';
                                \App\Session::UnsetSession();
                         ?>
                         <form class="form-signin" method="post"  id="loginform" name ="loginform" action="loginOperation.php" onsubmit=" return validateForm()">
+
+                                <div class="form-group">
                                     <label for="owner_email">Email</label>
                                     <input type="email" class="form-control" name="owner_email" id="email" placeholder="Email Address"  autofocus="" />
+                                </div>
 
-                                    <span id="passwordcheck"></span>
-                                    <label for="password">Password</label>
-                                    <span class="label label-default colorOrange" id="validpassword"></span>
-                                    <input type="password" class="form-control" name="password" id="password" placeholder="Password"/>
-                                    <button class="btn btn-lg btn-login btn-block button" type="submit" name="login">Login</button>
-                                   <br/> 
-                                   <div class="info">If you are new please Sign up first!</div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" name="password" id="password" placeholder="Password"/>
+                            </div>
+
+                            <div class="form-group">
+                                <button class="btn btn-lg btn-login btn-block button" type="submit" name="login">Login</button>
+                            </div>
+
+
+                            <div class="info">If you are new please Sign up first!</div>
 
                         </form>
 
@@ -86,6 +92,10 @@ include_once '../../vendor/autoload.php';
 
 
       $(document).ready(function() {
+          setTimeout(function() {
+              $('.colorOrange').fadeOut('slow');
+          }, 2000);
+
           $('#validator').hide();
           $('#email').keyup(function () {
               var $this = $(this);
@@ -114,6 +124,10 @@ include_once '../../vendor/autoload.php';
 
       function validateForm()
       {
+          setTimeout(function() {
+              $('.colorOrange').fadeOut('slow');
+          }, 2000);
+
           var mailformat = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
           var owner_email=document.forms["loginform"]["owner_email"].value;
           var password=document.forms['loginform']['password'].value;

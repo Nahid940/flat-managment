@@ -1,4 +1,12 @@
-<?php include_once('../../includes/header.php'); ?>
+<?php
+include_once '../../../../../../vendor/autoload.php';
+\App\Session::init();
+\App\Session::checksession();
+
+include_once('../../../../includes/header.php');
+
+
+?>
 
 
 
@@ -216,4 +224,4 @@
           </section>
 		  
 		  
-		  <?php include_once('../../includes/footer.php'); ?>
+		  <?php include_once('../../../../includes/footer.php'); ?>
