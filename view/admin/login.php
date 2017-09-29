@@ -1,106 +1,180 @@
+<?php
+//include_once ('Session.php');
+//include('user.php');
+//Session::init();
+//Session::checkLoggedin();
+//
+//$user=new user();
+//if(isset($_POST['login'])){
+//    $email=$_POST['email'];
+//    $password=$_POST['password'];
+//
+//    $user->setEmail($email);
+//    $user->setPassword($password);
+//
+//    if($user->loginUser()){
+//        Session::init();
+//        header('Location:index.php');
+//    }
+//}
+//include_once('includes/header.php'); ?>
+
+
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Bootstrap Dashboard by Bootstrapious.com</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="all,follow">
-    <!-- Bootstrap CSS-->
-    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
-    <!-- Google fonts - Roboto -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
-    <!-- theme stylesheet-->
-    <link rel="stylesheet" href="../../assets/css/style.default.css" id="theme-stylesheet">
-    <!-- Custom stylesheet - for your changes-->
-    <link rel="stylesheet" href="../../assets/css/custom.css">
-    <!-- Favicon-->
-    <link rel="shortcut icon" href="../../assets/img/favicon.ico">
-    <!-- Font Awesome CDN-->
-    <!-- you can replace it by local Font Awesome-->
-    <script src="../../assets/use.fontawesome.com/99347ac47f.js"></script>
-    <!-- Font Icons CSS-->
-    <link rel="stylesheet" href="../../assets/file.myfontastic.com/da58YPMQ7U5HY8Rb6UxkNf/icons.css">
-    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-  </head>
-  <body>
-    <div class="page login-page">
-      <div class="container d-flex align-items-center">
-        <div class="form-holder has-shadow">
-          <div class="row">
-            <!-- Logo & Information Panel-->
-            <div class="col-lg-6">
-              <div class="info d-flex align-items-center">
-                <div class="content">
-                  <div class="logo">
-                    <h1>Dashboard</h1>
-                  </div>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-              </div>
-            </div>
-            <!-- Form Panel    -->
-            <div class="col-lg-6 bg-white">
-              <div class="form d-flex align-items-center">
-                <div class="content">
-                  <form id="login-form" method="post">
-                    <div class="form-group">
-                      <input id="login-username" type="text" name="loginUsername" required="" class="input-material">
-                      <label for="login-username" class="label-material">User Name</label>
-                    </div>
-                    <div class="form-group">
-                      <input id="login-password" type="password" name="loginPassword" required="" class="input-material">
-                      <label for="login-password" class="label-material">Password</label>
-                    </div><a id="login" href="index.html" class="btn btn-primary">Login</a>
-                    <!-- This should be submit button but I replaced it with <a> for demo purposes-->
-                  </form><a href="#" class="forgot-pass">Forgot Password?</a><br><small>Do not have an account? </small><a href="register.php" class="signup">Signup</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="copyrights text-center">
-        <p>Design by <a href="https://bootstrapious.com/admin-templates" class="external">Bootstrapious</a></p>
-        <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
-      </div>
-    </div>
-    <button type="button" data-toggle="collapse" data-target="#style-switch" id="style-switch-button" class="btn btn-primary btn-sm hidden-xs hidden-sm"><i class="fa fa-cog fa-2x"></i></button>
-    <div id="style-switch" class="collapse">
-      <h4 class="mb-3">Select theme colour</h4>
-      <form class="mb-3">
-        <select name="colour" id="colour" class="form-control">
-          <option value="">select colour variant</option>
-          <option value="default">violet</option>
-          <option value="pink">pink</option>
-          <option value="red">red</option>
-          <option value="green">green</option>
-          <option value="sea">sea</option>
-          <option value="blue">blue</option>
-        </select>
-      </form>
-      <p><img src="../../assets/mg/template-mac.png" alt="" class="img-fluid"></p>
-      <p class="text-muted text-small"> <small>Stylesheet switching is done via JavaScript and can cause a blink while page loads. This will not happen in your production code.</small></p>
-    </div>
-    <!-- Javascript files-->
-    <script src="../../assets/ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="../../assets/js/tether.min.js"></script>
-    <script src="../../assets/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/jquery.cookie.js"> </script>
-    <script src="../../assets/js/jquery.validate.min.js"></script>
-    <script src="../../assets/js/front.js"></script>
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->
-    <!---->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='../../www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
-  </body>
+    <meta charset="UTF-8">
+    <title>Log in</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/loginandregistrationstyle.css" type="text/css"/>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <style>
+    </style>
+</head>
+<body>
+<!--   action="loginUser.php-->
+   <div class="container">
+   <div class="row">
+   
+   
+   <div class="col-md-6 col-sm-4 wrapper">
+      <div class="jumbotron">
+       
+        <h2>
+           Manage your residence smartly !!
+       </h2>
+      <img src="images/buildings.png" alt="" style="width:300px;height:300px">
+      </div>   
+   </div>
+   
+   <div class="col-md-6 wrapper">
+       <div class="panel panel-login">
+           <div class="panel-heading">
+               <div class="row">
+                       <a href="#loginform" class="active" id="login-form-link">Sign in</a>
+               </div>
+               <hr/>
+           </div>
+           
+           <div class="panel-body">
+               <div class="row">
+                   <div class="col-lg-12">
+                           <?php 
+//                            if($_SERVER['REQUEST_METHOD']=='POST' && isset($_POST['login'])){
+//                                //$user->setPassword='';
+//                              $val= $user->checkUser();
+//                            }
+                        ?> 
+                        <form class="form-signin" method="post"  id="loginform">       
+<!--                          <h2 class="form-signin-heading">Sign in</h2>-->
+                                  <?php 
+
+//                                    if(isset($val)){
+//                                        echo $val;
+//                                    }
+                                    ?>
+                                    <span id="emailcheck"></span>
+                                    <label for="email">Email</label>
+                                    <input type="text" class="form-control" name="email" id="email" placeholder="Email Address"  autofocus="" />
+
+                                    <span id="passwordcheck"></span>
+                                    <label for="password">Password</label>
+                                    <input type="password" class="form-control" name="password" id="password" placeholder="Password"/>
+                                    <button class="btn btn-lg btn-login btn-block button" type="submit" name="login">Login</button>
+                                   <br/> 
+                                   <div class="info">If you are new please Sign up first!</div>
+
+                        </form>
+                        
+                   
+
+                   </div>
+               </div>
+           </div>
+       </div>
+
+   </div>
+</div>
+</div>
+ 
+ 
+  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+      $(document).ready(function() {
+
+          var mailformat = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+          $('#login-form').on('click', '.button', function (e) {
+              var email = $('#email').val();
+              var password = $('#password').val();
+
+              if (email == '' || (!mailformat.test(email))) {
+                  document.getElementById("emailcheck").innerHTML = "<div class='alert danger'><center>Fill up each field properly!!</center></div>";
+                  $('#email').css('box-shadow', '0 0 10px ##ff0000');
+                  $('#email').css('border-color', '#ff0000');
+                  e.preventDefault();
+              }
+              if (password == '') {
+                  document.getElementById("emailcheck").innerHTML = "<div class='alert danger'><center>Fill up each field properly!!</center></div>";
+                  $('#emailcheck').delay(100).fadeIn(100);
+                  $('#emailcheck').fadeOut(2000);
+                  $('#password').css('box-shadow', '0 0 10px ##ff0000');
+                  $('#password').css('border-color', '#ff0000');
+                  e.preventDefault();
+              }
+          });
+
+
+          $('#email').keyup(function () {
+              var $this = $(this);
+              var insertedVal = $this.val();
+              if (insertedVal != '') {
+                  $('#email').css('box-shadow', '0 0 10px green');
+                  $this.css({"color": "green", "border": "1px solid green"});
+              } else {
+                  $('#email').css('box-shadow', '0 0 10px #ff0000');
+                  $this.css({"color": "green", "border": "1px solid #ff0000"});
+              }
+          });
+
+          $('#password').keyup(function () {
+              var $this = $(this);
+              var insertedVal = $this.val();
+              if (insertedVal != '') {
+                  $('#password').css('box-shadow', '0 0 10px green');
+                  $this.css({"color": "green", "border": "1px solid green"});
+              } else {
+                  $('#password').css('box-shadow', '0 0 10px #ff0000');
+                  $this.css({"color": "green", "border": "1px solid #ff0000"});
+              }
+          });
+      });
+
+</script>
+
+
+<script>
+    $(function(){
+          $('#login-form-link').click(function (e){
+                $('#loginform').delay(100).fadeIn(100);
+                $('#registerform').fadeOut(100);
+                $('#register-form-link').removeClass('active');
+                $(this).addClass('active');
+                e.preventDefault();
+            });
+            
+            
+            $('#register-form-link').click(function (e){
+                $('#registerform').delay(100).fadeIn(100);
+                $('#loginform').fadeOut(100);
+                $('#login-form-link').removeClass('active');
+                $(this).addClass('active');
+                e.preventDefault();
+            });
+      });
+</script>
+</body>
 </html>
