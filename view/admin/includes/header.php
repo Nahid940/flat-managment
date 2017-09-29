@@ -1,3 +1,5 @@
+<?php
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,8 +19,6 @@
     <link rel="stylesheet" href="assets/css/style.default.css" id="theme-stylesheet">
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="assets/css/custom.css">
-
-
     <!-- Favicon-->
     <link rel="shortcut icon" href="assets/img/favicon.ico">
     <!-- Font Awesome CDN-->
@@ -74,7 +74,7 @@
 
 <!--
                 <!-- Logout    -->
-                <li class="nav-item"><a href="view/admin/login.php" class="nav-link logout">Logout<i class="fa fa-sign-out"></i></a></li>
+                <li class="nav-item"><a href="view/admin/login.php?action=logout" class="nav-link logout">Logout<i class="fa fa-sign-out"></i></a></li>
               </ul>
             </div>
           </div>
@@ -87,7 +87,7 @@
           <div class="sidebar-header d-flex align-items-center">
             <div class="avatar"><img src="assets/img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
             <div class="title">
-              <h1 class="h4">Mark Stephen</h1>
+              <h1 class="h4">Welcome <?php echo \App\Session::get('name')?></h1>
               <p>Owner</p>
             </div>
           </div>

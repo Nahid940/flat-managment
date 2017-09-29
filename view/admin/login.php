@@ -1,23 +1,9 @@
 <?php
-//include_once ('Session.php');
-//include('user.php');
-//Session::init();
-//Session::checkLoggedin();
-//
-//$user=new user();
-//if(isset($_POST['login'])){
-//    $email=$_POST['email'];
-//    $password=$_POST['password'];
-//
-//    $user->setEmail($email);
-//    $user->setPassword($password);
-//
-//    if($user->loginUser()){
-//        Session::init();
-//        header('Location:index.php');
-//    }
-//}
-//include_once('includes/header.php'); ?>
+
+include_once '../../vendor/autoload.php';
+\App\Session::init();
+\App\Session::checkLoggedin();
+ ?>
 
 
 
@@ -50,6 +36,7 @@
    </div>
    
    <div class="col-md-6 wrapper">
+
        <div class="panel panel-login">
            <div class="panel-heading">
                <div class="row">
@@ -57,38 +44,30 @@
                </div>
                <hr/>
            </div>
-           
+
            <div class="panel-body">
                <div class="row">
                    <div class="col-lg-12">
-                           <?php 
-//                            if($_SERVER['REQUEST_METHOD']=='POST' && isset($_POST['login'])){
-//                                //$user->setPassword='';
-//                              $val= $user->checkUser();
-//                            }
-                        ?> 
-                        <form class="form-signin" method="post"  id="loginform">       
-<!--                          <h2 class="form-signin-heading">Sign in</h2>-->
-                                  <?php 
-
-//                                    if(isset($val)){
-//                                        echo $val;
-//                                    }
-                                    ?>
-                                    <span id="emailcheck"></span>
-                                    <label for="email">Email</label>
-                                    <input type="text" class="form-control" name="email" id="email" placeholder="Email Address"  autofocus="" />
+                       <div class="alert alert-default colorOrange" id="validator"></div>
+                       <?php
+                               echo \App\Session::get('login-failure');
+                               echo \App\Session::get("accountBlocked");
+                               echo \App\Session::get('time');
+                               \App\Session::UnsetSession();
+                        ?>
+                        <form class="form-signin" method="post"  id="loginform" name ="loginform" action="loginOperation.php" onsubmit=" return validateForm()">
+                                    <label for="owner_email">Email</label>
+                                    <input type="email" class="form-control" name="owner_email" id="email" placeholder="Email Address"  autofocus="" />
 
                                     <span id="passwordcheck"></span>
                                     <label for="password">Password</label>
+                                    <span class="label label-default colorOrange" id="validpassword"></span>
                                     <input type="password" class="form-control" name="password" id="password" placeholder="Password"/>
                                     <button class="btn btn-lg btn-login btn-block button" type="submit" name="login">Login</button>
                                    <br/> 
                                    <div class="info">If you are new please Sign up first!</div>
 
                         </form>
-                        
-                   
 
                    </div>
                </div>
@@ -104,30 +83,10 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
+
+
       $(document).ready(function() {
-
-          var mailformat = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-          $('#login-form').on('click', '.button', function (e) {
-              var email = $('#email').val();
-              var password = $('#password').val();
-
-              if (email == '' || (!mailformat.test(email))) {
-                  document.getElementById("emailcheck").innerHTML = "<div class='alert danger'><center>Fill up each field properly!!</center></div>";
-                  $('#email').css('box-shadow', '0 0 10px ##ff0000');
-                  $('#email').css('border-color', '#ff0000');
-                  e.preventDefault();
-              }
-              if (password == '') {
-                  document.getElementById("emailcheck").innerHTML = "<div class='alert danger'><center>Fill up each field properly!!</center></div>";
-                  $('#emailcheck').delay(100).fadeIn(100);
-                  $('#emailcheck').fadeOut(2000);
-                  $('#password').css('box-shadow', '0 0 10px ##ff0000');
-                  $('#password').css('border-color', '#ff0000');
-                  e.preventDefault();
-              }
-          });
-
-
+          $('#validator').hide();
           $('#email').keyup(function () {
               var $this = $(this);
               var insertedVal = $this.val();
@@ -145,36 +104,28 @@
               var insertedVal = $this.val();
               if (insertedVal != '') {
                   $('#password').css('box-shadow', '0 0 10px green');
-                  $this.css({"color": "green", "border": "1px solid green"});
+                  $this.css({ "border": "1px solid green"});
               } else {
                   $('#password').css('box-shadow', '0 0 10px #ff0000');
-                  $this.css({"color": "green", "border": "1px solid #ff0000"});
+                  $this.css({ "border": "1px solid #ff0000"});
               }
           });
       });
 
-</script>
+      function validateForm()
+      {
+          var mailformat = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+          var owner_email=document.forms["loginform"]["owner_email"].value;
+          var password=document.forms['loginform']['password'].value;
 
-
-<script>
-    $(function(){
-          $('#login-form-link').click(function (e){
-                $('#loginform').delay(100).fadeIn(100);
-                $('#registerform').fadeOut(100);
-                $('#register-form-link').removeClass('active');
-                $(this).addClass('active');
-                e.preventDefault();
-            });
-            
-            
-            $('#register-form-link').click(function (e){
-                $('#registerform').delay(100).fadeIn(100);
-                $('#loginform').fadeOut(100);
-                $('#login-form-link').removeClass('active');
-                $(this).addClass('active');
-                e.preventDefault();
-            });
-      });
+          if(owner_email=='' || (!mailformat.test(owner_email)) || password==''){
+              $('#validator').show();
+              $('#validator').text("Provide each information properly !!");
+              return false;
+          }else{
+              return true;
+          }
+      }
 </script>
 </body>
 </html>

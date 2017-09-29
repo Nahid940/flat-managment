@@ -1,4 +1,17 @@
-<?php include_once('includes/header.php'); ?>
+<?php
+include_once '../../vendor/autoload.php';
+
+
+\App\Session::init();
+\App\Session::checksession();
+
+if(isset($_GET['action']) && $_GET['action']=='logout'){
+    \App\Session::Destroy();
+}
+
+include_once('includes/header.php');
+
+?>
           <!-- Dashboard Header Section    -->
 
 

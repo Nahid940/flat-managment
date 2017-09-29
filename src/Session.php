@@ -1,0 +1,68 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Nahid Islam
+ * Date: 9/29/2017
+ * Time: 5:10 PM
+ */
+
+namespace App;
+
+
+class Session
+{
+
+    public static function init(){
+
+        if(version_compare(phpversion(),'5.4.0','<')){
+            if(session_id==''){
+                session_start();
+            }
+        }else
+        {
+            if(session_status()==PHP_SESSION_NONE)
+            {
+                session_start();
+            }
+        }
+    }
+
+    public static function set($key,$val){
+        $_SESSION[$key]=$val;
+    }
+
+    public static function get($key){
+        if(isset($_SESSION[$key])){
+            return $_SESSION[$key];
+        }else
+        {
+            return false;
+        }
+    }
+
+    public static function UnsetSession(){
+        session_unset();
+    }
+
+
+    public static function Destroy(){
+        session_destroy();
+        self::UnsetSession();
+    }
+
+
+    public static function checksession(){
+        if(self::get('login')==false){
+            self::Destroy();
+            header('Location:login.php');
+        }
+    }
+
+    public static function checkLoggedin(){
+        if(self::get('login')==true){
+          header('Location:index.php');
+        }
+    }
+
+
+}
