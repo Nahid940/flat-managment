@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Bootstrap Dashboard by Bootstrapious.com</title>
@@ -7,21 +8,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
     <!-- Bootstrap CSS-->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
     <!-- Google fonts - Roboto -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
     <!-- theme stylesheet-->
-    <link rel="stylesheet" href="assets/css/style.default.css" id="theme-stylesheet">
+    <link rel="stylesheet" href="../../assets/css/style.default.css" id="theme-stylesheet">
     <!-- Custom stylesheet - for your changes-->
-    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="../../assets/css/custom.css">
     <!-- Favicon-->
-    <link rel="shortcut icon" href="assets/img/favicon.ico">
+    <link rel="shortcut icon" href="../../assets/img/favicon.ico">
     <!-- Font Awesome CDN-->
     <!-- you can replace it by local Font Awesome-->
-    <script src="assets/use.fontawesome.com/99347ac47f.js"></script>
+    <script src="../../assets/use.fontawesome.com/99347ac47f.js"></script>
     <!-- Font Icons CSS-->
-    <link rel="stylesheet" href="assets/file.myfontastic.com/da58YPMQ7U5HY8Rb6UxkNf/icons.css">
-	
+    <link rel="stylesheet" href="../../assets/file.myfontastic.com/da58YPMQ7U5HY8Rb6UxkNf/icons.css">
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -46,25 +46,17 @@
             <div class="col-lg-6 bg-white">
               <div class="form d-flex align-items-center">
                 <div class="content">
-                  <form id="register-form">
+                  <form id="login-form" method="post">
                     <div class="form-group">
-                      <input id="register-username" type="text" name="registerUsername" required class="input-material">
-                      <label for="register-username" class="label-material">User Name</label>
-                    </div>
-                    <div class="form-group">
-                      <input id="register-email" type="email" name="registerEmail" required class="input-material">
-                      <label for="register-email" class="label-material">Email Address      </label>
+                      <input id="login-username" type="text" name="loginUsername" required="" class="input-material">
+                      <label for="login-username" class="label-material">User Name</label>
                     </div>
                     <div class="form-group">
-                      <input id="register-passowrd" type="password" name="registerPassword" required class="input-material">
-                      <label for="register-passowrd" class="label-material">password        </label>
-                    </div>
-                    <div class="form-group terms-conditions">
-                      <input id="license" type="checkbox" class="checkbox-template">
-                      <label for="license">Agree the terms and policy</label>
-                    </div>
-                    <input id="register" type="submit" value="Register" class="btn btn-primary">
-                  </form><small>Already have an account? </small><a href="login.php" class="signup">Login</a>
+                      <input id="login-password" type="password" name="loginPassword" required="" class="input-material">
+                      <label for="login-password" class="label-material">Password</label>
+                    </div><a id="login" href="index.html" class="btn btn-primary">Login</a>
+                    <!-- This should be submit button but I replaced it with <a> for demo purposes-->
+                  </form><a href="#" class="forgot-pass">Forgot Password?</a><br><small>Do not have an account? </small><a href="register.php" class="signup">Signup</a>
                 </div>
               </div>
             </div>
@@ -72,7 +64,7 @@
         </div>
       </div>
       <div class="copyrights text-center">
-        <p>Design by <a href="https://bootstrapious.com/" class="external">Bootstrapious</a></p>
+        <p>Design by <a href="https://bootstrapious.com/admin-templates" class="external">Bootstrapious</a></p>
         <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
       </div>
     </div>
@@ -90,16 +82,16 @@
           <option value="blue">blue</option>
         </select>
       </form>
-      <p><img src="assets/img/template-mac.png" alt="" class="img-fluid"></p>
+      <p><img src="../../assets/mg/template-mac.png" alt="" class="img-fluid"></p>
       <p class="text-muted text-small"> <small>Stylesheet switching is done via JavaScript and can cause a blink while page loads. This will not happen in your production code.</small></p>
     </div>
     <!-- Javascript files-->
-    <script src="assets/ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="assets/js/tether.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/jquery.cookie.js"> </script>
-    <script src="assets/js/jquery.validate.min.js"></script>
-    <script src="assets/js/front.js"></script>
+    <script src="../../assets/ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="../../assets/js/tether.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/jquery.cookie.js"> </script>
+    <script src="../../assets/js/jquery.validate.min.js"></script>
+    <script src="../../assets/js/front.js"></script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->
     <!---->
     <script>
@@ -111,3 +103,4 @@
       ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>
   </body>
+</html>

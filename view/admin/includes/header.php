@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
 	<!-- Base path -->
-	<base href="http://localhost/appartment/admin/"/>
+	<base href="http://localhost/BITM/bitm-final-project/"/>
     <!-- Bootstrap CSS-->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Google fonts - Roboto -->
@@ -23,7 +23,7 @@
     <!-- you can replace it by local Font Awesome-->
     <script src="assets/use.fontawesome.com/99347ac47f.js"></script>
     <!-- Font Icons CSS-->
-    <link rel="assets/stylesheet" href="file.myfontastic.com/da58YPMQ7U5HY8Rb6UxkNf/icons.css">
+    <link rel="stylesheet" href="assets/file.myfontastic.com/da58YPMQ7U5HY8Rb6UxkNf/icons.css">
 	
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>

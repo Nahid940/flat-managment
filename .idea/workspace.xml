@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5c3789d2-c2cc-4055-9f23-349ba1dd9914" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/DBConnection.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/admin/owner/Owner.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BITMproject.txt" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/assets/ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" afterPath="$PROJECT_DIR$/assets/ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/assets/cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js" afterPath="$PROJECT_DIR$/assets/cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/assets/charts.html" afterPath="$PROJECT_DIR$/assets/charts.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/assets/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/assets/css/bootstrap.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/assets/css/custom.css" afterPath="$PROJECT_DIR$/assets/css/custom.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/assets/css/style.default.css" afterPath="$PROJECT_DIR$/assets/css/style.default.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/assets/file.myfontastic.com/da58YPMQ7U5HY8Rb6UxkNf/fonts/1494891667.eot" afterPath="$PROJECT_DIR$/assets/file.myfontastic.com/da58YPMQ7U5HY8Rb6UxkNf/fonts/1494891667.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/assets/file.myfontastic.com/da58YPMQ7U5HY8Rb6UxkNf/fonts/1494891667.svg" afterPath="$PROJECT_DIR$/assets/file.myfontastic.com/da58YPMQ7U5HY8Rb6UxkNf/fonts/1494891667.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/assets/file.myfontastic.com/da58YPMQ7U5HY8Rb6UxkNf/fonts/1494891667.ttf" afterPath="$PROJECT_DIR$/assets/file.myfontastic.com/da58YPMQ7U5HY8Rb6UxkNf/fonts/1494891667.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/assets/file.myfontastic.com/da58YPMQ7U5HY8Rb6UxkNf/fonts/1494891667.woff" afterPath="$PROJECT_DIR$/assets/file.myfontastic.com/da58YPMQ7U5HY8Rb6UxkNf/fonts/1494891667.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/assets/file.myfontastic.com/da58YPMQ7U5HY8Rb6UxkNf/fonts/1494891667d41d.eot" afterPath="$PROJECT_DIR$/assets/file.myfontastic.com/da58YPMQ7U5HY8Rb6UxkNf/fonts/1494891667d41d.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/assets/file.myfontastic.com/da58YPMQ7U5HY8Rb6UxkNf/icons.css" afterPath="$PROJECT_DIR$/assets/file.myfontastic.com/da58YPMQ7U5HY8Rb6UxkNf/icons.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/assets/forms.html" afterPath="$PROJECT_DIR$/assets/forms.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/assets/img/avatar-1.jpg" afterPath="$PROJECT_DIR$/assets/img/avatar-1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/assets/img/avatar-2.jpg" afterPath="$PROJECT_DIR$/assets/img/avatar-2.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/assets/img/avatar-3.jpg" afterPath="$PROJECT_DIR$/assets/img/avatar-3.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/assets/img/avatar-4.jpg" afterPath="$PROJECT_DIR$/assets/img/avatar-4.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/assets/img/avatar-5.jpg" afterPath="$PROJECT_DIR$/assets/img/avatar-5.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/assets/img/bg.jpg" afterPath="$PROJECT_DIR$/assets/img/bg.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/assets/img/favicon.ico" afterPath="$PROJECT_DIR$/assets/img/favicon.ico" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/assets/img/project-1.jpg" afterPath="$PROJECT_DIR$/assets/img/project-1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/assets/img/project-2.jpg" afterPath="$PROJECT_DIR$/assets/img/project-2.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/assets/img/project-3.jpg" afterPath="$PROJECT_DIR$/assets/img/project-3.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/assets/img/project-4.jpg" afterPath="$PROJECT_DIR$/assets/img/project-4.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/assets/img/template-mac.png" afterPath="$PROJECT_DIR$/assets/img/template-mac.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/assets/index-2.html" afterPath="$PROJECT_DIR$/assets/index-2.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/assets/index.html" afterPath="$PROJECT_DIR$/assets/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/assets/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/assets/js/bootstrap.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/assets/js/charts-custom.js" afterPath="$PROJECT_DIR$/assets/js/charts-custom.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/assets/js/charts-home.js" afterPath="$PROJECT_DIR$/assets/js/charts-home.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/assets/js/front.js" afterPath="$PROJECT_DIR$/assets/js/front.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/assets/js/jquery.cookie.js" afterPath="$PROJECT_DIR$/assets/js/jquery.cookie.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/assets/js/jquery.validate.min.js" afterPath="$PROJECT_DIR$/assets/js/jquery.validate.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/assets/js/tether.min.js" afterPath="$PROJECT_DIR$/assets/js/tether.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/assets/login.html" afterPath="$PROJECT_DIR$/assets/login.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/assets/register.html" afterPath="$PROJECT_DIR$/assets/register.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/assets/tables.html" afterPath="$PROJECT_DIR$/assets/tables.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/assets/use.fontawesome.com/99347ac47f.js" afterPath="$PROJECT_DIR$/assets/use.fontawesome.com/99347ac47f.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/assets/www.google-analytics.com/analytics.js" afterPath="$PROJECT_DIR$/assets/www.google-analytics.com/analytics.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/index.php" afterPath="$PROJECT_DIR$/view/admin/index.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/login.php" afterPath="$PROJECT_DIR$/view/admin/login.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/register.php" afterPath="$PROJECT_DIR$/view/admin/register.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/vendor/autoload.php" afterPath="$PROJECT_DIR$/vendor/autoload.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/vendor/composer/ClassLoader.php" afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/vendor/composer/LICENSE" afterPath="$PROJECT_DIR$/vendor/composer/LICENSE" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/vendor/composer/autoload_namespaces.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/vendor/composer/autoload_psr4.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/vendor/composer/autoload_real.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/vendor/composer/autoload_static.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/view/admin/includes/footer.php" afterPath="$PROJECT_DIR$/view/admin/includes/footer.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/view/admin/includes/header.php" afterPath="$PROJECT_DIR$/view/admin/includes/header.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/view/admin/owner/expenditure/view.php" afterPath="$PROJECT_DIR$/view/admin/view/admin/owner/expenditure/view.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/view/admin/owner/manager/create.php" afterPath="$PROJECT_DIR$/view/admin/view/admin/owner/manager/create.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/view/admin/owner/manager/delete.php" afterPath="$PROJECT_DIR$/view/admin/view/admin/owner/manager/delete.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/view/admin/owner/manager/edit.php" afterPath="$PROJECT_DIR$/view/admin/view/admin/owner/manager/edit.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/view/admin/owner/manager/store.php" afterPath="$PROJECT_DIR$/view/admin/view/admin/owner/manager/store.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/view/admin/owner/manager/update.php" afterPath="$PROJECT_DIR$/view/admin/view/admin/owner/manager/update.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/view/admin/owner/query/view.php" afterPath="$PROJECT_DIR$/view/admin/view/admin/owner/query/view.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/view/admin/owner/sendmessage/create.php" afterPath="$PROJECT_DIR$/view/admin/view/admin/owner/sendmessage/create.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/view/admin/owner/staff/create.php" afterPath="$PROJECT_DIR$/view/admin/view/admin/owner/staff/create.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/view/admin/owner/staff/delete.php" afterPath="$PROJECT_DIR$/view/admin/view/admin/owner/staff/delete.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/view/admin/owner/staff/edit.php" afterPath="$PROJECT_DIR$/view/admin/view/admin/owner/staff/edit.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/view/admin/owner/staff/store.php" afterPath="$PROJECT_DIR$/view/admin/view/admin/owner/staff/store.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/view/admin/owner/staff/update.php" afterPath="$PROJECT_DIR$/view/admin/view/admin/owner/staff/update.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/admin/includes/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-299">
+              <caret line="150" column="15" lean-forward="true" selection-start-line="150" selection-start-column="15" selection-end-line="150" selection-end-column="15" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="88" lean-forward="false" selection-start-line="15" selection-start-column="88" selection-end-line="15" selection-end-column="88" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/admin/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="composer.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/composer.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DBConnection.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DBConnection.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="14" lean-forward="false" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+              <folding>
+                <element signature="e#7#96#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Owner.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/admin/owner/Owner.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+              <folding>
+                <element signature="e#7#96#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/admin/view/admin/includes/header.php" />
+        <option value="$PROJECT_DIR$/view/admin/includes/header.php" />
+        <option value="$PROJECT_DIR$/src/DBConnection.php" />
+        <option value="$PROJECT_DIR$/src/admin/owner/owner.php" />
+        <option value="$PROJECT_DIR$/src/admin/owner/Owner.php" />
+        <option value="$PROJECT_DIR$/view/admin/index.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="754" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitm-final-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitm-final-project" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="js.eslint.eslintPackage" value="" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\BITM\bitm-final-project" />
+      <recent name="C:\xampp\htdocs\BITM\bitm-final-project\view\admin" />
+      <recent name="C:\xampp\htdocs\BITM\bitm-final-project\view" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpSpecConfigurationType" factoryName="PHPSpec">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5c3789d2-c2cc-4055-9f23-349ba1dd9914" name="Default" comment="" />
+      <created>1506663923232</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1506663923232</updated>
+      <workItem from="1506663924664" duration="2710000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="2710000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/view/admin/includes/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-299">
+          <caret line="150" column="15" lean-forward="true" selection-start-line="150" selection-start-column="15" selection-end-line="150" selection-end-column="15" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/admin/owner/Owner.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+          <folding>
+            <element signature="e#7#96#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/admin/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DBConnection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="14" lean-forward="false" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+          <folding>
+            <element signature="e#7#96#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="88" lean-forward="false" selection-start-line="15" selection-start-column="88" selection-end-line="15" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
