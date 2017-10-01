@@ -49,8 +49,8 @@ class Owner
                         $stmt->execute();
                         Session::init();
                         Session::set('login',true);
-                        Session::set('name',$res->name);
-                        Session::set('owner_email',$res->owner_email);
+                        Session::set('ownername',$res->name);
+                        Session::set('owner_email',$this->owner_email);
                         header('location:index.php');
                     }
                 }else{
@@ -80,5 +80,4 @@ class Owner
             header('location:login.php');
         }
     }
-
 }

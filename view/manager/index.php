@@ -1,33 +1,19 @@
 <?php
+
 include_once '../../vendor/autoload.php';
-
-
 \App\Session::init();
+var_dump(\App\Session::get('managername'));
+var_dump(\App\Session::get('login'));
 \App\Session::checkSession();
 
-if(isset($_GET['action']) && $_GET['action']=='logout'){
-    \App\Session::Destroy();
-}
+//if(isset($_GET['action']) && $_GET['action']=='managerlogout'){
+//    \App\Session::Destroy();
+//}
 
 include_once('includes/header.php');
+
 ?>
           <!-- Dashboard Header Section    -->
-    <header class="page-header">
-        <div class="container-fluid">
-            <h2 class="no-margin-bottom">Dashboard</h2>
-        </div>
-    </header>
-
-<!--    <ul class="breadcrumb">-->
-<!--        <div class="container-fluid">-->
-<!--            --><?php
-//            $url = "$_SERVER[REQUEST_URI]";
-//            $last=explode("/",$url);
-//            $lastelement=rtrim(end($last),'.php');
-//            ?>
-<!--            <li class="breadcrumb-item"><a href="--><?php //echo $url?><!--">Home</a></li>-->
-<!--        </div>-->
-<!--    </ul>-->
 
             <section class="dashboard-counts no-padding-bottom">
                 <div class="container-fluid">

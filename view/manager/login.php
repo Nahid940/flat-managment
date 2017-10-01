@@ -4,10 +4,8 @@ include_once '../../vendor/autoload.php';
 
 \App\Session::init();
 
-//\App\Session::checkOwnerLoggedin();
+\App\Session::checkLoggedin();
  ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -26,22 +24,11 @@ include_once '../../vendor/autoload.php';
    <div class="container">
    <div class="row">
 
-
-<!--   <div class="col-md-6 col-sm-4 wrapper">-->
-<!--      <div class="jumbotron">-->
-<!--       -->
-<!--        <h2>-->
-<!--           Manage your residence smartly !!-->
-<!--       </h2>-->
-<!--      <img src="images/buildings.png" alt="" style="width:300px;height:300px">-->
-<!--      </div>   -->
-<!--   </div>-->
-   
    <div class="col-md-8 col-md-offset-2 wrapper">
        <div class="panel panel-login">
            <div class="panel-heading">
                <div class="row">
-                       <a href="#loginform" class="active" id="login-form-link">Sign in</a>
+                       <a href="login.php" class="active" id="login-form-link">Manager log in</a>
                </div>
                <hr/>
            </div>
@@ -60,10 +47,9 @@ include_once '../../vendor/autoload.php';
                         <form class="form-signin" method="post" id="loginform" name ="loginform" action="loginOperation.php" onsubmit=" return validateForm()">
 
                                 <div class="form-group">
-                                    <label for="owner_email">Email</label>
-                                    <input type="email" class="form-control" name="owner_email" id="email" placeholder="Email Address"  autofocus="" />
+                                    <label for="manager_id">Your ID</label>
+                                    <input type="text" class="form-control" name="manager_id" id="manager_id" placeholder="Your ID"  autofocus="" />
                                 </div>
-
                             <div class="form-group">
                                 <label for="password">Password</label>
                                 <input type="password" class="form-control" name="password" id="password" placeholder="Password"/>
@@ -72,7 +58,9 @@ include_once '../../vendor/autoload.php';
                             <div class="form-group">
                                 <button class="btn btn-lg btn-login btn-block button" type="submit" name="login">Login</button>
                             </div>
-                            <div class="info">If you are new please Sign up first! <a href="registration.php">Register here!</a></div>
+
+
+                            <div class="info">If you are new please Sign up first!</div>
 
                         </form>
 
@@ -91,13 +79,12 @@ include_once '../../vendor/autoload.php';
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
 
-
       $(document).ready(function() {
+          $('#validator').hide();
           setTimeout(function() {
               $('.colorOrange').fadeOut('slow');
           }, 2000);
 
-          $('#validator').hide();
           $('#email').keyup(function () {
               var $this = $(this);
               var insertedVal = $this.val();
@@ -125,7 +112,9 @@ include_once '../../vendor/autoload.php';
 
       function validateForm()
       {
-
+          setTimeout(function() {
+              $('.colorOrange').fadeOut('slow');
+          }, 2000);
 
           var mailformat = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
           var owner_email=document.forms["loginform"]["owner_email"].value;

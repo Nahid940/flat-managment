@@ -48,7 +48,7 @@
               <!-- Navbar Header-->
               <div class="navbar-header">
                 <!-- Navbar Brand --><a href="index.html" class="navbar-brand">
-                  <div class="brand-text brand-big hidden-lg-down"><span>Bootstrap </span><strong>Dashboard</strong></div>
+                  <div class="brand-text brand-big hidden-lg-down"><span>Your  </span><strong> Dashboard</strong></div>
                   <div class="brand-text brand-small"><strong>BD</strong></div></a>
                 <!-- Toggle Button--><a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
               </div>
@@ -74,7 +74,7 @@
 
 <!--
                 <!-- Logout    -->
-                <li class="nav-item"><a href="view/admin/login.php?action=logout" class="nav-link logout">Logout<i class="fa fa-sign-out"></i></a></li>
+                <li class="nav-item"><a href="view/manager/login.php?action=managerlogout" class="nav-link logout">Logout<i class="fa fa-sign-out"></i></a></li>
               </ul>
             </div>
           </div>
@@ -87,23 +87,23 @@
           <div class="sidebar-header d-flex align-items-center">
             <div class="avatar"><img src="assets/img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
             <div class="title">
-              <h1 class="h4">Welcome <?php echo \App\Session::get('ownername')?></h1>
-              <p>Owner</p>
+              <h1 class="h4">Welcome <?php echo \App\Session::get('managername')?></h1>
+              <p>Manager</p>
             </div>
           </div>
           <!-- Sidebar Navidation Menus-->
           <ul class="list-unstyled">
-            <li class="active"> <a href="view/admin/index.php"><i class="icon-home"></i>Home</a></li>
-            <li class="active"> <a href="view/admin/view/admin/owner/staff/view.php"><i class="fa fa-users" aria-hidden="true"></i>Personnel details</a></li>
-            <li><a href="#dashvariants" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Add new information</a>
+            <li class="active"> <a href="view/manager/index.php"><i class="icon-home"></i>Home</a></li>
+            <li class="active"> <a href="view/manager/view/admin/manager/staff/view.php"><i class="fa fa-users" aria-hidden="true"></i>Personnel details</a></li>
+            <li><a href="#dashvariants" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Add </a>
               <ul id="dashvariants" class="collapse list-unstyled">
-                <li><a href="view/admin/view/admin/owner/manager/AddInfo.php">Add new info</a></li>
+                <li><a href="view/manager/view/admin/manager/staff/create.php">Add new staff information</a></li>
               </ul>
             </li>
          
-            <li> <a href="view/admin/view/admin/owner/expenditure/expenditure.php"> <i class="fa fa-book" aria-hidden="true"></i>Expenditure </a></li>
-              <li> <a href="view/admin/view/admin/owner/query/view.php"> <i class="fa fa-inbox" aria-hidden="true"></i></i>Residents query</a></li>
-			  <li> <a href="view/admin/view/admin/owner/sendmessage/create.php"> <i class="fa fa-comments-o" aria-hidden="true"></i>Send Message</a></li>
+            <li> <a href="view/manager/view/admin/manager/expenditure/view.php"> <i class="fa fa-book" aria-hidden="true"></i>Expenditure </a></li>
+              <li> <a href="view/manager/view/admin/manager/query/view.php"> <i class="fa fa-inbox" aria-hidden="true"></i></i>Residents query</a></li>
+			  <li> <a href="view/manager/view/admin/manager/sendmessage/create.php"> <i class="fa fa-comments-o" aria-hidden="true"></i>Send Message</a></li>
 			   
           <!--  <li> <a href="assets/charts.html"> <i class="fa fa-bar-chart"></i>Charts </a></li>
             <li> <a href="assets/forms.html"> <i class="icon-padnote"></i>Forms </a></li>
@@ -112,5 +112,9 @@
         </nav>
         <div class="content-inner">
           <!-- Page Header-->
-
+          <header class="page-header">
+            <div class="container-fluid">
+              <h2 class="no-margin-bottom">Dashboard</h2>
+            </div>
+          </header>
           <!-- Dashboard Counts Section-->

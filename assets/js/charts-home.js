@@ -201,14 +201,14 @@ $(document).ready(function () {
             scales:
             {
                 xAxes: [{
-                    display: false
+                    display: true
                 }],
                 yAxes: [{
-                    display: false
+                    display: true
                 }],
             },
             legend: {
-                display: false
+                display: true
             }
         },
         data: {

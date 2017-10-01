@@ -5,23 +5,28 @@ include_once '../../../../../../vendor/autoload.php';
 
 include_once('../../../../includes/header.php');
 
-
 ?>
-
-        <header class="page-header">
-            <div class="container-fluid">
-                <h2 class="no-margin-bottom">Query of residents</h2>
-            </div>
-        </header>
-          
           <!-- Breadcrumb-->
-          <ul class="breadcrumb">
-            <div class="container-fluid">
-              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-              <li class="breadcrumb-item active">Query info</li>
-            </div>
-          </ul>
+    <header class="page-header">
+        <div class="container-fluid">
+            <h2 class="no-margin-bottom">Expenditure details</h2>
+        </div>
+    </header>
 
+    <!-- Breadcrumb-->
+    <ul class="breadcrumb">
+        <div class="container-fluid">
+
+<!--            <li class="breadcrumb-item active">Query info</li>-->
+            <?php
+            $url = "$_SERVER[REQUEST_URI]";
+            $last=explode("/",$url);
+            $lastelement=rtrim(end($last),'.php');
+            //print_r($last)?>
+
+            <li class="breadcrumb-item"><a href="<?php echo end($last)?>">Home</a></li>
+        </div>
+    </ul>
           <section class="tables">   
             <div class="container-fluid">
               <div class="row">

@@ -8,11 +8,8 @@ include_once('../../../../includes/header.php');
 
 ?>
 
-        <header class="page-header">
-            <div class="container-fluid">
-                <h2 class="no-margin-bottom">Query of residents</h2>
-            </div>
-        </header>
+
+
           
           <!-- Breadcrumb-->
           <ul class="breadcrumb">
@@ -21,7 +18,6 @@ include_once('../../../../includes/header.php');
               <li class="breadcrumb-item active">Query info</li>
             </div>
           </ul>
-
           <section class="tables">   
             <div class="container-fluid">
               <div class="row">

@@ -26,7 +26,7 @@
     <script src="assets/use.fontawesome.com/99347ac47f.js"></script>
     <!-- Font Icons CSS-->
     <link rel="stylesheet" href="assets/file.myfontastic.com/da58YPMQ7U5HY8Rb6UxkNf/icons.css">
-	
+
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -35,6 +35,7 @@
     <div class="page home-page">
       <!-- Main Navbar-->
       <header class="header">
+
         <nav class="navbar">
           <!-- Search Box-->
           <div class="search-box">
@@ -46,16 +47,28 @@
           <div class="container-fluid">
             <div class="navbar-holder d-flex align-items-center justify-content-between">
               <!-- Navbar Header-->
+
+
               <div class="navbar-header">
                 <!-- Navbar Brand --><a href="index.html" class="navbar-brand">
-                  <div class="brand-text brand-big hidden-lg-down"><span>Bootstrap </span><strong>Dashboard</strong></div>
-                  <div class="brand-text brand-small"><strong>BD</strong></div></a>
-                <!-- Toggle Button--><a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
+                  <div class="brand-text brand-big hidden-lg-down"><span>Your  </span><strong> Dashboard</strong></div>
+                  <div class="brand-text brand-small"><strong>My villa</strong></div></a>
+
+
+                <!-- Toggle Button-->
+<!--                  <a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>-->
               </div>
+
+
+
+
+
+
               <!-- Navbar Menu -->
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+
                 <!-- Search-->
-                <li class="nav-item d-flex align-items-center"><a id="search" href="#"><i class="icon-search"></i></a></li>
+                <li class="nav-item d-flex align-items-center"><a id="search" href="#"><i class="icon-search"></i>search</a></li>
                 <!-- Notifications-->
                 <li class="nav-item dropdown"> <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-bell-o"></i><span class="badge bg-red">12</span></a>
                   <ul aria-labelledby="notifications" class="dropdown-menu">
@@ -67,50 +80,51 @@
                             </div>
                         </a>
                     </li>
-<!--
-<!--                    <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong>view all notifications                                            </strong></a></li>-->
+
+<!--                <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong>view all notifications</strong></a></li>-->
                   </ul>
                 </li>
 
-<!--
                 <!-- Logout    -->
-                <li class="nav-item"><a href="view/admin/login.php?action=logout" class="nav-link logout">Logout<i class="fa fa-sign-out"></i></a></li>
+
+                <li class="nav-item"><a href="view/residents/login.php?action=managerlogout" class="nav-link logout">Logout<i class="fa fa-sign-out"></i></a></li>
+
               </ul>
+
             </div>
           </div>
         </nav>
       </header>
-      <div class="page-content d-flex align-items-stretch">
+
+      <div class="page-content d-flex">
+
         <!-- Side Navbar -->
-        <nav class="side-navbar">
-          <!-- Sidebar Header-->
-          <div class="sidebar-header d-flex align-items-center">
-            <div class="avatar"><img src="assets/img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
-            <div class="title">
-              <h1 class="h4">Welcome <?php echo \App\Session::get('ownername')?></h1>
-              <p>Owner</p>
-            </div>
-          </div>
-          <!-- Sidebar Navidation Menus-->
-          <ul class="list-unstyled">
-            <li class="active"> <a href="view/admin/index.php"><i class="icon-home"></i>Home</a></li>
-            <li class="active"> <a href="view/admin/view/admin/owner/staff/view.php"><i class="fa fa-users" aria-hidden="true"></i>Personnel details</a></li>
-            <li><a href="#dashvariants" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Add new information</a>
-              <ul id="dashvariants" class="collapse list-unstyled">
-                <li><a href="view/admin/view/admin/owner/manager/AddInfo.php">Add new info</a></li>
+
+          <nav class="side-navbar">
+<!--              Sidebar Header-->
+              <div class="sidebar-header d-flex align-items-center">
+                  <div class="avatar"><img src="assets/img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
+                  <div class="title">
+                      <h1 class="h4">Welcome <?php// echo \App\Session::get('managername')?></h1>
+                      <p>Manager</p>
+                  </div>
+              </div>
+              <ul class="list-unstyled">
+                  <li class="active"> <a href="view/residents/index.php"><i class="icon-home"></i>Home</a></li>
+
+                  <li> <a href="view/manager/view/admin/manager/expenditure/view.php"> <i class="fa fa-book" aria-hidden="true"></i>Your prifile </a></li>
+                  <li> <a href="view/manager/view/admin/manager/query/view.php"> <i class="fa fa-inbox" aria-hidden="true"></i></i>Inform your problem</a></li>
+                  <li> <a href="view/manager/view/admin/manager/sendmessage/create.php"> <i class="fa fa-comments-o" aria-hidden="true"></i>Send Message</a></li>
+
+
               </ul>
-            </li>
-         
-            <li> <a href="view/admin/view/admin/owner/expenditure/expenditure.php"> <i class="fa fa-book" aria-hidden="true"></i>Expenditure </a></li>
-              <li> <a href="view/admin/view/admin/owner/query/view.php"> <i class="fa fa-inbox" aria-hidden="true"></i></i>Residents query</a></li>
-			  <li> <a href="view/admin/view/admin/owner/sendmessage/create.php"> <i class="fa fa-comments-o" aria-hidden="true"></i>Send Message</a></li>
-			   
-          <!--  <li> <a href="assets/charts.html"> <i class="fa fa-bar-chart"></i>Charts </a></li>
-            <li> <a href="assets/forms.html"> <i class="icon-padnote"></i>Forms </a></li>
-            <li> <a href="assets/login.html"> <i class="icon-interface-windows"></i>Login Page</a></li>
-          </ul>-->
-        </nav>
+          </nav>
+
         <div class="content-inner">
           <!-- Page Header-->
-
+          <header class="page-header">
+            <div class="container-fluid">
+              <h2 class="no-margin-bottom"><span style="color: #002e59;"> Welcome to My villa!!</span></h2>
+            </div>
+          </header>
           <!-- Dashboard Counts Section-->

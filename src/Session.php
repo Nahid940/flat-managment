@@ -25,11 +25,14 @@ class Session
                 session_start();
             }
         }
+
     }
+
 
     public static function set($key,$val){
         $_SESSION[$key]=$val;
     }
+
 
     public static function get($key){
         if(isset($_SESSION[$key])){
@@ -47,11 +50,11 @@ class Session
 
     public static function Destroy(){
         session_destroy();
-        self::UnsetSession();
+        session_unset();
     }
 
 
-    public static function checksession(){
+    public static function checkSession(){
         if(self::get('login')==false){
             self::Destroy();
             header('Location:login.php');
@@ -63,6 +66,8 @@ class Session
           header('Location:index.php');
         }
     }
+
+
 
 
 }
