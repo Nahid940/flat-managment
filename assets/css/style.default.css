@@ -1440,8 +1440,8 @@ input[type='submit'] {
 
 form label {
     font-size: 0.9em;
-    color: #777;
-    font-weight: 300
+    color: black;
+    font-weight: 500;
 }
 
 .checkbox-template,
@@ -1902,14 +1902,14 @@ fieldset[disabled] a.btn {
 
 .btn-primary {
     color: #fff;
-    background-color: #796AEE;
-    border-color: #796AEE
+    background-color: #1476e0;
+    border-color: #1476e0
 }
 
 .btn-primary:hover {
     color: #fff;
-    background-color: #503ce9;
-    border-color: #4833e8
+    background-color: #09873b;
+    border-color: #09873b
 }
 
 .btn-primary:focus,

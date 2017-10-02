@@ -1,4 +1,5 @@
 <?php
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -94,7 +95,7 @@
           <!-- Sidebar Navidation Menus-->
           <ul class="list-unstyled">
             <li class="active"> <a href="view/admin/index.php"><i class="icon-home"></i>Home</a></li>
-            <li class="active"> <a href="view/admin/view/admin/owner/staff/view.php"><i class="fa fa-users" aria-hidden="true"></i>Personnel details</a></li>
+            <li class="active"> <a href="view/admin/view/admin/owner/manager/view.php"><i class="fa fa-users" aria-hidden="true"></i>Personnel details</a></li>
             <li><a href="#dashvariants" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Add new information</a>
               <ul id="dashvariants" class="collapse list-unstyled">
                 <li><a href="view/admin/view/admin/owner/manager/AddInfo.php">Add new info</a></li>

@@ -47,6 +47,13 @@ class Session
         session_unset();
     }
 
+    public static function UnsetKeySession($key){
+        if(isset($_SESSION[$key])){
+            self::set($key,"");
+            return false;
+        }
+    }
+
 
     public static function Destroy(){
         session_destroy();

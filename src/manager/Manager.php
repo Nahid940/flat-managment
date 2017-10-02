@@ -17,8 +17,11 @@ class Manager
     private $phn;
     private $nid;
     private $email;
+    private $attempt=0;
+    private $timestamp=0;
     private $password;
     private $image;
+    private $uniqueid;
 
     public function set($data=array()){
         if(array_key_exists('manager_id',$data)){
@@ -47,6 +50,41 @@ class Manager
         }
         if(array_key_exists('image',$data)){
             $this->image=$data['image'];
+        }
+        if(array_key_exists('uniqueid',$data)){
+            $this->uniqueid=$data['uniqueid'];
+        }
+    }
+
+    public function insertNewManager(){
+        $sql="select manager_id from manager where manager_id=:manager_id";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->bindValue(':manager_id',$this->manager_id);
+        $stmt->execute();
+        if($stmt->rowCount()>0){
+            Session::init();
+            Session::set('managerExist', "<div class='alert alert-danger'>Data already exist !!</div>");
+            header('location:Addinfo.php');
+        }else {
+
+            $sql = "insert into manager (manager_id,name,age,phn,nid,email,attempt,timestamp,password,image,uniqueid) values(:manager_id,:name,:age,:phn,:nid,:email,:attempt,:timestamp,:password,:image,:uniqueid)";
+            $stmt = DBConnection::myQuery($sql);
+            $stmt->bindValue(':manager_id', $this->manager_id);
+            $stmt->bindValue(':name', $this->name);
+            $stmt->bindValue(':age', $this->age);
+            $stmt->bindValue(':phn', $this->phn);
+            $stmt->bindValue(':nid', $this->nid);
+            $stmt->bindValue(':email', $this->email);
+            $stmt->bindValue(':attempt', $this->attempt);
+            $stmt->bindValue(':timestamp', $this->timestamp);
+            $stmt->bindValue(':password', $this->password);
+            $stmt->bindValue(':image', $this->image);
+            $stmt->bindValue(':uniqueid', $this->uniqueid);
+            if ($stmt->execute()) {
+                Session::init();
+                Session::set('newManagerInsert', "<div class='alert alert-success'>New manager info added !!</div>");
+                header('location:view.php');
+            }
         }
     }
 
@@ -100,6 +138,25 @@ class Manager
             Session::init();
             Session::set('login-failure',"<div class='alert alert-default colorOrange'>Invalid login</div>");
             header('location:login.php');
+        }
+    }
+
+    public function getAllmanagers(){
+        $sql="select * from manager";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    }
+
+    public function checkSameManagerID(){
+        $sql="select manager_id from manager where manager_id=:manager_id";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->bindValue(':manager_id',$this->manager_id);
+        $stmt->execute();
+        if($stmt->rowCount()>0){
+            return  "User Name Already Exist";
+        }else{
+            return "Available";
         }
     }
 
