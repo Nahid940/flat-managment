@@ -5,8 +5,6 @@ include_once '../../../../../../vendor/autoload.php';
 $query=new \App\query\query();
 
 include_once('../../../../includes/header.php');
-
-
 ?>
 
         <header class="page-header">
@@ -35,7 +33,7 @@ include_once('../../../../includes/header.php');
                       </div>
                     </div>
                     <div class="card-header d-flex align-items-center">
-                      <h3 class="h4">Flat info</h3>
+                      <h3 class="h4">New queries</h3>
                     </div>
                     <div class="card-body">
                       <table class="table table-striped">
@@ -62,7 +60,7 @@ include_once('../../../../includes/header.php');
                               <td>
                                   <form action="" method="post">
                                       <input type="hidden" value="<?php echo $queries['query_no']?>" name="query_no">
-                                      <input type="button" value="Checked" name="checkquery" class="btn btn-danger checkevent" id="button">
+                                      <input type="button" value="Checked" name="checkquery" class="btn btn-primary checkevent" id="button">
                                   </form>
                               </td>
                           </tr>

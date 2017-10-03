@@ -108,32 +108,16 @@
          $(".checkevent").on('click',function(e){
              e.preventDefault();
              var query_no = jQuery(this).prevAll('input[name="query_no"]').val();
-
-
-
-
-//             if(confirm("Do you want to delete this event ?")){
+             alert(query_no);
                  $.ajax({
                      type: "POST",
                      data:{
-                         query_no: query_no,
+                         query_no: query_no
                      },
                      url: "view/admin/view/admin/owner/query/jsondata/CheckedQuery.php",
-
-                     success: function(responseText){
-//                         if(responseText==1){
-//                             $("#deleteevent").text("Event deleted !!");
-//                             setTimeout(function(){
-//                                 $('#deleteevent').fadeOut();
-//                             },2000);
-//                         }
-                     }
-
                  });
                  $(this).parents(".record").animate({ backgroundColor: "#fbc7c7" }, "fast")
                      .animate({ opacity: "hide" }, "slow");
-//             }
-
          });
      });
 

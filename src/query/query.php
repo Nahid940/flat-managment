@@ -37,7 +37,7 @@ class query
     }
 
     public function checkQuery(){
-        $sql="update resident_query set checks='yes' wher query_no=:query_no";
+        $sql="update resident_query set checks='yes' where query_no=:query_no";
         $stmt=DBConnection::myQuery($sql);
         $stmt->bindValue(":query_no",$this->query_no);
         if($stmt->execute()){

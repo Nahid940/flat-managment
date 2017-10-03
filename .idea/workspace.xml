@@ -2,24 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="052b9746-a99d-4b23-8488-ef9b2be3047d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/flats/Flat.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/query/query.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/view/admin/owner/manager/addManagerSalary.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/manager/view/admin/manager/resident/AddResidents.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/manager/view/admin/manager/resident/addResidentOperation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/manager/view/admin/manager/resident/view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/assets/css/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/style.default.css" afterPath="$PROJECT_DIR$/assets/css/style.default.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap/bootstrap.min.css" afterPath="$PROJECT_DIR$/bootstrap/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/manager/Manager.php" afterPath="$PROJECT_DIR$/src/manager/Manager.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/query/query.php" afterPath="$PROJECT_DIR$/src/query/query.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/includes/footer.php" afterPath="$PROJECT_DIR$/view/admin/includes/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/includes/header.php" afterPath="$PROJECT_DIR$/view/admin/includes/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/view/admin/owner/expenditure/expenditure.php" afterPath="$PROJECT_DIR$/view/admin/view/admin/owner/expenditure/expenditure.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/view/admin/owner/query/jsondata/CheckedQuery.php" afterPath="$PROJECT_DIR$/view/admin/view/admin/owner/query/jsondata/CheckedQuery.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/view/admin/owner/query/view.php" afterPath="$PROJECT_DIR$/view/admin/view/admin/owner/query/view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/manager/includes/footer.php" afterPath="$PROJECT_DIR$/view/manager/includes/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/manager/includes/header.php" afterPath="$PROJECT_DIR$/view/manager/includes/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/manager/view/admin/manager/query/view.php" afterPath="$PROJECT_DIR$/view/manager/view/admin/manager/query/view.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,18 +23,18 @@
       <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/admin/includes/footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="118" column="43" lean-forward="false" selection-start-line="118" selection-start-column="43" selection-end-line="118" selection-end-column="43" />
+            <state relative-caret-position="356">
+              <caret line="120" column="10" lean-forward="false" selection-start-line="120" selection-start-column="10" selection-end-line="120" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CheckedQuery.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CheckedQuery.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/admin/view/admin/owner/query/jsondata/CheckedQuery.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+            <state relative-caret-position="153">
+              <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -94,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="view.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/admin/view/admin/owner/query/view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="55" column="43" lean-forward="false" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="43" />
+            <state relative-caret-position="102">
+              <caret line="6" column="48" lean-forward="false" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -127,14 +113,14 @@
       <file leaf-file-name="query.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/query/query.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="44" column="9" lean-forward="true" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+            <state relative-caret-position="308">
+              <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
               <folding>
                 <element signature="e#7#96#0#PHP" expanded="true" />
-                <marker date="1507056672119" expanded="true" signature="409:416" ph="select * fro... " />
-                <marker date="1507056672119" expanded="true" signature="409:632" ph="select name,... " />
-                <marker date="1507056672119" expanded="true" signature="808:859" ph="select check... resident_query" />
-                <marker date="1507056672119" expanded="true" signature="1020:1082" ph="update resid... " />
+                <marker date="1507057379480" expanded="true" signature="409:416" ph="select * fro... " />
+                <marker date="1507057379480" expanded="true" signature="409:632" ph="select name,... " />
+                <marker date="1507057379480" expanded="true" signature="808:859" ph="select check... resident_query" />
+                <marker date="1507057379480" expanded="true" signature="1020:1083" ph="update resid... " />
               </folding>
             </state>
           </provider>
@@ -190,10 +176,10 @@
         <option value="$PROJECT_DIR$/view/manager/view/admin/manager/query/view.php" />
         <option value="$PROJECT_DIR$/view/admin/view/admin/owner/query/jsondata/allNewquery.php" />
         <option value="$PROJECT_DIR$/view/admin/includes/header.php" />
-        <option value="$PROJECT_DIR$/src/query/query.php" />
-        <option value="$PROJECT_DIR$/view/admin/view/admin/owner/query/view.php" />
-        <option value="$PROJECT_DIR$/view/admin/includes/footer.php" />
         <option value="$PROJECT_DIR$/view/admin/view/admin/owner/query/jsondata/CheckedQuery.php" />
+        <option value="$PROJECT_DIR$/src/query/query.php" />
+        <option value="$PROJECT_DIR$/view/admin/includes/footer.php" />
+        <option value="$PROJECT_DIR$/view/admin/view/admin/owner/query/view.php" />
       </list>
     </option>
   </component>
@@ -590,12 +576,12 @@
       <workItem from="1506959325779" duration="16481000" />
       <workItem from="1507003368672" duration="12135000" />
       <workItem from="1507019141368" duration="3742000" />
-      <workItem from="1507031604664" duration="22352000" />
+      <workItem from="1507031604664" duration="23121000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54710000" />
+    <option name="totallyTimeSpent" value="55479000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -1043,28 +1029,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/query/query.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="44" column="9" lean-forward="true" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
-          <folding>
-            <element signature="e#7#96#0#PHP" expanded="true" />
-            <marker date="1507056672119" expanded="true" signature="409:416" ph="select * fro... " />
-            <marker date="1507056672119" expanded="true" signature="409:632" ph="select name,... " />
-            <marker date="1507056672119" expanded="true" signature="808:859" ph="select check... resident_query" />
-            <marker date="1507056672119" expanded="true" signature="1020:1082" ph="update resid... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/admin/view/admin/owner/query/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="55" column="43" lean-forward="false" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/admin/view/admin/owner/query/jsondata/allNewquery.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="118">
@@ -1073,18 +1037,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/admin/includes/footer.php">
+    <entry file="file://$PROJECT_DIR$/view/admin/view/admin/owner/query/jsondata/CheckedQuery.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="118" column="43" lean-forward="false" selection-start-line="118" selection-start-column="43" selection-end-line="118" selection-end-column="43" />
+        <state relative-caret-position="153">
+          <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/admin/view/admin/owner/query/jsondata/CheckedQuery.php">
+    <entry file="file://$PROJECT_DIR$/src/query/query.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        <state relative-caret-position="308">
+          <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+          <folding>
+            <element signature="e#7#96#0#PHP" expanded="true" />
+            <marker date="1507057379480" expanded="true" signature="409:416" ph="select * fro... " />
+            <marker date="1507057379480" expanded="true" signature="409:632" ph="select name,... " />
+            <marker date="1507057379480" expanded="true" signature="808:859" ph="select check... resident_query" />
+            <marker date="1507057379480" expanded="true" signature="1020:1083" ph="update resid... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/admin/includes/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="120" column="10" lean-forward="false" selection-start-line="120" selection-start-column="10" selection-end-line="120" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/admin/view/admin/owner/query/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="48" lean-forward="false" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
           <folding />
         </state>
       </provider>
