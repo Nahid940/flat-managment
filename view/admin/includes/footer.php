@@ -77,6 +77,13 @@
              });
      });
 
+     //get the id of the person to delete............................................................................
+     $(document).on('click','.delete',function () {
+         var uniqueid=$(this);
+         $('#uniqueid').val(uniqueid.data('id'));
+
+     });
+
 
      function validateManagerInfoForm()
      {

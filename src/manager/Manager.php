@@ -170,4 +170,16 @@ class Manager
         }
     }
 
+    public function deleteManager(){
+        $sql="delete from manager where uniqueid=:uniqueid";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->bindValue(":uniqueid",$this->uniqueid);
+        $stmt->execute();
+        if($stmt->execute()){
+            Session::init();
+            Session::set("managerDelete","<div class='alert alert-info'>Account deleted</div>");
+            header('location:view.php');
+        }
+    }
+
 }

@@ -10,6 +10,32 @@ $manager=new \App\manager\Manager();
 
 ?>
 
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+                <p>Do you want to delete this account?</p>
+
+                <form action="view/admin/view/admin/owner/manager/delete.php" method="post">
+                    <div class="form-group pull-right">
+                        <input type="hidden" id="uniqueid" name="uniqueid">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+
 <section class="forms">
     <div class="container-fluid">
         <div class="row">
@@ -28,6 +54,8 @@ $manager=new \App\manager\Manager();
                         echo \App\Session::get('newManagerInsert');
                         \App\Session::UnsetKeySession('newManagerInsert');
 
+                        echo \App\Session::get('managerDelete');
+                        \App\Session::UnsetKeySession('managerDelete');
 //
                     ?>
                     <?php foreach ($manager->getAllmanagers() as $managerData){
@@ -74,7 +102,8 @@ $manager=new \App\manager\Manager();
                                                     <td>
                                                         <div class="pull-right">
                                                             <a href="view/admin/view/admin/owner/manager/edit.php?uniqueid=<?php echo $managerData['uniqueid']?>" class="btn btn-primary"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</a>
-                                                            <a href="view/admin/view/admin/owner/manager/delete.php?uniqueid=<?php echo $managerData['uniqueid']?>" class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</a>
+<!--                                                            <a href="view/admin/view/admin/owner/manager/delete.php?uniqueid=--><?php //echo $managerData['uniqueid']?><!--" class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</a>-->
+                                                            <a href="" data-toggle="modal" data-target="#myModal" data-id="<?php echo $managerData['uniqueid']?>" class="btn btn-danger delete">Delete</a>
 
                                                         </div>
                                                     </td>
