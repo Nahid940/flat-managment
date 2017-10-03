@@ -68,7 +68,7 @@
                  dataType:"json",
                  success:function (data) {
 //                      data = JSON.parse(data);
-                     //$(".notification-content").html(data.notification);
+                     $(".notification-content").html(data.notify);
                      if(data.total >0 ){
                          //$("#total").html(data.total);
                          $(".Ajaxdata").html(data.total);
@@ -83,6 +83,77 @@
          $('#uniqueid').val(uniqueid.data('id'));
 
      });
+
+     $(document).ready(function () {
+         timeOut();
+         $.ajax({
+             url:"http://localhost/BITM/bitm-final-project/view/admin/view/admin/owner/query/jsondata/allNewquery.php",
+             method:"POST",
+//                  data:{view:view},
+             dataType:"json",
+             success:function (data) {
+//                      data = JSON.parse(data);
+                 $(".notification-content").html(data.notify);
+                 if(data.total >0 ){
+                     $("#newquery").html(data.total);
+                     $(".notification-content").html(data.notify);
+                 }
+             }
+         });
+     });
+
+
+
+     $(document).ready(function(){
+         $(".checkevent").on('click',function(e){
+             e.preventDefault();
+             var query_no = jQuery(this).prevAll('input[name="query_no"]').val();
+
+
+
+
+//             if(confirm("Do you want to delete this event ?")){
+                 $.ajax({
+                     type: "POST",
+                     data:{
+                         query_no: query_no,
+                     },
+                     url: "view/admin/view/admin/owner/query/jsondata/CheckedQuery.php",
+
+                     success: function(responseText){
+//                         if(responseText==1){
+//                             $("#deleteevent").text("Event deleted !!");
+//                             setTimeout(function(){
+//                                 $('#deleteevent').fadeOut();
+//                             },2000);
+//                         }
+                     }
+
+                 });
+                 $(this).parents(".record").animate({ backgroundColor: "#fbc7c7" }, "fast")
+                     .animate({ opacity: "hide" }, "slow");
+//             }
+
+         });
+     });
+
+
+     function timeOut(){
+         setTimeout(function(){
+             update();
+             timeOut();
+         },300);
+     }
+
+     //update real time notification
+     function update(){
+         $.getJSON('view/admin/view/admin/owner/query/jsondata/allNewquery.php',function(data){
+             $.each(data,function (){
+                 $("#newquery").html(data.total);
+                 $(".notification-content").html(data.notify);
+             });
+         });
+     }
 
 
      function validateManagerInfoForm()
@@ -160,8 +231,35 @@
          }
      }
 
+     function validateManagerSalaryInfoForm(){
+         var manager_id=document.forms["addmanagerSalaryform"]["manager_id"].value;
+         var amount=document.forms["addmanagerSalaryform"]["amount"].value;
+         var month=document.forms["addmanagerSalaryform"]["month"].value;
+         var year=document.forms["addmanagerSalaryform"]["year"].value;
 
-
+         if(manager_id==''){
+             $('#ManagerIDValidator').text("Select manager name !!");
+             $('#ManagerIDValidator').css({"color":"red","font-weight":"bold"});
+             return false;
+         }
+         else if(amount==''){
+             $('#ManageramountValidator').text("Enter amount !!");
+             $('#ManageramountValidator').css({"color":"red","font-weight":"bold"});
+             return false;
+         }
+          else if(month==''){
+             $('#ManagerMonthValidator').text('Select month !!');
+             $('#ManagerMonthValidator').css({"color":"red","font-weight":"bold"});
+             return false;
+         }
+         else if(year==''){
+             $('#ManagerYearValidator').text('Select year !!');
+             $('#ManagerYearValidator').css({"color":"red","font-weight":"bold"});
+             return false;
+         }else{
+             return true;
+         }
+     }
 
 
 //     check existing manager id---------------------------------------------------------------------

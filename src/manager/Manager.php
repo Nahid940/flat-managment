@@ -23,6 +23,10 @@ class Manager
     private $image;
     private $uniqueid;
 
+    private $month;
+    private $year;
+    private $date;
+
     public function set($data=array()){
         if(array_key_exists('manager_id',$data)){
             $this->manager_id=$data['manager_id'];
@@ -53,6 +57,16 @@ class Manager
         }
         if(array_key_exists('uniqueid',$data)){
             $this->uniqueid=$data['uniqueid'];
+        }
+
+        if(array_key_exists('month',$data)){
+            $this->month=$data['month'];
+        }
+        if(array_key_exists('year',$data)){
+            $this->year=$data['year'];
+        }
+        if(array_key_exists('date',$data)){
+            $this->date=$data['date'];
         }
     }
 
@@ -180,6 +194,43 @@ class Manager
             Session::set("managerDelete","<div class='alert alert-info'>Account deleted</div>");
             header('location:view.php');
         }
+    }
+
+    public function insertManagerMonthlySalary(){
+        $sql="select * from manager_salary where manager_id=:manager_id and month=:month and year=:year";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->bindValue(':manager_id',$this->manager_id);
+        $stmt->bindValue(':month',$this->month);
+        $stmt->bindValue(':year',$this->year);
+        $stmt->execute();
+        if($stmt->rowCount()>0){
+            Session::init();
+            Session::set("ManagersalaryPaid","<div class='alert alert-danger'>Salary already paid !!</div>");
+            header('location:salary.php');
+        }else{
+            $sql="insert into manager_salary (manager_id,month,year,date) VALUES (:manager_id,:month,:year,:date)";
+            $stmt=DBConnection::myQuery($sql);
+            $stmt->bindValue(':manager_id',$this->manager_id);
+            $stmt->bindValue(':month',$this->month);
+            $stmt->bindValue(':year',$this->year);
+            $stmt->bindValue(':date',$this->date);
+            if($stmt->execute()){
+                Session::init();
+                Session::set("salaryPaid","<div class='alert alert-success'>Salary paid !!</div>");
+                header('location:salary.php');
+            }
+        }
+    }
+
+
+    public function getManagerMonthlySalaryList(){
+        $sql="select name,month,year,date from manager m,manager_salary ms where m.manager_id=ms.manager_id";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+
+
+
     }
 
 }

@@ -98,6 +98,7 @@
             <li><a href="#dashvariants" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Add </a>
               <ul id="dashvariants" class="collapse list-unstyled">
                 <li><a href="view/manager/view/admin/manager/staff/create.php">Add new staff information</a></li>
+                <li><a href="view/manager/view/admin/manager/resident/AddResidents.php">Add new residents information</a></li>
               </ul>
             </li>
          

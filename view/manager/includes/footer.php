@@ -137,6 +137,87 @@
              return true;
          }
      }
+
+ </script>
+
+ <script>
+     function validateNewResidentInfoForm()
+     {
+         var mailformat = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+         var resident_id=document.forms["addResidentform"]["resident_id"].value;
+         var name=document.forms["addResidentform"]["name"].value;
+         var age=document.forms["addResidentform"]["age"].value;
+         var nid=document.forms["addResidentform"]["nid"].value;
+         var phn=document.forms["addResidentform"]["phn"].value;
+         var password=document.forms["addResidentform"]["password"].value;
+         var cpassword=document.forms["addResidentform"]["cpassword"].value;
+//         var image=document.getElementById('image');
+////         var file = image.files[0];
+//         //var fileType = image.substring(image.lastIndexOf('.')+1);
+//         var fileType = file["type"];
+//         var ValidImageTypes = ["image/gif", "image/jpeg", "image/png","image/jpg"];
+
+//         var password=document.forms['addmanagerModalform']['password'].value;
+         if( resident_id==''){
+             $('#IDvalidatorModal').text("Staff ID required !");
+             $('#IDvalidatorModal').css({"color": "red", "font-weight": "bold"});
+             return false;
+         }
+         else if(name==''){
+             $('#namevalidatorModal').text("Staff name required !");
+             $('#namevalidatorModal').css({"color": "red", "font-weight": "bold"});
+             return false;
+         }
+
+
+         else if(age=='' || (isNaN(age)) || age>120){
+             $('#AgevalidatorModal').text("Enter valid age !");
+             $('#AgevalidatorModal').css({"color": "red", "font-weight": "bold"});
+             return false;
+         }
+
+         else if(nid=='' || (isNaN(nid)) || nid.length<9){
+             $('#NIDvalidatorModal').text("Enter valid NID No. !");
+             $('#NIDvalidatorModal').css({"color": "red", "font-weight": "bold"});
+             return false;
+         }
+
+         else if(phn==''){
+             $('#PhnvalidatorModal').text("Enter phone No.. !");
+             $('#PhnvalidatorModal').css({"color": "red", "font-weight": "bold"});
+             return false;
+         }
+
+         else if(password=='' || password.length<6){
+             $('#PasswordValidatorModal').text("Enter correct password. !");
+             $('#PasswordValidatorModal').css({"color": "red", "font-weight": "bold"});
+             return false;
+         }
+         else if(cpassword=='' || (cpassword!=password)){
+             $('#ConfirmPasswordValidatorModal').text("Reenter password !");
+             $('#ConfirmPasswordValidatorModal').css({"color": "red", "font-weight": "bold"});
+             return false;
+         }
+//         else if( image.value==''){
+//             $('#Imagevalidator').text("Select image !");
+//             $('#Imagevalidator').css({"color": "red", "font-weight": "bold"});
+//             return false;
+//         }
+//         else if((image.files[0].size)>50000 ){
+//             $('#Imagevalidator').text("Select 50 kb image only !");
+//             $('#Imagevalidator').css({"color": "red", "font-weight": "bold"});
+//             return false;
+//         }
+//         else if( $.inArray(fileType, ValidImageTypes) < 0){
+//             $('#Imagevalidator').text("File format is not supported!");
+//             $('#Imagevalidator').css({"color": "red", "font-weight": "bold"});
+//             return false;
+//         }
+     else{
+         return true;
+     }
+     }
+
  </script>
   </body>
 </html>

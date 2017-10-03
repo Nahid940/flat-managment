@@ -1396,7 +1396,7 @@ section.charts div[class*="col-"] {
 }
 
 .form-control {
-    border: 1px solid #e6e6e6;
+    border: 1.5px solid #0D7CDA;
     border-radius: 0;
     padding: 10px 15px
 }
@@ -1440,8 +1440,8 @@ input[type='submit'] {
 
 form label {
     font-size: 0.9em;
-    color: black;
-    font-weight: 500;
+    color: #5F5F5F;
+    font-weight: 600;
 }
 
 .checkbox-template,
