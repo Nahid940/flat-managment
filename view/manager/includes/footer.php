@@ -2,7 +2,7 @@
             <div class="container-fluid">
               <div class="row">
                 <div class="col-sm-6">
-                  <p>Touchdevs &copy; 2017-2019</p>
+                  <p>Manager &copy; 2017-2019</p>
                 </div>
                 <div class="col-sm-6 text-right">
                   <p>Design by <a href="http://touchdevs.com" class="external">Touchdevs.com</a></p>
@@ -49,5 +49,94 @@
       r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
       ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>
+
+
+ <script>
+
+
+     function validateStaffInfoForm()
+     {
+         var mailformat = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+         var staff_id=document.forms["addStaffModalform"]["staff_id"].value;
+         var name=document.forms["addStaffModalform"]["name"].value;
+         var age=document.forms["addStaffModalform"]["age"].value;
+         var nid=document.forms["addStaffModalform"]["nid"].value;
+         var phn=document.forms["addStaffModalform"]["phn"].value;
+         var email=document.forms["addStaffModalform"]["email"].value;
+         var password=document.forms["addStaffModalform"]["password"].value;
+         var cpassword=document.forms["addStaffModalform"]["cpassword"].value;
+
+         var image=document.getElementById('image');
+////         var file = image.files[0];
+//         //var fileType = image.substring(image.lastIndexOf('.')+1);
+//         var fileType = file["type"];
+//         var ValidImageTypes = ["image/gif", "image/jpeg", "image/png","image/jpg"];
+
+//         var password=document.forms['addmanagerModalform']['password'].value;
+         if( staff_id==''){
+             $('#IDvalidatorModal').text("Staff ID required !");
+             $('#IDvalidatorModal').css({"color": "red", "font-weight": "bold"});
+             return false;
+         }
+         else if(name==''){
+             $('#namevalidatorModal').text("Staff name required !");
+             $('#namevalidatorModal').css({"color": "red", "font-weight": "bold"});
+             return false;
+         }
+
+//
+         else if(age=='' || (isNaN(age)) || age>120){
+             $('#AgevalidatorModal').text("Enter valid age !");
+             $('#AgevalidatorModal').css({"color": "red", "font-weight": "bold"});
+             return false;
+         }
+
+         else if(nid=='' || (isNaN(nid)) || nid.length<9){
+             $('#NIDvalidatorModal').text("Enter valid NID No. !");
+             $('#NIDvalidatorModal').css({"color": "red", "font-weight": "bold"});
+             return false;
+         }
+
+         else if(phn==''){
+             $('#PhnvalidatorModal').text("Enter phone No.. !");
+             $('#PhnvalidatorModal').css({"color": "red", "font-weight": "bold"});
+             return false;
+         }
+
+         else if(email=='' || (!mailformat.test(email))){
+             $('#EmailvalidatorModal').text("Enter valid email. !");
+             $('#EmailvalidatorModal').css({"color": "red", "font-weight": "bold"});
+             return false;
+         }
+         else if(password=='' || password.length<6){
+             $('#PasswordValidatorModal').text("Enter correct password. !");
+             $('#PasswordValidatorModal').css({"color": "red", "font-weight": "bold"});
+             return false;
+         }
+         else if(cpassword=='' || (cpassword!=password)){
+             $('#ConfirmPasswordValidatorModal').text("Reenter password !");
+             $('#ConfirmPasswordValidatorModal').css({"color": "red", "font-weight": "bold"});
+             return false;
+         }
+         else if( image.value==''){
+             $('#Imagevalidator').text("Select image !");
+             $('#Imagevalidator').css({"color": "red", "font-weight": "bold"});
+             return false;
+         }
+         else if((image.files[0].size)>50000 ){
+             $('#Imagevalidator').text("Select 50 kb image only !");
+             $('#Imagevalidator').css({"color": "red", "font-weight": "bold"});
+             return false;
+         }
+         else if( $.inArray(fileType, ValidImageTypes) < 0){
+             $('#Imagevalidator').text("File format is not supported!");
+             $('#Imagevalidator').css({"color": "red", "font-weight": "bold"});
+             return false;
+         }
+         else{
+             return true;
+         }
+     }
+ </script>
   </body>
 </html>

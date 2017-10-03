@@ -5,7 +5,7 @@ include_once '../../../../../../vendor/autoload.php';
 \App\Session::init();
 \App\Session::checksession();
 include_once('../../../../includes/header.php');
-
+$staff=new \App\staff\Staff();
 
 ?>
 
@@ -13,6 +13,11 @@ include_once('../../../../includes/header.php');
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
+                <?php
+                echo \App\Session::get('newStaffInsert');
+                \App\Session::UnsetKeySession('newStaffInsert');
+                ?>
+
                 <div class="card">
                     <div class="card-close">
                         <div class="dropdown">
@@ -23,10 +28,11 @@ include_once('../../../../includes/header.php');
                     <div class="card-header d-flex align-items-center">
                         <h3 class="h4">All the personnel info</h3>
                     </div>
+                    <?php foreach ($staff->getAllStaff() as $staffData){?>
                     <div class="card-body">
                             <div class="panel panel-info">
                                 <div class="panel-heading">
-                                    <h3 class="panel-title">Manager Nahid</h3>
+                                    <h3 class="panel-title">Staff <?php echo $staffData['name']?></h3>
                                 </div>
                                 <div class="panel-body">
                                     <div class="row">
@@ -35,36 +41,30 @@ include_once('../../../../includes/header.php');
                                                 <tbody>
 
                                                 <tr>
-                                                    <td>Image</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Email:</td>
-                                                    <td>nahid940@gmail.com</td>
+                                                    <td><img src="<?php echo $staffData['image']?>" alt=""></td>
                                                 </tr>
 
                                                 <tr>
-                                                    <td>Address:</td>
-                                                    <td>Dhaka</td>
+                                                    <td>Age:</td>
+                                                    <td><?php echo $staffData['age']?></td>
                                                 </tr>
 
                                                 <tr>
                                                     <td>Mobile:</td>
-                                                    <td>435646</td>
+                                                    <td><?php echo $staffData['phn']?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Gender:</td>
-                                                    <td>Male</td>
+                                                    <td>NID No.:</td>
+                                                    <td><?php echo $staffData['nid']?></td>
                                                 </tr>
 
+
                                                 <tr>
-                                                    <td>Date of Birth</td>
-                                                    <td>10-1013</td>
+                                                    <td></td>
+                                                    <td></td>
                                                     <td>
-                                                        <form action="" method="post">
-                                                            <input type="hidden" value="<?php echo $userData['email']?>" id="userEmail" name="userEmail"/>
-                                                            <input type="button" data-toggle="modal" data-target="#view-modal" value="Update" name="edit"  class="btn btn-primary updateUser" id="updateUser" />
-
-                                                        </form>
+                                                        <a href="view/manager/view/admin/manager/staff/edit.php?uniqueid=<?php echo $staffData['uniqueid']?>" class="btn btn-info">Edit</a>
+                                                        <a href="view/manager/view/admin/manager/staff/delete.php?uniqueid=<?php echo $staffData['uniqueid']?>" class="btn btn-danger">Delete</a>
                                                     </td>
                                                 </tr>
                                                 </tbody>
@@ -74,6 +74,7 @@ include_once('../../../../includes/header.php');
                                 </div>
                         </div>
                 </div>
+                <?php }?>
 
             </div>
         </div>

@@ -90,20 +90,11 @@ include_once('includes/header.php');
                     <div class="row">
                         <!-- Statistics -->
                         <div class="statistics col-lg-4">
-
                             <div class="statistic d-flex align-items-center bg-white has-shadow">
                                 <div class="icon bg-red"><i class="fa fa-tasks"></i></div>
-                                <div class="text"><strong class="Ajaxdata"></strong><br><small>New feedback</small></div>
+                                <div class="text">he;llo<strong class=""></strong><br><small></small></div>
                             </div>
 
-                            <div class="statistic d-flex align-items-center bg-white has-shadow">
-                                <div class="icon bg-green"><i class="fa fa-calendar-o"></i></div>
-                                <div class="text"><strong>152</strong><br><small>Interviews</small></div>
-                            </div>
-                            <div class="statistic d-flex align-items-center bg-white has-shadow">
-                                <div class="icon bg-orange"><i class="fa fa-paper-plane-o"></i></div>
-                                <div class="text"><strong>147</strong><br><small>Forwards</small></div>
-                            </div>
                         </div>
 
 

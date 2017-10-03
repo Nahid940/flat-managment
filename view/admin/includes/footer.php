@@ -58,6 +58,23 @@
          $('.alert').delay(5000).fadeOut(1000,function () {
              $(this).alert('close');
          });
+
+//         Count total managers and staffs...........................................................
+
+             $.ajax({
+                 url:"http://localhost/BITM/bitm-final-project/view/admin/view/admin/owner/manager/jsonData/totalManagerandStaff.php",
+                 method:"POST",
+//                  data:{view:view},
+                 dataType:"json",
+                 success:function (data) {
+//                      data = JSON.parse(data);
+                     //$(".notification-content").html(data.notification);
+                     if(data.total >0 ){
+                         //$("#total").html(data.total);
+                         $(".Ajaxdata").html(data.total);
+                     }
+                 }
+             });
      });
 
 
@@ -148,8 +165,6 @@
      function checkExistingID()
      {
          var manager_id=document.getElementById( "manager_id" ).value;
-//         alert(manager_id);
-
          if(manager_id !='')
          {
              $.ajax({
@@ -165,6 +180,7 @@
                      {
                          $("#manager_id").css("border-color","green");
                          $("#manager_id").css("color","green");
+                         document.getElementById("addNewManager").disabled = false;
                          return true;
                      }
                      else
@@ -173,6 +189,7 @@
                          $("#manager_id").css("color","red");
                          $("#IDvalidatorModal").css("border-color","red");
                          $("#IDvalidatorModal").css("color","red");
+                         document.getElementById("addNewManager").disabled = true;
                          return false;
                      }
                  }
@@ -186,19 +203,6 @@
      }
 
 
-//     function checkall()
-//     {
-//         var manager_id=document.getElementById("manager_id").innerHTML;
-//
-//         if((manager_id)=="OK")
-//         {
-//             return true;
-//         }
-//         else
-//         {
-//             return false;
-//         }
-//     }
 
  </script>
 

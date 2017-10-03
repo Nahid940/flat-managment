@@ -16,6 +16,7 @@ class DBConnection
         if(!isset(self::$pdo)){
             try{
                 self::$pdo=new PDO('mysql:host=localhost;dbname=bitmproject',"root","");
+                self::$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             }
             catch(PDOException $exp){
                 return $exp->getMessage();

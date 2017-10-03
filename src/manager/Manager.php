@@ -148,6 +148,16 @@ class Manager
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
     }
 
+
+    public function getTotalManager(){
+        $sql="select * from manager";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->execute();
+        return $stmt->rowCount();
+    }
+
+
+
     public function checkSameManagerID(){
         $sql="select manager_id from manager where manager_id=:manager_id";
         $stmt=DBConnection::myQuery($sql);
