@@ -93,4 +93,12 @@ class residents
             }
         }
     }
+
+
+    public function selectAllResident(){
+        $sql="select name,resident_id from resident";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+}
 }

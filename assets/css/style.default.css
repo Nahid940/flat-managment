@@ -1396,7 +1396,7 @@ section.charts div[class*="col-"] {
 }
 
 .form-control {
-    border: 1.5px solid #0D7CDA;
+    border: 1px solid #0D7CDA;
     border-radius: 0;
     padding: 10px 15px
 }
