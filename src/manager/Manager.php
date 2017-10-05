@@ -11,7 +11,7 @@ use App\DBConnection;
 use App\Session;
 class Manager
 {
-    private $manager_id;
+    protected $manager_id;
     private $name;
     private $age;
     private $phn;

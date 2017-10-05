@@ -16,6 +16,7 @@ include_once '../../vendor/autoload.php';
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="../../assets/loginandregistrationstyle.css" type="text/css"/>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
     <style>
     </style>
 </head>
@@ -70,6 +71,7 @@ include_once '../../vendor/autoload.php';
        </div>
 
    </div>
+
 </div>
 </div>
  
@@ -77,6 +79,7 @@ include_once '../../vendor/autoload.php';
   
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
   <script>
 
       $(document).ready(function() {
@@ -128,6 +131,7 @@ include_once '../../vendor/autoload.php';
               return true;
           }
       }
+
 </script>
 </body>
 </html>

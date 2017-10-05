@@ -2,15 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="052b9746-a99d-4b23-8488-ef9b2be3047d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/staffPayment/StaffPayment.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/manager/view/admin/manager/staff/salary.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/manager/view/admin/manager/staff/staffSalaryPayment.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/dataTables.bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/dataTables.bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/jquery.dataTables.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/manager/ManagerCostList.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/manager/view/admin/manager/cost/AddCostOperation.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/manager/view/admin/manager/cost/AddMaintenanceCost.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/flatrentPayment/ResidentPayment.php" afterPath="$PROJECT_DIR$/src/flatrentPayment/ResidentPayment.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resident/residents.php" afterPath="$PROJECT_DIR$/src/resident/residents.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/manager/Manager.php" afterPath="$PROJECT_DIR$/src/manager/Manager.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/staff/Staff.php" afterPath="$PROJECT_DIR$/src/staff/Staff.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/manager/view/admin/manager/resident/BillPaymentOper.php" afterPath="$PROJECT_DIR$/view/manager/view/admin/manager/resident/BillPaymentOper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/manager/view/admin/manager/resident/payment.php" afterPath="$PROJECT_DIR$/view/manager/view/admin/manager/resident/payment.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/staffPayment/StaffPayment.php" afterPath="$PROJECT_DIR$/src/staffPayment/StaffPayment.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/manager/includes/footer.php" afterPath="$PROJECT_DIR$/view/manager/includes/footer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/manager/includes/header.php" afterPath="$PROJECT_DIR$/view/manager/includes/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/manager/index.php" afterPath="$PROJECT_DIR$/view/manager/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/manager/login.php" afterPath="$PROJECT_DIR$/view/manager/login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/manager/view/admin/manager/staff/salary.php" afterPath="$PROJECT_DIR$/view/manager/view/admin/manager/staff/salary.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,28 +34,8 @@
       <file leaf-file-name="salary.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/manager/view/admin/manager/staff/salary.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="79" column="59" lean-forward="false" selection-start-line="79" selection-start-column="53" selection-end-line="79" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="delete.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/manager/view/admin/manager/staff/delete.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/manager/view/admin/manager/staff/edit.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="37" column="104" lean-forward="true" selection-start-line="37" selection-start-column="104" selection-end-line="37" selection-end-column="152" />
+            <state relative-caret-position="255">
+              <caret line="24" column="69" lean-forward="false" selection-start-line="24" selection-start-column="69" selection-end-line="24" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -58,86 +44,102 @@
       <file leaf-file-name="staffSalaryPayment.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/manager/view/admin/manager/staff/staffSalaryPayment.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+            <state relative-caret-position="204">
+              <caret line="12" column="16" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="checkExistingStaffID.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/manager/view/admin/manager/staff/checkExistingStaffID.php">
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/manager/includes/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="57" />
+            <state relative-caret-position="-595">
+              <caret line="34" column="90" lean-forward="false" selection-start-line="34" selection-start-column="90" selection-end-line="34" selection-end-column="90" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ResidentPayment.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/flatrentPayment/ResidentPayment.php">
+      <file leaf-file-name="dataTables.bootstrap.min.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/css/dataTables.bootstrap.min.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28">
-              <caret line="44" column="4" lean-forward="false" selection-start-line="44" selection-start-column="4" selection-end-line="71" selection-end-column="5" />
-              <folding>
-                <element signature="e#7#96#0#PHP" expanded="true" />
-                <element signature="e#128#149#0#PHP" expanded="true" />
-                <marker date="1507177170061" expanded="true" signature="1097:1175" ph="select * fro... resident_payment" />
-                <marker date="1507177170061" expanded="true" signature="1621:1786" ph="insert into resident_payment... " />
-                <marker date="1507177170061" expanded="true" signature="2533:2586" ph="select resid... resident_payment" />
-                <marker date="1507177170061" expanded="true" signature="2533:2607" ph="select resid... resident_payment" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Staff.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/staff/Staff.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="27" column="4" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="30" selection-end-column="9" />
-              <folding>
-                <marker date="1507178234340" expanded="true" signature="1380:1431" ph="select staff... staff" />
-                <marker date="1507178234340" expanded="true" signature="1803:1989" ph="insert into staff... " />
-                <marker date="1507178234340" expanded="true" signature="3029:3048" ph="select * fro... staff" />
-                <marker date="1507178234340" expanded="true" signature="3230:3274" ph="select * fro... staff" />
-                <marker date="1507178234340" expanded="true" signature="3508:3527" ph="select * fro... staff" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StaffPayment.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/staffPayment/StaffPayment.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="55" column="48" lean-forward="true" selection-start-line="55" selection-start-column="48" selection-end-line="55" selection-end-column="48" />
-              <folding>
-                <element signature="e#7#96#0#PHP" expanded="true" />
-                <element signature="e#125#146#0#PHP" expanded="true" />
-                <marker date="1507179054133" expanded="true" signature="895:978" ph="select * fro... staff_salary" />
-                <marker date="1507179054133" expanded="true" signature="1464:1566" ph="insert into staff_salary... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addResidentOperation.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/manager/view/admin/manager/resident/addResidentOperation.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BillPaymentOper.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/manager/view/admin/manager/resident/BillPaymentOper.php">
+      <file leaf-file-name="AddMaintenanceCost.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/view/manager/view/admin/manager/cost/AddMaintenanceCost.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="6" selection-end-column="36" />
+            <state relative-caret-position="121">
+              <caret line="120" column="27" lean-forward="true" selection-start-line="120" selection-start-column="27" selection-end-line="120" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/manager/login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/manager/includes/footer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="57" column="28" lean-forward="false" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dataTables.bootstrap.min.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/dataTables.bootstrap.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Manager.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/manager/Manager.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="365">
+              <caret line="93" column="28" lean-forward="false" selection-start-line="93" selection-start-column="28" selection-end-line="93" selection-end-column="28" />
+              <folding>
+                <marker date="1507183513006" expanded="true" signature="1733:1792" ph="select manag... manager" />
+                <marker date="1507183513006" expanded="true" signature="2171:2363" ph="insert into manager... " />
+                <marker date="1507183513006" expanded="true" signature="3343:3393" ph="select * fro... manager" />
+                <marker date="1507183513006" expanded="true" signature="4011:4103" ph="update manag... " />
+                <marker date="1507183513006" expanded="true" signature="4691:4755" ph="update manag... " />
+                <marker date="1507183513006" expanded="true" signature="5265:5328" ph="update manag... " />
+                <marker date="1507183513006" expanded="true" signature="6034:6055" ph="select * fro... manager" />
+                <marker date="1507183513006" expanded="true" signature="6239:6260" ph="select * fro... manager" />
+                <marker date="1507183513006" expanded="true" signature="6431:6490" ph="select manag... manager" />
+                <marker date="1507183513006" expanded="true" signature="6816:6860" ph="delete from " />
+                <marker date="1507183513006" expanded="true" signature="7265:7354" ph="select * fro... manager_salary" />
+                <marker date="1507183513006" expanded="true" signature="7829:7924" ph="insert into manager_salary... " />
+                <marker date="1507183513006" expanded="true" signature="8503:8596" ph="select name,... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddCostOperation.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/manager/view/admin/manager/cost/AddCostOperation.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="15" lean-forward="false" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -177,11 +179,9 @@
         <option value="$PROJECT_DIR$/view/admin/view/admin/owner/expenditure/expenditure.php" />
         <option value="$PROJECT_DIR$/src/Flat.php" />
         <option value="$PROJECT_DIR$/src/flats/Flat.php" />
-        <option value="$PROJECT_DIR$/view/manager/includes/footer.php" />
         <option value="$PROJECT_DIR$/view/manager/view/admin/manager/resident/addResidentOperation.php" />
         <option value="$PROJECT_DIR$/view/manager/view/admin/manager/resident/view.php" />
         <option value="$PROJECT_DIR$/bootstrap/bootstrap.min.css" />
-        <option value="$PROJECT_DIR$/src/manager/Manager.php" />
         <option value="$PROJECT_DIR$/view/admin/view/admin/owner/manager/salary.php" />
         <option value="$PROJECT_DIR$/view/admin/view/admin/owner/manager/addManagerSalary.php" />
         <option value="$PROJECT_DIR$/view/manager/view/admin/manager/resident/AddResidents.php" />
@@ -193,16 +193,23 @@
         <option value="$PROJECT_DIR$/view/admin/includes/footer.php" />
         <option value="$PROJECT_DIR$/view/admin/view/admin/owner/query/view.php" />
         <option value="$PROJECT_DIR$/view/admin/includes/header.php" />
-        <option value="$PROJECT_DIR$/view/manager/includes/header.php" />
         <option value="$PROJECT_DIR$/assets/css/style.default.css" />
         <option value="$PROJECT_DIR$/src/flatrentPayment/ResidentPayment.php" />
         <option value="$PROJECT_DIR$/src/resident/residents.php" />
-        <option value="$PROJECT_DIR$/view/manager/view/admin/manager/resident/payment.php" />
         <option value="$PROJECT_DIR$/view/manager/view/admin/manager/resident/BillPaymentOper.php" />
-        <option value="$PROJECT_DIR$/src/staff/Staff.php" />
-        <option value="$PROJECT_DIR$/view/manager/view/admin/manager/staff/salary.php" />
         <option value="$PROJECT_DIR$/view/manager/view/admin/manager/staff/staffSalaryPayment.php" />
         <option value="$PROJECT_DIR$/src/staffPayment/StaffPayment.php" />
+        <option value="$PROJECT_DIR$/view/manager/view/admin/manager/resident/payment.php" />
+        <option value="$PROJECT_DIR$/view/manager/view/admin/manager/staff/salary.php" />
+        <option value="$PROJECT_DIR$/src/staff/Staff.php" />
+        <option value="$PROJECT_DIR$/view/manager/index.php" />
+        <option value="$PROJECT_DIR$/src/manager/Manager.php" />
+        <option value="$PROJECT_DIR$/view/manager/view/admin/manager/cost/AddCostOperation.php" />
+        <option value="$PROJECT_DIR$/src/manager/ManagerCostList.php" />
+        <option value="$PROJECT_DIR$/view/manager/login.php" />
+        <option value="$PROJECT_DIR$/view/manager/includes/footer.php" />
+        <option value="$PROJECT_DIR$/view/manager/includes/header.php" />
+        <option value="$PROJECT_DIR$/view/manager/view/admin/manager/cost/AddMaintenanceCost.php" />
       </list>
     </option>
   </component>
@@ -237,8 +244,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -312,40 +317,6 @@
               <option name="myItemId" value="manager" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="staff" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bitm-final-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bitm-final-project" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="manager" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="manager" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -377,7 +348,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resident" />
+              <option name="myItemId" value="cost" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -431,28 +402,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bitm-final-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bitm-final-project" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -471,7 +420,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="staffPayment" />
+              <option name="myItemId" value="manager" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -485,34 +434,14 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="staff" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bitm-final-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bitm-final-project" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flatrentPayment" />
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -520,15 +449,16 @@
     <property name="js.eslint.eslintPackage" value="" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\BITM\bitm-final-project\view\manager\view\admin\manager\resident" />
-      <recent name="C:\xampp\htdocs\BITM\bitm-final-project\view\manager\view\admin\manager" />
-      <recent name="C:\xampp\htdocs\BITM\bitm-final-project\view\manager\view\admin\manager\staff" />
-      <recent name="C:\xampp\htdocs\BITM\bitm-final-project\view\admin\view\admin\owner\manager" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\BITM\bitm-final-project\src\resident" />
       <recent name="C:\xampp\htdocs\BITM\bitm-final-project\src\flats" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\BITM\bitm-final-project\assets\js" />
+      <recent name="C:\xampp\htdocs\BITM\bitm-final-project\assets\css" />
+      <recent name="C:\xampp\htdocs\BITM\bitm-final-project\view\manager\view\admin\manager\resident" />
+      <recent name="C:\xampp\htdocs\BITM\bitm-final-project\view\manager\view\admin\manager" />
+      <recent name="C:\xampp\htdocs\BITM\bitm-final-project\view\manager\view\admin\manager\staff" />
     </key>
   </component>
   <component name="RunManager">
@@ -606,22 +536,24 @@
       <workItem from="1507133874336" duration="425000" />
       <workItem from="1507138199913" duration="2244000" />
       <workItem from="1507144286449" duration="1494000" />
-      <workItem from="1507175240935" duration="3475000" />
+      <workItem from="1507175240935" duration="3552000" />
+      <workItem from="1507180590557" duration="11691000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63501000" />
+    <option name="totallyTimeSpent" value="75269000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21742313" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25475842" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -647,59 +579,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/js/jquery.cookie.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/manager/view/admin/manager/jsonData/totalManagerandStaff.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DBConnection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/manager/view/admin/manager/staff/update.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Session.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="49" column="42" lean-forward="false" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Helper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="23" column="20" lean-forward="false" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="33" />
-          <folding>
-            <marker date="1507022317283" expanded="true" signature="194:211" ph="select image... " />
-            <marker date="1507022317283" expanded="true" signature="194:212" ph="select image... ${$table}" />
-            <marker date="1507022317283" expanded="true" signature="194:224" ph="select image... ${$table}" />
-            <marker date="1507022317283" expanded="true" signature="194:225" ph="select image... ${$table}" />
-            <marker date="1507022317283" expanded="true" signature="194:234" ph="select image... ${$table}" />
-            <marker date="1507022317283" expanded="true" signature="194:235" ph="select image... ${$table}" />
-            <marker date="1507022317283" expanded="true" signature="194:243" ph="select image... ${$table}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/admin/view/admin/owner/manager/delete.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -758,24 +637,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/manager/includes/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="142" column="8" lean-forward="false" selection-start-line="142" selection-start-column="8" selection-end-line="142" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/manager/view/admin/manager/staff/view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="586">
           <caret line="66" column="120" lean-forward="false" selection-start-line="66" selection-start-column="120" selection-end-line="66" selection-end-column="120" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/manager/view/admin/manager/staff/addNewStaff.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -845,25 +710,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/admin/includes/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2040">
-          <caret line="120" column="10" lean-forward="false" selection-start-line="120" selection-start-column="10" selection-end-line="120" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/admin/view/admin/owner/query/view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/manager/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -886,7 +736,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1428">
           <caret line="84" column="84" lean-forward="false" selection-start-line="84" selection-start-column="75" selection-end-line="84" selection-end-column="84" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -895,36 +744,6 @@
         <state relative-caret-position="17">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="35" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/manager/includes/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/manager/Manager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3281">
-          <caret line="199" column="8" lean-forward="false" selection-start-line="199" selection-start-column="8" selection-end-line="209" selection-end-column="9" />
-          <folding>
-            <marker date="1507048176818" expanded="true" signature="1731:1790" ph="select manag... manager" />
-            <marker date="1507048176818" expanded="true" signature="2169:2361" ph="insert into manager... " />
-            <marker date="1507048176818" expanded="true" signature="3341:3391" ph="select * fro... manager" />
-            <marker date="1507048176818" expanded="true" signature="4009:4101" ph="update manag... " />
-            <marker date="1507048176818" expanded="true" signature="4689:4753" ph="update manag... " />
-            <marker date="1507048176818" expanded="true" signature="5263:5326" ph="update manag... " />
-            <marker date="1507048176818" expanded="true" signature="6032:6053" ph="select * fro... manager" />
-            <marker date="1507048176818" expanded="true" signature="6237:6258" ph="select * fro... manager" />
-            <marker date="1507048176818" expanded="true" signature="6429:6488" ph="select manag... manager" />
-            <marker date="1507048176818" expanded="true" signature="6814:6858" ph="delete from " />
-            <marker date="1507048176818" expanded="true" signature="7263:7352" ph="select * fro... manager_salary" />
-            <marker date="1507048176818" expanded="true" signature="7827:7922" ph="insert into manager_salary... " />
-            <marker date="1507048176818" expanded="true" signature="8501:8594" ph="select name,... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -957,19 +776,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/manager/view/admin/manager/resident/payment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="58" column="25" lean-forward="true" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/admin/view/admin/owner/manager/addManagerSalary.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -999,38 +809,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/manager/view/admin/manager/staff/edit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
+        <state relative-caret-position="629">
           <caret line="37" column="104" lean-forward="true" selection-start-line="37" selection-start-column="104" selection-end-line="37" selection-end-column="152" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/staff/Staff.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="27" column="4" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="30" selection-end-column="9" />
-          <folding>
-            <marker date="1507178234340" expanded="true" signature="1380:1431" ph="select staff... staff" />
-            <marker date="1507178234340" expanded="true" signature="1803:1989" ph="insert into staff... " />
-            <marker date="1507178234340" expanded="true" signature="3029:3048" ph="select * fro... staff" />
-            <marker date="1507178234340" expanded="true" signature="3230:3274" ph="select * fro... staff" />
-            <marker date="1507178234340" expanded="true" signature="3508:3527" ph="select * fro... staff" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/flatrentPayment/ResidentPayment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="44" column="4" lean-forward="false" selection-start-line="44" selection-start-column="4" selection-end-line="71" selection-end-column="5" />
-          <folding>
-            <element signature="e#7#96#0#PHP" expanded="true" />
-            <element signature="e#128#149#0#PHP" expanded="true" />
-            <marker date="1507177170061" expanded="true" signature="1097:1175" ph="select * fro... resident_payment" />
-            <marker date="1507177170061" expanded="true" signature="1621:1786" ph="insert into resident_payment... " />
-            <marker date="1507177170061" expanded="true" signature="2533:2586" ph="select resid... resident_payment" />
-            <marker date="1507177170061" expanded="true" signature="2533:2607" ph="select resid... resident_payment" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1042,32 +823,185 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/manager/view/admin/manager/staff/staffSalaryPayment.php">
+    <entry file="file://$PROJECT_DIR$/src/flatrentPayment/ResidentPayment.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/manager/view/admin/manager/staff/salary.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="79" column="59" lean-forward="false" selection-start-line="79" selection-start-column="53" selection-end-line="79" selection-end-column="59" />
-          <folding />
+        <state relative-caret-position="308">
+          <caret line="74" column="4" lean-forward="false" selection-start-line="74" selection-start-column="4" selection-end-line="84" selection-end-column="5" />
+          <folding>
+            <element signature="e#7#96#0#PHP" expanded="true" />
+            <element signature="e#128#149#0#PHP" expanded="true" />
+            <marker date="1507177170061" expanded="true" signature="1097:1175" ph="select * fro... resident_payment" />
+            <marker date="1507177170061" expanded="true" signature="1621:1786" ph="insert into resident_payment... " />
+            <marker date="1507177170061" expanded="true" signature="2533:2586" ph="select resid... resident_payment" />
+            <marker date="1507177170061" expanded="true" signature="2533:2607" ph="select resid... resident_payment" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/staffPayment/StaffPayment.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="55" column="48" lean-forward="true" selection-start-line="55" selection-start-column="48" selection-end-line="55" selection-end-column="48" />
+        <state relative-caret-position="339">
+          <caret line="72" column="41" lean-forward="false" selection-start-line="72" selection-start-column="20" selection-end-line="72" selection-end-column="41" />
           <folding>
             <element signature="e#7#96#0#PHP" expanded="true" />
             <element signature="e#125#146#0#PHP" expanded="true" />
-            <marker date="1507179054133" expanded="true" signature="895:978" ph="select * fro... staff_salary" />
-            <marker date="1507179054133" expanded="true" signature="1464:1566" ph="insert into staff_salary... " />
+            <marker date="1507180810304" expanded="true" signature="895:978" ph="select * fro... staff_salary" />
+            <marker date="1507180810304" expanded="true" signature="1464:1566" ph="insert into staff_salary... " />
+            <marker date="1507180810304" expanded="true" signature="2210:2277" ph="select staff... staff_salary" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/manager/view/admin/manager/resident/payment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="65" lean-forward="false" selection-start-line="6" selection-start-column="65" selection-end-line="6" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/staff/Staff.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="81" column="20" lean-forward="true" selection-start-line="81" selection-start-column="20" selection-end-line="81" selection-end-column="20" />
+          <folding>
+            <marker date="1507181896998" expanded="true" signature="1410:1461" ph="select staff... staff" />
+            <marker date="1507181896998" expanded="true" signature="1832:2018" ph="insert into staff... " />
+            <marker date="1507181896998" expanded="true" signature="3117:3136" ph="select * fro... staff" />
+            <marker date="1507181896998" expanded="true" signature="3318:3362" ph="select * fro... staff" />
+            <marker date="1507181896998" expanded="true" signature="3596:3615" ph="select * fro... staff" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/manager/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="75" column="31" lean-forward="false" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/manager/view/admin/manager/staff/addNewStaff.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/admin/includes/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="56" column="5" lean-forward="true" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/manager/ManagerCostList.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="75" column="108" lean-forward="false" selection-start-line="75" selection-start-column="103" selection-end-line="75" selection-end-column="108" />
+          <folding>
+            <element signature="e#122#143#0#PHP" expanded="true" />
+            <marker date="1507186617350" expanded="true" signature="1457:1698" ph="insert into manager_expenditure... " />
+            <marker date="1507186617350" expanded="true" signature="1468:1489" ph="select manag... manager" />
+            <marker date="1507186617350" expanded="true" signature="2521:2815" ph="select date,... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/manager/view/admin/manager/staff/salary.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="24" column="69" lean-forward="false" selection-start-line="24" selection-start-column="69" selection-end-line="24" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/manager/view/admin/manager/staff/staffSalaryPayment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="16" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/dataTables.bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/manager/Manager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="93" column="28" lean-forward="false" selection-start-line="93" selection-start-column="28" selection-end-line="93" selection-end-column="28" />
+          <folding>
+            <marker date="1507183513006" expanded="true" signature="1733:1792" ph="select manag... manager" />
+            <marker date="1507183513006" expanded="true" signature="2171:2363" ph="insert into manager... " />
+            <marker date="1507183513006" expanded="true" signature="3343:3393" ph="select * fro... manager" />
+            <marker date="1507183513006" expanded="true" signature="4011:4103" ph="update manag... " />
+            <marker date="1507183513006" expanded="true" signature="4691:4755" ph="update manag... " />
+            <marker date="1507183513006" expanded="true" signature="5265:5328" ph="update manag... " />
+            <marker date="1507183513006" expanded="true" signature="6034:6055" ph="select * fro... manager" />
+            <marker date="1507183513006" expanded="true" signature="6239:6260" ph="select * fro... manager" />
+            <marker date="1507183513006" expanded="true" signature="6431:6490" ph="select manag... manager" />
+            <marker date="1507183513006" expanded="true" signature="6816:6860" ph="delete from " />
+            <marker date="1507183513006" expanded="true" signature="7265:7354" ph="select * fro... manager_salary" />
+            <marker date="1507183513006" expanded="true" signature="7829:7924" ph="insert into manager_salary... " />
+            <marker date="1507183513006" expanded="true" signature="8503:8596" ph="select name,... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/dataTables.bootstrap.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/manager/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/manager/includes/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="57" column="28" lean-forward="false" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/manager/includes/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-595">
+          <caret line="34" column="90" lean-forward="false" selection-start-line="34" selection-start-column="90" selection-end-line="34" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/manager/view/admin/manager/cost/AddCostOperation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="15" lean-forward="false" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/manager/view/admin/manager/cost/AddMaintenanceCost.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="120" column="27" lean-forward="true" selection-start-line="120" selection-start-column="27" selection-end-line="120" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>

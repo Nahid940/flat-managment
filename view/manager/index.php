@@ -23,9 +23,7 @@ include_once('includes/header.php');
                             <div class="item d-flex align-items-center">
                                 <div class="icon bg-violet"><i class="icon-user"></i></div>
                                 <div class="title"><span>New<br>Clients</span>
-                                    <div class="progress">
-                                        <div role="progressbar" style="width: 25%; height: 4px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-violet"></div>
-                                    </div>
+
                                 </div>
                                 <div class="number"><strong>25</strong></div>
                             </div>
@@ -35,9 +33,7 @@ include_once('includes/header.php');
                             <div class="item d-flex align-items-center">
                                 <div class="icon bg-red"><i class="icon-padnote"></i></div>
                                 <div class="title"><span>Work<br>Orders</span>
-                                    <div class="progress">
-                                        <div role="progressbar" style="width: 25%; height: 4px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-red"></div>
-                                    </div>
+
                                 </div>
                                 <div class="number"><strong>70</strong></div>
                             </div>
@@ -47,9 +43,7 @@ include_once('includes/header.php');
                             <div class="item d-flex align-items-center">
                                 <div class="icon bg-green"><i class="icon-bill"></i></div>
                                 <div class="title"><span>New<br>Invoices</span>
-                                    <div class="progress">
-                                        <div role="progressbar" style="width: 25%; height: 4px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-green"></div>
-                                    </div>
+
                                 </div>
                                 <div class="number"><strong>44</strong></div>
                             </div>
@@ -59,9 +53,7 @@ include_once('includes/header.php');
                             <div class="item d-flex align-items-center">
                                 <div class="icon bg-orange"><i class="icon-check"></i></div>
                                 <div class="title"><span>Open<br>Cases</span>
-                                    <div class="progress">
-                                        <div role="progressbar" style="width: 25%; height: 4px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-orange"></div>
-                                    </div>
+
                                 </div>
                                 <div class="number"><strong>35</strong></div>
                             </div>
@@ -78,10 +70,10 @@ include_once('includes/header.php');
                         <div class="statistics col-lg-4">
 
                             <div class="statistic d-flex align-items-center bg-white has-shadow">
-                                <div class="icon bg-red"><i class="fa fa-tasks"></i></div>
+                                <div class="icon bg-red"><i class="fa fa-tasks"></i>
+                                </div>
                                 <div class="text"><strong class="Ajaxdata"></strong><br><small>New feedback</small></div>
                             </div>
-
                             <div class="statistic d-flex align-items-center bg-white has-shadow">
                                 <div class="icon bg-green"><i class="fa fa-calendar-o"></i></div>
                                 <div class="text"><strong>152</strong><br><small>Interviews</small></div>

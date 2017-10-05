@@ -39,6 +39,8 @@
     <script src="assets/cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script src="assets/js/charts-home.js"></script>
     <script src="assets/js/front.js"></script>
+     <script src="assets/js/dataTables.bootstrap.min.js"></script>
+     <script src="assets/js/jquery.dataTables.min.js"></script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->
     <!---->
     <script>
@@ -50,8 +52,23 @@
       ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>
 
+ <script>
+     $(document).ready(function () {
+
+         $("#expenditureList").DataTable();
+
+         $('.alert').delay(5000).fadeOut(1000, function () {
+             $(this).alert('close');
+         });
+     });
+ </script>
 
  <script>
+
+
+
+
+
 
 
      function validateStaffInfoForm()

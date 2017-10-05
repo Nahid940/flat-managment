@@ -21,13 +21,18 @@ $datetime=strtotime(date("Y/m/d"));
     <link rel="stylesheet" href="assets/css/style.default.css" id="theme-stylesheet">
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="assets/css/custom.css">
+
     <!-- Favicon-->
     <link rel="shortcut icon" href="assets/img/favicon.ico">
     <!-- Font Awesome CDN-->
     <!-- you can replace it by local Font Awesome-->
     <script src="assets/use.fontawesome.com/99347ac47f.js"></script>
     <!-- Font Icons CSS-->
+
+
     <link rel="stylesheet" href="assets/file.myfontastic.com/da58YPMQ7U5HY8Rb6UxkNf/icons.css">
+
+    <link href="assets/css/dataTables.bootstrap.min.css" rel="stylesheet" type="text/css">
 	
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -102,6 +107,8 @@ $datetime=strtotime(date("Y/m/d"));
                 <li><a href="view/manager/view/admin/manager/staff/create.php">Add new staff information</a></li>
                 <li><a href="view/manager/view/admin/manager/resident/AddResidents.php">Add new residents information</a></li>
                 <li><a href="view/manager/view/admin/manager/resident/payment.php">Add residents payment</a></li>
+                <li><a href="view/manager/view/admin/manager/staff/salary.php">Add staff salary record</a></li>
+                <li><a href="view/manager/view/admin/manager/cost/AddMaintenanceCost.php">Add monthly maintenance costs</a></li>
               </ul>
             </li>
          

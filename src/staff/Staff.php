@@ -24,6 +24,7 @@ class Staff
     private $password;
     private $image;
     private $uniqueid;
+    private $deleted='NOW()';
 
     public function set($data=array()){
         if(array_key_exists('staff_id',$data)){
@@ -68,7 +69,6 @@ class Staff
             Session::set('StaffExist', "<div class='alert alert-danger'>Data already exist !!</div>");
             header('location:create.php');
         }else {
-
             $sql = "insert into staff (staff_id,name,age,phn,nid,email,attempt,timestamp,password,image,uniqueid) values(:staff_id,:name,:age,:phn,:nid,:email,:attempt,:timestamp,:password,:image,:uniqueid)";
             $stmt = DBConnection::myQuery($sql);
             $stmt->bindValue(':staff_id', $this->staff_id);
@@ -82,6 +82,7 @@ class Staff
             $stmt->bindValue(':password', $this->password);
             $stmt->bindValue(':image', $this->image);
             $stmt->bindValue(':uniqueid', $this->uniqueid);
+//            $stmt->bindValue(':deleted',$this->deleted);
 
             if ($stmt->execute()) {
                 Session::init();

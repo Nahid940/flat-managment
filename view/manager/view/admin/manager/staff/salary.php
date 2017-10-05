@@ -4,6 +4,7 @@ include_once '../../../../../../vendor/autoload.php';
 \App\Session::init();
 \App\Session::checksession();
 $staff=new App\staff\Staff();
+$staffPayment=new \App\staffPayment\StaffPayment();
 
 include_once('../../../../includes/header.php');
 ?>
@@ -29,7 +30,7 @@ include_once('../../../../includes/header.php');
         <div class="statistics col-lg-4">
             <div class="statistic d-flex align-items-center bg-white has-shadow">
                 <div class="icon bg-green"><i class="fa fa-calendar-o"></i></div>
-                <div class="text"><strong>152</strong><br><small>Other staffs</small></div>
+                <div class="text"><strong><?php echo $staffPayment->completedStaffPayment()?></strong><br><small>Staff's salary given on this month.</small></div>
             </div>
         </div>
     </div>

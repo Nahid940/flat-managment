@@ -70,4 +70,18 @@ class StaffPayment extends \App\staff\Staff
 
 
 
+    public function completedStaffPayment(){
+        $sql="select staff_id from staff_salary where month=:month and year=:year";
+        $stmt=DBConnection::myQuery($sql);
+        $datetime=strtotime(date("Y/m/d"));
+        $month=date('F',$datetime);
+        $year=date('Y',$datetime);
+        $stmt->bindValue(':month',$month);
+        $stmt->bindValue(':year',$year);
+        $stmt->execute();
+        return $stmt->rowCount();
+    }
+
+
+
 }
