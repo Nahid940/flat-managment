@@ -84,6 +84,13 @@
 
      });
 
+     //Send message
+
+     $(document).on('click','.sendmsg',function () {
+         var resid=$(this);
+         $('#resid').val(resid.data('id'));
+     });
+
      $(document).ready(function () {
          timeOut();
          $.ajax({

@@ -68,8 +68,6 @@ class StaffPayment extends \App\staff\Staff
         }
     }
 
-
-
     public function completedStaffPayment(){
         $sql="select staff_id from staff_salary where month=:month and year=:year";
         $stmt=DBConnection::myQuery($sql);
@@ -80,6 +78,19 @@ class StaffPayment extends \App\staff\Staff
         $stmt->bindValue(':year',$year);
         $stmt->execute();
         return $stmt->rowCount();
+    }
+
+    public function StaffPaymentList(){
+        $sql=" select name,date,amount,month,year from staff s left join staff_salary on s.staff_id=staff_salary.staff_id";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    }
+    public function TotalPayment(){
+        $sql="select sum(amount) as 'Total' from staff_salary";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->execute();
+        return $stmt->fetchColumn();
     }
 
 

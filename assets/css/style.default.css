@@ -902,7 +902,7 @@ section.dashboard-counts div[class*='col-']:last-of-type .item {
 }
 
 .chart .title small {
-    color: #aaa;
+    color: #440100;
     text-transform: uppercase
 }
 

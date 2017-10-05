@@ -96,10 +96,10 @@ class Staff
     }
 
     public function getAllStaff(){
-        $sql="select * from staff";
+        $sql="select count(staff_id) as 'totalStaff' from staff";
         $stmt=DBConnection::myQuery($sql);
         $stmt->execute();
-        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        return $stmt->fetchColumn();
     }
 
     public function getSingleStaff(){

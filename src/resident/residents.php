@@ -108,4 +108,59 @@ class residents
         $stmt->execute();
         return $stmt->rowCount();
     }
+
+
+    public function ResidentLogin(){
+
+
+        $sql="select * from resident where resident_id=:resident_id or email=:resident_id";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->bindValue(':resident_id',$this->resident_id);
+        $stmt->execute();
+        if($stmt->rowCount()==1){
+            $res=$stmt->fetch(\PDO::FETCH_OBJ);
+            if(($this->resident_id==$res->resident_id || $this->resident_id==$res->email) && $this->password==$res->password){
+                if($res->timestamp>time()){
+                    Session::init();
+                    Session::set('resLogintime',"<div class='alert alert-default colorOrange'>Account disabled !! try sometime later !!</div>");
+                    header('location:login.php');
+                }else{
+                    $sql="update resident set timestamp=0,attempt=0 where resident_id=:resident_id and password=:password";
+                    $stmt=DBConnection::myQuery($sql);
+                    $stmt->bindValue(':resident_id',$this->resident_id);
+                    $stmt->bindValue(':password',$this->password);
+                    $stmt->execute();
+                    Session::init();
+                    Session::set("login",true);
+                    Session::set('name',$res->name);
+                    Session::set('resident_id',$this->resident_id);
+                    header('location:index.php');
+                }
+            }else{
+                $res->attempt+=1;
+                $sql="update resident set attempt=:attempt where resident_id=:resident_id";
+                $stmt=DBConnection::myQuery($sql);
+                $stmt->bindValue(':attempt',$res->attempt);
+                $stmt->bindValue(':resident_id',$this->resident_id);
+                $stmt->execute();
+                Session::init();
+                Session::set('res-login-failure',"<div class='alert alert-default colorOrange'>Invalid login</div>");
+                header('location:login.php');
+                if($res->attempt>3){
+                    $time=time()+60*5;
+                    $sql="update resident set timestamp=$time where resident_id=:resident_id";
+                    $stmt=DBConnection::myQuery($sql);
+                    $stmt->bindValue(':resident_id',$this->resident_id);
+                    if($stmt->execute()){
+                        Session::init();
+                        Session::set("residentaccountBlocked","<div class='alert alert-default colorOrange'>Your account has been disabled please try again after 5 minutes!!</div>");
+                    }
+                }
+            }
+        }else{
+            Session::init();
+            Session::set('resident-login-failure',"<div class='alert alert-default colorOrange'>Invalid login</div>");
+            header('location:login.php');
+        }
+    }
 }

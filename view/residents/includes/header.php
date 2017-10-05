@@ -1,5 +1,4 @@
-<?php
-?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -59,24 +58,23 @@
 <!--                  <a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>-->
               </div>
 
-
-
-
-
-
               <!-- Navbar Menu -->
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
 
-                <!-- Search-->
-                <li class="nav-item d-flex align-items-center"><a id="search" href="#"><i class="icon-search"></i>search</a></li>
                 <!-- Notifications-->
-                <li class="nav-item dropdown"> <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-bell-o"></i><span class="badge bg-red">12</span></a>
+                <li class="nav-item dropdown">
+                    <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link">
+                        <i class="fa fa-envelope"></i>
+                        <span class="badge bg-red" id="newMessage"></span></a>
                   <ul aria-labelledby="notifications" class="dropdown-menu">
                     <li>
                         <a rel="nofollow" href="#" class="dropdown-item">
                             <div class="notification">
-                              <div class="notification-content"><i class="fa fa-envelope bg-green"></i>You have 6 new messages </div>
-                              <div class="notification-time"><small>4 minutes ago</small></div>
+
+                                <div class="message-content">
+                                    <i class="fa fa-envelope bg-green"></i>
+                                </div>
+
                             </div>
                         </a>
                     </li>
@@ -86,8 +84,9 @@
                 </li>
 
                 <!-- Logout    -->
+<!--                  view/admin/login.php?action=logout-->
 
-                <li class="nav-item"><a href="view/residents/login.php?action=managerlogout" class="nav-link logout">Logout<i class="fa fa-sign-out"></i></a></li>
+                <li class="nav-item"><a href="view/residents/login.php?action=logout" class="nav-link logout">Logout<i class="fa fa-sign-out"></i></a></li>
 
               </ul>
 
@@ -127,4 +126,14 @@
               <h2 class="no-margin-bottom"><span style="color: #002e59;"> Welcome to My villa!!</span></h2>
             </div>
           </header>
+
+            <?php
+            if(isset($_GET['action']) && $_GET['action']=='logout'){
+                \App\Session::Destroy();
+            }
+            ?>
+
+
+
+
           <!-- Dashboard Counts Section-->

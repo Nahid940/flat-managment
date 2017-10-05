@@ -3,8 +3,10 @@
 include_once '../../vendor/autoload.php';
 
 \App\Session::init();
+\App\Session::Destroy();
+//\App\Session::checkLoggedin();
 
-\App\Session::checkLoggedin();
+
  ?>
 
 <!DOCTYPE html>
@@ -28,7 +30,7 @@ include_once '../../vendor/autoload.php';
        <div class="panel panel-login">
            <div class="panel-heading">
                <div class="row">
-                       <a href="login.php" class="active" id="login-form-link">Manager log in</a>
+                       <a href="login.php" class="active" id="login-form-link">Residents login</a>
                </div>
                <hr/>
            </div>
@@ -39,16 +41,21 @@ include_once '../../vendor/autoload.php';
                        <div class="alert alert-default colorOrange" id="validator"></div>
                        <?php
 
-                               echo \App\Session::get('login-failure');
-                               echo \App\Session::get("accountBlocked");
-                               echo \App\Session::get('time');
-                               \App\Session::UnsetSession();
+                               echo \App\Session::get('resLogintime');
+                               \App\Session::UnsetKeySession('resLogintime');
+
+                               echo \App\Session::get("res-login-failure");
+                                \App\Session::UnsetKeySession('res-login-failure');
+
+
+                               echo \App\Session::get('resident-login-failure');
+                               \App\Session::UnsetKeySession('resident-login-failure');
                         ?>
                         <form class="form-signin" method="post" id="loginform" name ="loginform" action="loginOperation.php" onsubmit=" return validateForm()">
 
                                 <div class="form-group">
-                                    <label for="manager_id">Your ID</label>
-                                    <input type="text" class="form-control" name="manager_id" id="manager_id" placeholder="Your ID"  autofocus="" />
+                                    <label for="manager_id">Your ID or email</label>
+                                    <input type="text" class="form-control" name="resident_id" id="resident_id" placeholder="Your ID"  autofocus="" />
                                 </div>
                             <div class="form-group">
                                 <label for="password">Password</label>
@@ -60,20 +67,11 @@ include_once '../../vendor/autoload.php';
                             </div>
 
 
-                            <div class="info">If you are new please Sign up first!</div>
+                            <div class="info">If you are new please contact with your manager to enable your account!</div>
 
                         </form>
-
                    </div>
                </div>
-           </div>
-       </div>
-
-   </div>
-</div>
-</div>
- 
- 
   
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -117,10 +115,10 @@ include_once '../../vendor/autoload.php';
           }, 2000);
 
           var mailformat = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-          var owner_email=document.forms["loginform"]["owner_email"].value;
+          var resident_id=document.forms["loginform"]["resident_id"].value;
           var password=document.forms['loginform']['password'].value;
 
-          if(owner_email=='' || (!mailformat.test(owner_email)) || password==''){
+          if(resident_id=='' || (!mailformat.test(resident_id)) || password==''){
               $('#validator').show();
               $('#validator').text("Provide each information properly !!");
               return false;

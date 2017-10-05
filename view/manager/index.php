@@ -22,7 +22,7 @@ include_once('includes/header.php');
                         <div class="col-xl-3 col-sm-6">
                             <div class="item d-flex align-items-center">
                                 <div class="icon bg-violet"><i class="icon-user"></i></div>
-                                <div class="title"><span>New<br>Clients</span>
+                                <div class="title"><span>Total flat<br>Clients</span>
 
                                 </div>
                                 <div class="number"><strong>25</strong></div>

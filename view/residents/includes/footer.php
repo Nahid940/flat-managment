@@ -49,5 +49,45 @@
       r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
       ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>
+
+ <script>
+     $(document).ready(function () {
+         timeOut();
+         $.ajax({
+             url:"http://localhost/bitm/bitm-final-project/view/residents/allNewMessage.php",
+             method:"POST",
+             dataType:"json",
+             success:function (data) {
+//                 alert(data.total);
+////                      data = JSON.parse(data);
+                 $(".message-content").html(data.notify);
+                 if(data.total >0 ){
+                     $("#newMessage").html(data.total);
+                     $(".message-content").html(data.notify);
+                 }
+             }
+         });
+     });
+
+
+     function timeOut(){
+         setTimeout(function(){
+             update();
+             timeOut();
+         },3000);
+     }
+
+     //update real time notification
+     function update(){
+         $.getJSON('view/residents/allNewMessage.php',function(data){
+             $.each(data,function (){
+                 $("#newMessage").html(data.total);
+                 $(".message-content").html(data.notify);
+             });
+         });
+     }
+
+
+ </script>
   </body>
 </html>

@@ -6,11 +6,15 @@
 //var_dump(\App\Session::get('login'));
 //\App\Session::checkSession();
 
-//if(isset($_GET['action']) && $_GET['action']=='managerlogout'){
-//    \App\Session::Destroy();
-//}
+
+include_once '../../vendor/autoload.php';
+\App\Session::init();
+\App\Session::checkSession();
+
 
 include_once('includes/header.php');
+
+
 
 ?>
     <!-- Dashboard Header Section    -->

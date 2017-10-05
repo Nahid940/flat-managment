@@ -56,6 +56,7 @@
      $(document).ready(function () {
 
          $("#expenditureList").DataTable();
+         $("#SatffSalaryList").DataTable();
 
          $('.alert').delay(5000).fadeOut(1000, function () {
              $(this).alert('close');

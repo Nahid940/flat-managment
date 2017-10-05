@@ -22,6 +22,7 @@ class ManagerCostList
     private $masonry_cost;
     private $others_cost;
     private $date;
+    private $month;
 
 
     public function set($data=array())
@@ -31,6 +32,9 @@ class ManagerCostList
         }
         if (array_key_exists('date', $data)) {
             $this->date = $data['date'];
+        }
+        if (array_key_exists('month', $data)) {
+            $this->month = $data['month'];
         }
         if (array_key_exists('plumber_cost', $data)) {
             $this->plumber_cost = $data['plumber_cost'];
@@ -54,10 +58,11 @@ class ManagerCostList
 
 
     public function ManagerExpenditure(){
-        $sql="insert into manager_expenditure (manager_id,date,plumber_cost,electrician_bill,tool_cost,carpenter_cost,masonry_cost,others_cost) values(:manager_id,:date,:plumber_cost,:electrician_bill,:tool_cost,:carpenter_cost,:masonry_cost,:others_cost)";
+        $sql="insert into manager_expenditure (manager_id,date,month,plumber_cost,electrician_bill,tool_cost,carpenter_cost,masonry_cost,others_cost) values(:manager_id,:date,:month,:plumber_cost,:electrician_bill,:tool_cost,:carpenter_cost,:masonry_cost,:others_cost)";
         $stmt=DBConnection::myQuery($sql);
         $stmt->bindValue(':manager_id',$this->manager_id);
         $stmt->bindValue(':date',$this->date);
+        $stmt->bindValue(':month',$this->month);
         $stmt->bindValue(':plumber_cost',$this->plumber_cost);
         $stmt->bindValue(':electrician_bill',$this->electrician_bill);
         $stmt->bindValue(':tool_cost',$this->tool_cost);
@@ -75,11 +80,27 @@ class ManagerCostList
         $sql="select date,plumber_cost,electrician_bill,tool_cost,carpenter_cost,masonry_cost,others_cost,
               sum(plumber_cost+electrician_bill+tool_cost+carpenter_cost+masonry_cost+others_cost) as 'Total'
               from manager_expenditure where manager_id=:manager_id group by expenditure_no";
-
         $stmt=DBConnection::myQuery($sql);
         $stmt->bindValue(':manager_id','manager01');
         $stmt->execute();
         return$stmt->fetchAll(\PDO::FETCH_ASSOC);
     }
+    public function TotalCost(){
+        $sql="select sum(plumber_cost+Electrician_bill+tool_cost+carpenter_cost+masonry_cost+others_cost) as 'Totalcost' from manager_expenditure";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->execute();
+        $res=$stmt->fetchColumn();
+        return $res;
+    }
+
+    public function costListMonthly(){
+        $sql="select Month,year(date) as 'Year',sum(plumber_cost+electrician_bill+tool_cost+carpenter_cost+masonry_cost+others_cost) as 'Total' from manager_expenditure group by month(date),year(date)";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->execute();
+        $res=$stmt->fetchAll(\PDO::FETCH_ASSOC);
+        return $res;
+    }
+
+
 
 }

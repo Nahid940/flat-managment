@@ -118,6 +118,7 @@ include_once('../../../../includes/header.php');
                             <th>Total</th>
                         </tr>
                     </thead>
+
                     <tbody>
 
                     <?php foreach ($managerCostList->getAllExpenditureList() as $totalData){

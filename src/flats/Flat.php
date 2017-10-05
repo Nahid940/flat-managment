@@ -31,5 +31,18 @@ class Flat
         $stmt->execute();
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
     }
+    public function totalFlat(){
+        $sql="select count(flat_no) as 'total' from flats where booked='no'";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->execute();
+        return $stmt->fetchColumn();
+    }
+
+    public function totalBookedFlat(){
+        $sql="select count(flat_no) as 'total' from flats where booked='yes'";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->execute();
+        return $stmt->fetchColumn();
+    }
 
 }

@@ -30,8 +30,6 @@ $manager=new \App\manager\Manager();
                 </form>
             </div>
 
-
-
         </div>
     </div>
 </div>

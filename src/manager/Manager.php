@@ -164,10 +164,10 @@ class Manager
 
 
     public function getTotalManager(){
-        $sql="select * from manager";
+        $sql="select count('manager_id') as 'totalmanager' from manager";
         $stmt=DBConnection::myQuery($sql);
         $stmt->execute();
-        return $stmt->rowCount();
+        return $stmt->fetchColumn();
     }
 
 
