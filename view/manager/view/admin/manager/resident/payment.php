@@ -4,13 +4,14 @@ include_once '../../../../../../vendor/autoload.php';
 \App\Session::init();
 \App\Session::checksession();
 $resident=new App\resident\residents();
+$residentPaymentTotal=new \App\flatrentPayment\ResidentPayment();
 
 include_once('../../../../includes/header.php');
 ?>
 
 <header class="page-header">
     <div class="container-fluid">
-        <h2 class="no-margin-bottom">Add new info</h2>
+        <h2 class="no-margin-bottom">Add resident payment info</h2>
     </div>
 
 </header>
@@ -23,14 +24,14 @@ include_once('../../../../includes/header.php');
         <div class="statistics col-lg-4">
             <div class="statistic d-flex align-items-center bg-white has-shadow">
                 <div class="icon bg-red"><i class="fa fa-tasks"></i></div>
-                <div class="text"><strong class="Ajaxdata"></strong><br><small>Manager</small></div>
+                <div class="text"><strong><?php echo $resident->selectTotalResident()?></strong><br><small>Total residents</small></div>
             </div>
         </div>
 
         <div class="statistics col-lg-4">
             <div class="statistic d-flex align-items-center bg-white has-shadow">
                 <div class="icon bg-green"><i class="fa fa-calendar-o"></i></div>
-                <div class="text"><strong>152</strong><br><small>Other staffs</small></div>
+                <div class="text"><strong><?php echo $residentPaymentTotal->totalPaymentForThisMonth()?></strong><br><small>Total payment for this month</small></div>
             </div>
         </div>
     </div>
@@ -56,12 +57,6 @@ include_once('../../../../includes/header.php');
                         <h3 class="h4">Insert residents's monthly payment record</h3>
                     </div>
                     <br/>
-
-                    <!--                    action="view/admin/view/admin/owner/manager/addManagerSalary.php"
-
-                    action="view/admin/view/admin/owner/manager/
-
-                    -->
                     <form method="post" name="addResidentSalaryform" onsubmit="return validateResidentPaymentInfoForm()"  action="view/manager/view/admin/manager/resident/BillPaymentOper.php">
 
                         <div class="form-group">

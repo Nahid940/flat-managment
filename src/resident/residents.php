@@ -100,5 +100,12 @@ class residents
         $stmt=DBConnection::myQuery($sql);
         $stmt->execute();
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
-}
+    }
+
+    public function selectTotalResident(){
+        $sql="select * from resident";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->execute();
+        return $stmt->rowCount();
+    }
 }

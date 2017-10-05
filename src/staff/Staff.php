@@ -13,7 +13,7 @@ use App\Session;
 class Staff
 {
 
-    private $staff_id;
+    protected $staff_id;
     private $name;
     private $age;
     private $phn;
@@ -57,7 +57,6 @@ class Staff
             $this->uniqueid=$data['uniqueid'];
         }
     }
-
 
     public function insertNewStaff(){
         $sql="select staff_id from staff where staff_id=:staff_id";
@@ -108,6 +107,13 @@ class Staff
         $stmt->bindValue(":uniqueid",$this->uniqueid);
         $stmt->execute();
         return $stmt->fetch(\PDO::FETCH_ASSOC);
+    }
+
+    public function getTotallStaff(){
+        $sql="select * from staff";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->execute();
+        return $stmt->rowCount();
     }
 
 }
