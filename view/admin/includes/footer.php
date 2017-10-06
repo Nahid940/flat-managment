@@ -39,6 +39,8 @@
     <script src="assets/cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script src="assets/js/charts-home.js"></script>
     <script src="assets/js/front.js"></script>
+ <script src="assets/js/dataTables.bootstrap.min.js"></script>
+ <script src="assets/js/jquery.dataTables.min.js"></script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->
     <!---->
     <script>
@@ -109,26 +111,6 @@
          });
      });
 
-
-
-     $(document).ready(function(){
-         $(".checkevent").on('click',function(e){
-             e.preventDefault();
-             var query_no = jQuery(this).prevAll('input[name="query_no"]').val();
-             alert(query_no);
-                 $.ajax({
-                     type: "POST",
-                     data:{
-                         query_no: query_no
-                     },
-                     url: "view/admin/view/admin/owner/query/jsondata/CheckedQuery.php",
-                 });
-                 $(this).parents(".record").animate({ backgroundColor: "#fbc7c7" }, "fast")
-                     .animate({ opacity: "hide" }, "slow");
-         });
-     });
-
-
      function timeOut(){
          setTimeout(function(){
              update();
@@ -145,6 +127,34 @@
              });
          });
      }
+
+
+
+     $(document).ready(function(){
+         $(".checkevent").on('click',function(e){
+             e.preventDefault();
+             var query_no = jQuery(this).prevAll('input[name="query_no"]').val();
+             alert(query_no);
+             $.ajax({
+                 type: "POST",
+                 data:{
+                     query_no: query_no
+                 },
+                 url: "view/admin/view/admin/owner/query/jsondata/CheckedQuery.php",
+
+                 success: function(response){
+                     alert(response);
+                 },
+
+             });
+             $(this).parents(".record").animate({ backgroundColor: "#fbc7c7" }, "fast")
+                 .animate({ opacity: "hide" }, "slow");
+         });
+     });
+
+
+
+
 
 
      function validateManagerInfoForm()

@@ -55,6 +55,8 @@ class OwnerMessage
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
     }
 
+
+
     public function total(){
         $sql="select count(resident_id) as 'total' from owner_message where resident_id=:resident_id and checks='no'";
         $stmt=DBConnection::myQuery($sql);

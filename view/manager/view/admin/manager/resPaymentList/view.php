@@ -47,6 +47,7 @@ include_once('../../../../includes/header.php');
                                         <th>Electrician bill</th>
                                         <th>Other cost</th>
                                         <th>Total</th>
+                                        <th>Print document</th>
                                     </tr>
                                 </thead>
 
@@ -71,6 +72,11 @@ include_once('../../../../includes/header.php');
                                         <td><?php echo $totalData['electricity_bill']?></td>
                                         <td><?php echo $totalData['other_bill']?></td>
                                         <td><?php echo $totalData['total']?></td>
+                                        <td>
+                                            <form action="view/manager/view/admin/manager/resPaymentList/print.php" method="post">
+                                                <button class="btn btn-warning" type="submit">Print</button>
+                                            </form>
+                                        </td>
 
                                     </tr>
 

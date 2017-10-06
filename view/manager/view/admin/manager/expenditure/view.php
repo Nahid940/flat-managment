@@ -140,22 +140,9 @@ include_once('../../../../includes/header.php');
 
                                     </tbody>
                                 </table>
-<!--                            </div>-->
                         </div>
                     </div>
-
                 </div>
-
-
-
-
-
-
-
-
-
-
-
             </div>
 
           </section>

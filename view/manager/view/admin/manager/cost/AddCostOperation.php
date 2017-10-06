@@ -7,6 +7,7 @@ date_default_timezone_set('Asia/Dhaka');
 $_POST['date']=date('Y-m-d');
 $datetime=strtotime(date('Y-m-d'));
 $_POST['month']=date('F',$datetime);
+$_POST['year']=date('Y',$datetime);
 $_POST['manager_id']=\App\Session::get('manager_id');
 var_dump($_POST);
 

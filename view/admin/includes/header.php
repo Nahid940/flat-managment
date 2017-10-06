@@ -28,6 +28,9 @@ $datetime=strtotime(date("Y/m/d"));
     <script src="assets/use.fontawesome.com/99347ac47f.js"></script>
     <!-- Font Icons CSS-->
     <link rel="stylesheet" href="assets/file.myfontastic.com/da58YPMQ7U5HY8Rb6UxkNf/icons.css">
+
+<!--    <link href="assets/css/dataTables.bootstrap.min.css" rel="stylesheet" type="text/css">-->
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
 	
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -50,7 +53,7 @@ $datetime=strtotime(date("Y/m/d"));
               <!-- Navbar Header-->
               <div class="navbar-header">
                 <!-- Navbar Brand --><a href="index.html" class="navbar-brand">
-                  <div class="brand-text brand-big hidden-lg-down"><span>Bootstrap </span><strong>Dashboard</strong></div>
+                  <div class="brand-text brand-big hidden-lg-down"><span>Owner's </span><strong>Dashboard</strong></div>
                   <div class="brand-text brand-small"><strong>BD</strong></div></a>
                 <!-- Toggle Button--><a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
               </div>
@@ -97,7 +100,7 @@ $datetime=strtotime(date("Y/m/d"));
             <li class="active"> <a href="view/admin/view/admin/owner/manager/view.php"><i class="fa fa-users" aria-hidden="true"></i>Personnel details</a></li>
             <li><a href="#dashvariants" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Add new information</a>
               <ul id="dashvariants" class="collapse list-unstyled">
-                <li><a href="view/admin/view/admin/owner/manager/AddInfo.php">Add new info</a></li>
+                <li><a href="view/admin/view/admin/owner/manager/AddInfo.php">Add new manager</a></li>
                   <li><a href="view/admin/view/admin/owner/manager/salary.php">Add manager salary info</a></li>
               </ul>
             </li>

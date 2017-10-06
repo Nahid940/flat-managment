@@ -110,6 +110,16 @@ class ResidentPayment
     }
 
 
+    public function getTotalPayment(){
+        $datetime=strtotime(date("Y/m/d"));
+        $month=date('F',$datetime);
+        $sql="select sum(flat_rent)as 'Total' from resident_payment where monthname(date)='$month' group by month,year";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->execute();
+        return $stmt->fetchColumn();
+    }
+
+
 
 
 }

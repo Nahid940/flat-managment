@@ -26,6 +26,7 @@ class Manager
     private $month;
     private $year;
     private $date;
+    private $amount;
 
     public function set($data=array()){
         if(array_key_exists('manager_id',$data)){
@@ -67,6 +68,9 @@ class Manager
         }
         if(array_key_exists('date',$data)){
             $this->date=$data['date'];
+        }
+        if(array_key_exists('amount',$data)){
+            $this->amount=$data['amount'];
         }
     }
 
@@ -208,12 +212,13 @@ class Manager
             Session::set("ManagersalaryPaid","<div class='alert alert-danger'>Salary already paid !!</div>");
             header('location:salary.php');
         }else{
-            $sql="insert into manager_salary (manager_id,month,year,date) VALUES (:manager_id,:month,:year,:date)";
+            $sql="insert into manager_salary (manager_id,amount,month,year,date) VALUES (:manager_id,:amount,:month,:year,:date)";
             $stmt=DBConnection::myQuery($sql);
             $stmt->bindValue(':manager_id',$this->manager_id);
+            $stmt->bindValue(':amount',$this->amount);
             $stmt->bindValue(':month',$this->month);
             $stmt->bindValue(':year',$this->year);
-            $stmt->bindValue(':date',$this->date);
+            $stmt->bindValue(':date',date('Y-m-d'));
             if($stmt->execute()){
                 Session::init();
                 Session::set("salaryPaid","<div class='alert alert-success'>Salary paid !!</div>");
@@ -224,13 +229,17 @@ class Manager
 
 
     public function getManagerMonthlySalaryList(){
-        $sql="select name,month,year,date from manager m,manager_salary ms where m.manager_id=ms.manager_id";
+        $sql="select name,month,year,date,amount ,sum(amount) as 'Total' from manager m,manager_salary ms where m.manager_id=ms.manager_id group by month,year,m.manager_id";
         $stmt=DBConnection::myQuery($sql);
         $stmt->execute();
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    }
 
-
-
+    public function getManagerMonthlySalaryCost(){
+        $sql="select month,year, sum(amount) as 'Total' from manager_salary group by month,year desc limit 1";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->execute();
+        return $stmt->fetch(\PDO::FETCH_ASSOC);
     }
 
 }

@@ -46,12 +46,11 @@ class query
         return $stmt->rowCount();
     }
 
-    public function checkQuery(){
-        $sql="update resident_query set checks='yes' where query_no=:query_no";
+    public function checkQuery($data){
+        $sql="update resident_query set checks='yes' where query_no=$data";
         $stmt=DBConnection::myQuery($sql);
-        $stmt->bindValue(":query_no",$this->query_no);
-        if($stmt->execute()){
-            return 1;
+        if(!$stmt->execute()){
+            echo 1;
         }
     }
 

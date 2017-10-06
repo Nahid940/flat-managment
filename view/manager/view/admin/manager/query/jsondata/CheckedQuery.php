@@ -7,8 +7,6 @@
  */
 include_once '../../../../../../../vendor/autoload.php';
 $checkedQuery=new \App\query\query();
-if(isset($_POST['query_no'])){
-    $query_no=$_POST['query_no'];
-    $checkedQuery->checkQuery($query_no);
-}
-
+$_POST['query_no'];
+$checkedQuery->set($_POST);
+$checkedQuery->checkQuery();

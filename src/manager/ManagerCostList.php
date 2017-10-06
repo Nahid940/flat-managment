@@ -23,6 +23,7 @@ class ManagerCostList
     private $others_cost;
     private $date;
     private $month;
+    private $year;
 
 
     public function set($data=array())
@@ -35,6 +36,9 @@ class ManagerCostList
         }
         if (array_key_exists('month', $data)) {
             $this->month = $data['month'];
+        }
+        if (array_key_exists('year', $data)) {
+            $this->year = $data['year'];
         }
         if (array_key_exists('plumber_cost', $data)) {
             $this->plumber_cost = $data['plumber_cost'];
@@ -58,11 +62,12 @@ class ManagerCostList
 
 
     public function ManagerExpenditure(){
-        $sql="insert into manager_expenditure (manager_id,date,month,plumber_cost,electrician_bill,tool_cost,carpenter_cost,masonry_cost,others_cost) values(:manager_id,:date,:month,:plumber_cost,:electrician_bill,:tool_cost,:carpenter_cost,:masonry_cost,:others_cost)";
+        $sql="insert into manager_expenditure (manager_id,date,month,year,plumber_cost,electrician_bill,tool_cost,carpenter_cost,masonry_cost,others_cost) values(:manager_id,:date,:month,:year,:plumber_cost,:electrician_bill,:tool_cost,:carpenter_cost,:masonry_cost,:others_cost)";
         $stmt=DBConnection::myQuery($sql);
         $stmt->bindValue(':manager_id',$this->manager_id);
         $stmt->bindValue(':date',$this->date);
         $stmt->bindValue(':month',$this->month);
+        $stmt->bindValue(':year',$this->year);
         $stmt->bindValue(':plumber_cost',$this->plumber_cost);
         $stmt->bindValue(':electrician_bill',$this->electrician_bill);
         $stmt->bindValue(':tool_cost',$this->tool_cost);
@@ -98,6 +103,15 @@ class ManagerCostList
         $stmt=DBConnection::myQuery($sql);
         $stmt->execute();
         $res=$stmt->fetchAll(\PDO::FETCH_ASSOC);
+        return $res;
+    }
+    public function costListOfLastMonth(){
+        $datetime=strtotime(date('Y-m-d'));
+        $month=(date('F',$datetime));
+        $sql="select month,year,sum(plumber_cost+electrician_bill+tool_cost+carpenter_cost+masonry_cost+others_cost) as 'Total' from manager_expenditure where monthname(date)='$month' group by month(date),year(date)";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->execute();
+        $res=$stmt->fetch(\PDO::FETCH_ASSOC);
         return $res;
     }
 

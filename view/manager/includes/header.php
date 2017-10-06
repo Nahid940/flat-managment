@@ -32,7 +32,8 @@ $datetime=strtotime(date("Y/m/d"));
 
     <link rel="stylesheet" href="assets/file.myfontastic.com/da58YPMQ7U5HY8Rb6UxkNf/icons.css">
 
-    <link href="assets/css/dataTables.bootstrap.min.css" rel="stylesheet" type="text/css">
+<!--    <link href="assets/css/dataTables.bootstrap.min.css" rel="stylesheet" type="text/css">-->
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
 	
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -64,13 +65,17 @@ $datetime=strtotime(date("Y/m/d"));
                 <!-- Search-->
                 <li class="nav-item d-flex align-items-center"><a id="search" href="#"><i class="icon-search"></i></a></li>
                 <!-- Notifications-->
-                <li class="nav-item dropdown"> <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-bell-o"></i><span class="badge bg-red">12</span></a>
+                <li class="nav-item dropdown"> <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link">
+                        <i class="fa fa-bell-o"></i>
+                        <span class="badge bg-red" id="managerquery">
+
+                        </span></a>
                   <ul aria-labelledby="notifications" class="dropdown-menu">
                     <li>
-                        <a rel="nofollow" href="#" class="dropdown-item">
+                        <a rel="nofollow" href="view/manager/view/admin/manager/query/view.php" class="dropdown-item">
                             <div class="notification">
                               <div class="notification-content"><i class="fa fa-envelope bg-green"></i>You have 6 new messages </div>
-                              <div class="notification-time"><small>4 minutes ago</small></div>
+
                             </div>
                         </a>
                     </li>

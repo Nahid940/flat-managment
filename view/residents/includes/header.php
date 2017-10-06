@@ -68,13 +68,11 @@
                         <span class="badge bg-red" id="newMessage"></span></a>
                   <ul aria-labelledby="notifications" class="dropdown-menu">
                     <li>
-                        <a rel="nofollow" href="#" class="dropdown-item">
+                        <a rel="nofollow" href="view/residents/query/view.php" class="dropdown-item">
                             <div class="notification">
-
                                 <div class="message-content">
                                     <i class="fa fa-envelope bg-green"></i>
                                 </div>
-
                             </div>
                         </a>
                     </li>
@@ -113,6 +111,7 @@
 
                   <li> <a href="view/residents/profile/profile.php"> <i class="fa fa-book" aria-hidden="true"></i>Your prifile </a></li>
                   <li> <a href="view/residents/query/query.php"> <i class="fa fa-inbox" aria-hidden="true"></i></i>Inform your problem</a></li>
+                  <li> <a href="view/residents/query/view.php"> <i class="fa fa-inbox" aria-hidden="true"></i></i>All messages</a></li>
 
               </ul>
           </nav>

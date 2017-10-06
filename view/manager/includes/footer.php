@@ -61,7 +61,67 @@
          $('.alert').delay(5000).fadeOut(1000, function () {
              $(this).alert('close');
          });
+
+
+
+         $(".checkevent").on('click',function(e){
+             e.preventDefault();
+             var query_no = jQuery(this).prevAll('input[name="query_no"]').val();
+             alert(query_no);
+             $.ajax({
+                 type: "POST",
+                 data:{
+                     query_no: query_no
+                 },
+                 url: "view/manager/view/admin/manager/query/CheckedQuery.php",
+             });
+             $(this).parents(".record").animate({ backgroundColor: "#fbc7c7" }, "fast")
+                 .animate({ opacity: "hide" }, "slow");
+         });
      });
+     //});
+
+
+
+     $(document).ready(function () {
+         timeOut();
+         $.ajax({
+             url:"http://localhost/BITM/bitm-final-project/view/manager/view/admin/manager/query/jsondata/allNewquery.php",
+             method:"POST",
+//                  data:{view:view},
+             dataType:"json",
+             success:function (data) {
+
+//                 data = JSON.parse(data);
+//                 alert(data.total);
+                 $(".notification-content").html(data.notify);
+                 if(data.total >0 ){
+                     $("#managerquery").html(data.total);
+                     $(".notification-content").html(data.notify);
+                 }else{
+                     $("#managerquery").html("");
+                 }
+             }
+         });
+     });
+
+
+     function timeOut(){
+         setTimeout(function(){
+             update();
+             timeOut();
+         },300);
+     }
+
+     //update real time notification
+     function update(){
+         $.getJSON('view/manager/view/admin/manager/query/jsondata/allNewquery.php',function(data){
+             $.each(data,function (){
+                 $("#newquery").html(data.total);
+                 $(".notification-content").html(data.notify);
+             });
+         });
+     }
  </script>
 
  <script>

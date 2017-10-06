@@ -93,6 +93,13 @@ class StaffPayment extends \App\staff\Staff
         return $stmt->fetchColumn();
     }
 
+    public function StaffTotalPaymentLastMonth(){
+        $sql="select month,year,sum(amount) as 'Total' from staff_salary group by month,year desc limit 1";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->execute();
+        return $stmt->fetch(\PDO::FETCH_ASSOC);
+    }
+
 
 
 }
