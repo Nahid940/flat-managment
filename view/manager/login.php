@@ -4,7 +4,7 @@ include_once '../../vendor/autoload.php';
 
 \App\Session::init();
 
-\App\Session::checkLoggedin();
+//\App\Session::checkLoggedin();
  ?>
 
 <!DOCTYPE html>

@@ -55,11 +55,15 @@ class ResidentPayment
         }else {
 
 
-            $sql = "insert into resident_payment(resident_id,date,month,flat_rent,electricity_bill,other_bill) values(:resident_id,:date,:month,:flat_rent,:electricity_bill,:other_bill)";
+            $datetime=strtotime(date("Y/m/d"));
+            $year=date('Y',$datetime);
+
+            $sql = "insert into resident_payment(resident_id,date,month,year,flat_rent,electricity_bill,other_bill) values(:resident_id,:date,:month,:year,:flat_rent,:electricity_bill,:other_bill)";
             $stmt = DBConnection::myQuery($sql);
             $stmt->bindValue(':resident_id', $this->resident_id);
             $stmt->bindValue(':date', $this->date);
             $stmt->bindValue(':month', $this->month);
+            $stmt->bindValue(':year', $year);
             $stmt->bindValue(':flat_rent', $this->flat_rent);
             $stmt->bindValue(':electricity_bill', $this->electricity_bill);
             $stmt->bindValue(':other_bill', $this->other_bill);
@@ -73,7 +77,7 @@ class ResidentPayment
 
 
     public function totalPaymentForThisMonth(){
-        $sql="select resident_id from resident_payment where month=:month and year=:year";
+        $sql="select count(resident_id) as 'total' from resident_payment where month=:month and year=:year";
         $stmt=DBConnection::myQuery($sql);
         $datetime=strtotime(date("Y/m/d"));
         $month=date('F',$datetime);
@@ -81,8 +85,31 @@ class ResidentPayment
         $stmt->bindValue(':month',$month);
         $stmt->bindValue(':year',$year);
         $stmt->execute();
-        return $stmt->rowCount();
+        return $stmt->fetchColumn();
     }
+
+    public function getPaymentListMonthly(){
+        $sql="select name,date,phn,email,flat_no,flat_rent,electricity_bill,other_bill, sum(flat_rent+electricity_bill+other_bill) as 'total' from resident r,residentflat rf, resident_payment rp where
+        r.resident_id=rf.resident_id and r.resident_id=rp.resident_id group by(payment_no) desc";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    }
+
+    public function PaymentComplete(){
+        $datetime=strtotime(date("Y/m/d"));
+        $month=date('F',$datetime);
+        $year=date('Y',$datetime);
+        $sql="select resident_id from resident_payment where month='$month' and year='$year' and resident_id=:resident_id";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->bindValue(':resident_id',Session::get('resident_id'));
+        $stmt->execute();
+        if($stmt->rowCount()==1){
+            return "<div class='alert-success' style='height: 50px;border-radius: 5px;padding: 15px'>Thank you. Your payment is complete for this month !!</div>";
+        }
+    }
+
+
 
 
 }

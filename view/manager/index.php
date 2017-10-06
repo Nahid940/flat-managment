@@ -2,13 +2,8 @@
 
 include_once '../../vendor/autoload.php';
 \App\Session::init();
-var_dump(\App\Session::get('managername'));
-var_dump(\App\Session::get('login'));
 \App\Session::checkSession();
-
-//if(isset($_GET['action']) && $_GET['action']=='managerlogout'){
-//    \App\Session::Destroy();
-//}
+$flat=new \App\flats\Flat();
 
 include_once('includes/header.php');
 
@@ -22,20 +17,20 @@ include_once('includes/header.php');
                         <div class="col-xl-3 col-sm-6">
                             <div class="item d-flex align-items-center">
                                 <div class="icon bg-violet"><i class="icon-user"></i></div>
-                                <div class="title"><span>Total flat<br>Clients</span>
+                                <div class="title"><span>Total flat</span>
 
                                 </div>
-                                <div class="number"><strong>25</strong></div>
+                                <div class="number"><strong><?php echo $flat->totalFlat()?></strong></div>
                             </div>
                         </div>
                         <!-- Item -->
                         <div class="col-xl-3 col-sm-6">
                             <div class="item d-flex align-items-center">
                                 <div class="icon bg-red"><i class="icon-padnote"></i></div>
-                                <div class="title"><span>Work<br>Orders</span>
+                                <div class="title"><span>Total booked flat</span>
 
                                 </div>
-                                <div class="number"><strong>70</strong></div>
+                                <div class="number"><strong><?php echo $flat->totalBookedFlat()?></strong></div>
                             </div>
                         </div>
                         <!-- Item -->

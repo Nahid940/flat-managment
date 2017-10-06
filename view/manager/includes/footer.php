@@ -164,7 +164,6 @@
          var mailformat = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
          var resident_id=document.forms["addResidentform"]["resident_id"].value;
          var name=document.forms["addResidentform"]["name"].value;
-         var age=document.forms["addResidentform"]["age"].value;
          var nid=document.forms["addResidentform"]["nid"].value;
          var phn=document.forms["addResidentform"]["phn"].value;
          var password=document.forms["addResidentform"]["password"].value;
@@ -187,12 +186,6 @@
              return false;
          }
 
-
-         else if(age=='' || (isNaN(age)) || age>120){
-             $('#AgevalidatorModal').text("Enter valid age !");
-             $('#AgevalidatorModal').css({"color": "red", "font-weight": "bold"});
-             return false;
-         }
 
          else if(nid=='' || (isNaN(nid)) || nid.length<9){
              $('#NIDvalidatorModal').text("Enter valid NID No. !");

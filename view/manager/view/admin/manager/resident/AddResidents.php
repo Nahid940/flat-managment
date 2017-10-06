@@ -3,9 +3,7 @@
 include_once '../../../../../../vendor/autoload.php';
 \App\Session::init();
 \App\Session::checksession();
-//$flats=new \App\flats\Flat();
-
-
+$flats=new \App\flats\Flat();
 include_once('../../../../includes/header.php');
 ?>
 
@@ -54,14 +52,14 @@ include_once('../../../../includes/header.php');
 
 <!--                action="view/admin/view/admin/manager/resident/AddResidents.php"-->
                             <form method="post" name="addResidentform" onsubmit="return validateNewResidentInfoForm()" enctype="multipart/form-data" action="view/manager/view/admin/manager/resident/addResidentOperation.php">
-<!--                                <label for="sel1">Select list:</label>-->
+                                <label for="sel1">Select list:</label>
 
-<!--                                <select class="form-control" name="flat_no">-->
-<!--                                    <option>Available flat list </option>-->
-<!--                                    --><?php //foreach ($flats->selectAllAvaliableFlat() as $avflats){?>
-<!--                                    <option value="--><?php //echo $avflats['flat_no']?><!--">--><?php //echo $avflats['flat_no']?><!--</option>-->
-<!--                                    --><?php //}?>
-<!--                                </select>-->
+                                <select class="form-control" name="flat_no">
+                                    <option>Available flat list </option>
+                                    <?php foreach ($flats->selectAllAvaliableFlat() as $avflats){?>
+                                    <option value="<?php echo $avflats['flat_no']?>"><?php echo $avflats['flat_no']?></option>
+                                    <?php }?>
+                                </select>
 
 
                                     <div class="form-group">
@@ -75,14 +73,6 @@ include_once('../../../../includes/header.php');
                                         <span id="namevalidatorModal"></span>
                                         <label>Name</label>
                                         <input type="text" name="name" id="name" placeholder="Enter person name" class="form-control">
-                                    </div>
-
-
-
-                                    <div class="form-group">
-                                        <span id="AgevalidatorModal"></span>
-                                        <label>Age</label>
-                                        <input type="text" name="age" id="age" placeholder="Enter person age" class="form-control">
                                     </div>
 
 

@@ -10,6 +10,7 @@
 include_once '../../vendor/autoload.php';
 \App\Session::init();
 \App\Session::checkSession();
+$residentPayment=new \App\flatrentPayment\ResidentPayment();
 
 
 include_once('includes/header.php');
@@ -20,8 +21,20 @@ include_once('includes/header.php');
     <!-- Dashboard Header Section    -->
 
     <section class="dashboard-counts no-padding-bottom">
+
         <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <?php
+                    if((date("d"))==25){
+                        echo "<div class='alert alert-info'>Please pay your monthly bill within this month!!</div>";
+                    }
+                        echo $residentPayment->PaymentComplete();
+                    ?>
+                </div>
+            </div>
             <div class="row bg-white has-shadow">
+
                 <!-- Item -->
                 <div class="col-xl-3 col-sm-6">
                     <div class="item d-flex align-items-center">

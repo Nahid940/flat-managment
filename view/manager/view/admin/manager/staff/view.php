@@ -28,7 +28,7 @@ $staff=new \App\staff\Staff();
                     <div class="card-header d-flex align-items-center">
                         <h3 class="h4">All the personnel info</h3>
                     </div>
-                    <?php foreach ($staff->getAllStaff() as $staffData){?>
+                    <?php foreach ($staff->getAllStaffList() as $staffData){?>
                     <div class="card-body">
                             <div class="panel panel-info">
                                 <div class="panel-heading">

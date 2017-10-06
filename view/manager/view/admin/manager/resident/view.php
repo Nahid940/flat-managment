@@ -5,7 +5,7 @@ include_once '../../../../../../vendor/autoload.php';
 \App\Session::init();
 \App\Session::checksession();
 include_once('../../../../includes/header.php');
-$staff=new \App\staff\Staff();
+$resident=new \App\resident\residents();
 
 ?>
 
@@ -35,11 +35,11 @@ $staff=new \App\staff\Staff();
 
 
                     </div>
-                    <?php foreach ($staff->getAllStaff() as $staffData){?>
+                    <?php foreach ( $resident->selectAllResident() as $Data){?>
                     <div class="card-body">
                             <div class="panel panel-info">
                                 <div class="panel-heading">
-                                    <h3 class="panel-title">Staff <?php echo $staffData['name']?></h3>
+                                    <h3 class="panel-title">Staff <?php echo $Data['name']?></h3>
                                 </div>
                                 <div class="panel-body">
                                     <div class="row">
@@ -48,21 +48,21 @@ $staff=new \App\staff\Staff();
                                                 <tbody>
 
                                                 <tr>
-                                                    <td><img src="<?php echo $staffData['image']?>" alt=""></td>
+                                                    <td><img src="<?php echo $Data['image']?>" alt=""></td>
                                                 </tr>
 
-                                                <tr>
-                                                    <td>Age:</td>
-                                                    <td><?php echo $staffData['age']?></td>
-                                                </tr>
 
                                                 <tr>
                                                     <td>Mobile:</td>
-                                                    <td><?php echo $staffData['phn']?></td>
+                                                    <td><?php echo $Data['phn']?></td>
                                                 </tr>
                                                 <tr>
                                                     <td>NID No.:</td>
-                                                    <td><?php echo $staffData['nid']?></td>
+                                                    <td><?php echo $Data['nid']?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Flat No.:</td>
+                                                    <td><?php echo $Data['flat_no']?></td>
                                                 </tr>
 
 

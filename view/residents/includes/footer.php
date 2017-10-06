@@ -88,6 +88,30 @@
      }
 
 
+     $(document).ready(function () {
+
+//         $("#expenditureList").DataTable();
+//         $("#SatffSalaryList").DataTable();
+
+         $('.alert').delay(5000).fadeOut(1000, function () {
+             $(this).alert('close');
+         });
+     });
+
+
+ </script>
+
+ <script>
+     function validateQuery() {
+         var query=document.forms["queryPost"]["query"].value;
+         if(query==''){
+             $('#queryCheck').text('Please write something .....');
+             $('#queryCheck').css('color','red');
+             return false
+         }else{
+             return true;
+         }
+     }
  </script>
   </body>
 </html>

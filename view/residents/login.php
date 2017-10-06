@@ -55,15 +55,21 @@ include_once '../../vendor/autoload.php';
 
                                 <div class="form-group">
                                     <label for="manager_id">Your ID or email</label>
-                                    <input type="text" class="form-control" name="resident_id" id="resident_id" placeholder="Your ID"  autofocus="" />
+                                    <input type="text" class="form-control" name="resident_id" id="resident_id" placeholder="Your ID" value="<?php if(isset($_COOKIE["res_login"])) { echo $_COOKIE["res_login"]; } ?>" autofocus="" />
                                 </div>
                             <div class="form-group">
                                 <label for="password">Password</label>
-                                <input type="password" class="form-control" name="password" id="password" placeholder="Password"/>
+                                <input type="password" class="form-control" name="password" value="<?php if(isset($_COOKIE["password"])) { echo $_COOKIE["password"]; } ?>" id="password" placeholder="Password"/>
                             </div>
 
                             <div class="form-group">
                                 <button class="btn btn-lg btn-login btn-block button" type="submit" name="login">Login</button>
+                            </div>
+
+                            <div class="field-group">
+                                <div><input type="checkbox" name="remember" id="remember" <?php if(isset($_COOKIE["res_login"])) { ?> checked <?php } ?> />
+                                    <label for="remember-me">Remember me</label>
+                                </div>
                             </div>
 
 
@@ -83,14 +89,14 @@ include_once '../../vendor/autoload.php';
               $('.colorOrange').fadeOut('slow');
           }, 2000);
 
-          $('#email').keyup(function () {
+          $('#resident_id').keyup(function () {
               var $this = $(this);
               var insertedVal = $this.val();
               if (insertedVal != '') {
-                  $('#email').css('box-shadow', '0 0 10px green');
+                  $('#resident_id').css('box-shadow', '0 0 10px green');
                   $this.css({"color": "green", "border": "1px solid green"});
               } else {
-                  $('#email').css('box-shadow', '0 0 10px #ff0000');
+                  $('#resident_id').css('box-shadow', '0 0 10px #ff0000');
                   $this.css({"color": "green", "border": "1px solid #ff0000"});
               }
           });
@@ -118,7 +124,7 @@ include_once '../../vendor/autoload.php';
           var resident_id=document.forms["loginform"]["resident_id"].value;
           var password=document.forms['loginform']['password'].value;
 
-          if(resident_id=='' || (!mailformat.test(resident_id)) || password==''){
+          if(resident_id==''  || password==''){
               $('#validator').show();
               $('#validator').text("Provide each information properly !!");
               return false;

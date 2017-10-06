@@ -102,6 +102,14 @@ class Staff
         return $stmt->fetchColumn();
     }
 
+    public function getAllStaffList(){
+        $sql="select * from staff";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    }
+
+
     public function getSingleStaff(){
         $sql="select * from staff where uniqueid=:uniqueid";
         $stmt=DBConnection::myQuery($sql);

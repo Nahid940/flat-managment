@@ -102,6 +102,7 @@ $datetime=strtotime(date("Y/m/d"));
           <ul class="list-unstyled">
             <li class="active"> <a href="view/manager/index.php"><i class="icon-home"></i>Home</a></li>
             <li class="active"> <a href="view/manager/view/admin/manager/staff/view.php"><i class="fa fa-users" aria-hidden="true"></i>Personnel details</a></li>
+              <li> <a href="view/manager/view/admin/manager/resident/view.php"> <i class="fa fa-user" aria-hidden="true"></i></i>Residents list</a></li>
             <li><a href="#dashvariants" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Add </a>
               <ul id="dashvariants" class="collapse list-unstyled">
                 <li><a href="view/manager/view/admin/manager/staff/create.php">Add new staff information</a></li>
@@ -111,8 +112,10 @@ $datetime=strtotime(date("Y/m/d"));
                 <li><a href="view/manager/view/admin/manager/cost/AddMaintenanceCost.php">Add monthly maintenance costs</a></li>
               </ul>
             </li>
-         
+
+
             <li> <a href="view/manager/view/admin/manager/expenditure/view.php"> <i class="fa fa-book" aria-hidden="true"></i>Expenditure </a></li>
+              <li> <a href="view/manager/view/admin/manager/resPaymentList/view.php"> <i class="fa fa-inbox" aria-hidden="true"></i></i>Residents payment list</a></li>
               <li> <a href="view/manager/view/admin/manager/query/view.php"> <i class="fa fa-inbox" aria-hidden="true"></i></i>Residents query</a></li>
 			  <li> <a href="view/manager/view/admin/manager/sendmessage/create.php"> <i class="fa fa-comments-o" aria-hidden="true"></i>Send Message</a></li>
 			   

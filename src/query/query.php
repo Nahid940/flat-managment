@@ -8,16 +8,26 @@
  */
 namespace App\query;
 use App\DBConnection;
+use App\Session;
 
 class query
 {
 
     private $query_no;
     private $resident_id;
+    private $query;
+    private $date;
+    private $checks='no';
 
     public function set($data){
-        if(array_key_exists('query_no',$data)){
-            $this->query_no=$data['query_no'];
+        if(array_key_exists('resident_id',$data)){
+            $this->resident_id=$data['resident_id'];
+        } if(array_key_exists('query',$data)){
+            $this->query=$data['query'];
+        }if(array_key_exists('date',$data)){
+            $this->date=$data['date'];
+        }if(array_key_exists('date',$data)){
+            $this->date=$data['date'];
         }
     }
 
@@ -42,6 +52,20 @@ class query
         $stmt->bindValue(":query_no",$this->query_no);
         if($stmt->execute()){
             return 1;
+        }
+    }
+
+    public function sendQuery(){
+        $sql="insert into resident_query(resident_id,query,date,checks)VALUES (:resident_id,:query,:date,:checks)";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->bindValue(':resident_id',$this->resident_id);
+        $stmt->bindValue(':query',$this->query);
+        $stmt->bindValue(':date',$this->date);
+        $stmt->bindValue(':checks',$this->checks);
+        if($stmt->execute()){
+            Session::init();
+            Session::set('querySend',"<div class='alert alert-success'>Query sent!</div>");
+            header('location:query.php');
         }
     }
 

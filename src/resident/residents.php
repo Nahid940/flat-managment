@@ -25,6 +25,8 @@ class residents
     private $password;
     private $image=null;
     private $uniqueid;
+    private $remember;
+    private $flat_no;
 
 
     public function set($data=array()){
@@ -58,6 +60,13 @@ class residents
         if(array_key_exists('uniqueid',$data)){
             $this->uniqueid=$data['uniqueid'];
         }
+
+        if(array_key_exists('remember',$data)){
+            $this->remember=$data['remember'];
+        }
+        if(array_key_exists('flat_no',$data)){
+            $this->flat_no=$data['flat_no'];
+        }
     }
 
 
@@ -73,11 +82,10 @@ class residents
             header('location:Addresidents.php');
         }else {
 
-            $sql = "insert into resident (resident_id,name,age,phn,nid,email,attempt,timestamp,password,image,uniqueid) values(:resident_id,:name,:age,:phn,:nid,:email,:attempt,:timestamp,:password,:image,:uniqueid)";
+            $sql = "insert into resident (resident_id,name,phn,nid,email,attempt,timestamp,password,image,uniqueid) values(:resident_id,:name,:phn,:nid,:email,:attempt,:timestamp,:password,:image,:uniqueid)";
             $stmt = DBConnection::myQuery($sql);
             $stmt->bindValue(':resident_id', $this->resident_id);
             $stmt->bindValue(':name', $this->name);
-            $stmt->bindValue(':age', $this->age);
             $stmt->bindValue(':phn', $this->phn);
             $stmt->bindValue(':nid', $this->nid);
             $stmt->bindValue(':email', $this->email);
@@ -87,6 +95,21 @@ class residents
             $stmt->bindValue(':image', $this->image);
             $stmt->bindValue(':uniqueid', $this->uniqueid);
             if ($stmt->execute()) {
+
+
+                $sql="insert into residentflat(flat_no,resident_id)values(:flat_no,:resident_id)";
+                $stmt=DBConnection::myQuery($sql);
+                $stmt->bindValue(':flat_no',$this->flat_no);
+                $stmt->bindValue(':resident_id',$this->resident_id);
+
+                if( $stmt->execute()){
+                    $sql="update flats set booked='yes' where flat_no=:flat_no";
+                    $stmt=DBConnection::myQuery($sql);
+                    $stmt->bindValue(':flat_no',$this->flat_no);
+                    $stmt->execute();
+                }
+
+
                 Session::init();
                 Session::set('newResidentInsert', "<div class='alert alert-success'>New resident info added !!</div>");
                 header('location:view.php');
@@ -96,7 +119,7 @@ class residents
 
 
     public function selectAllResident(){
-        $sql="select name,resident_id from resident";
+        $sql="select r.resident_id,name,phn,email,nid,flat_no from resident r , residentflat rf where r.resident_id=rf.resident_id";
         $stmt=DBConnection::myQuery($sql);
         $stmt->execute();
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
@@ -111,7 +134,6 @@ class residents
 
 
     public function ResidentLogin(){
-
 
         $sql="select * from resident where resident_id=:resident_id or email=:resident_id";
         $stmt=DBConnection::myQuery($sql);
@@ -135,6 +157,14 @@ class residents
                     Session::set('name',$res->name);
                     Session::set('resident_id',$this->resident_id);
                     header('location:index.php');
+
+                    if(!empty($this->remember)){
+                        setcookie('res_login',$this->resident_id,time()+(10 * 365 * 24 * 60 * 60));
+                        setcookie('password',$this->password,time()+(10 * 365 * 24 * 60 * 60));
+                    }else{
+                        setcookie('res_login',$this->resident_id);
+                        setcookie('password',$this->password);
+                    }
                 }
             }else{
                 $res->attempt+=1;
@@ -163,4 +193,6 @@ class residents
             header('location:login.php');
         }
     }
+
+
 }

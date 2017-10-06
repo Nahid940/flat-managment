@@ -104,17 +104,15 @@
               <div class="sidebar-header d-flex align-items-center">
                   <div class="avatar"><img src="assets/img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
                   <div class="title">
-                      <h1 class="h4">Welcome <?php// echo \App\Session::get('managername')?></h1>
-                      <p>Manager</p>
+                      <h1 class="h4">Welcome <?php echo \App\Session::get('name')?></h1>
+                      <p>Resident</p>
                   </div>
               </div>
               <ul class="list-unstyled">
                   <li class="active"> <a href="view/residents/index.php"><i class="icon-home"></i>Home</a></li>
 
-                  <li> <a href="view/manager/view/admin/manager/expenditure/view.php"> <i class="fa fa-book" aria-hidden="true"></i>Your prifile </a></li>
-                  <li> <a href="view/manager/view/admin/manager/query/view.php"> <i class="fa fa-inbox" aria-hidden="true"></i></i>Inform your problem</a></li>
-                  <li> <a href="view/manager/view/admin/manager/sendmessage/create.php"> <i class="fa fa-comments-o" aria-hidden="true"></i>Send Message</a></li>
-
+                  <li> <a href="view/residents/profile/profile.php"> <i class="fa fa-book" aria-hidden="true"></i>Your prifile </a></li>
+                  <li> <a href="view/residents/query/query.php"> <i class="fa fa-inbox" aria-hidden="true"></i></i>Inform your problem</a></li>
 
               </ul>
           </nav>

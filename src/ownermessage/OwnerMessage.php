@@ -47,15 +47,18 @@ class OwnerMessage
     }
 
     public function getAllmessage(){
-        $sql="select message from owner_message where resident_id='res01' and checks='no'";
+//        Session::init();
+        $sql="select message from owner_message where resident_id=:resident_id and checks='no'";
         $stmt=DBConnection::myQuery($sql);
+        $stmt->bindValue('resident_id',Session::get('resident_id'));
         $stmt->execute();
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
     }
 
     public function total(){
-        $sql="select count(resident_id) as 'total' from owner_message where resident_id='res01' and checks='no'";
+        $sql="select count(resident_id) as 'total' from owner_message where resident_id=:resident_id and checks='no'";
         $stmt=DBConnection::myQuery($sql);
+        $stmt->bindValue('resident_id',Session::get('resident_id'));
         $stmt->execute();
         return $stmt->fetchColumn();
     }

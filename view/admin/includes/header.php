@@ -61,7 +61,7 @@ $datetime=strtotime(date("Y/m/d"));
                 <li class="nav-item dropdown">
                     <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link">
                         <i class="fa fa-bell-o"></i>
-                        <span class="badge bg-red" id="newquery">12</span></a>
+                        <span class="badge bg-red" id="newquery"></span></a>
                   <ul aria-labelledby="notifications" class="dropdown-menu">
                     <li>
                         <a rel="nofollow" href="view/admin/view/admin/owner/query/view.php" class="dropdown-item">

@@ -10,3 +10,5 @@ $resident=new App\resident\residents();
 $_POST['uniqueid']=$uniqueid=md5(time());
 $resident->set($_POST);
 $resident->insertNewResidents();
+$resident->bookFlat();
+//var_dump($_POST);

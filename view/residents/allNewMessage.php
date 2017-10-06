@@ -9,6 +9,7 @@ include_once '../../vendor/autoload.php';
 $ownerMessage=new \App\ownermessage\OwnerMessage();
 $data=array();
 //$ownerMessage->getAllmessage();
+\App\Session::init();
 
 $total=$ownerMessage->total();
 $output='';
