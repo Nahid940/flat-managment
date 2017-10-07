@@ -14,9 +14,7 @@ $resident=new \App\resident\residents();
         <div class="row">
             <div class="col-lg-12">
 
-
                 <div class="card">
-
                     <?php
 
                     echo \App\Session::get('newResidentInsert');
@@ -33,9 +31,25 @@ $resident=new \App\resident\residents();
                         <h3 class="h4">All the personnel info</h3>
 
 
-
                     </div>
-                    <?php foreach ( $resident->selectAllResident() as $Data){?>
+
+
+                    <?php
+
+                    if(isset($_GET['page'])){
+                        $pageNumber=$_GET['page'];
+                    }else{
+                        $pageNumber=0;
+                    }
+
+
+                    if($pageNumber==0 || $pageNumber==1){
+                        $page1=0;
+                    }else{
+                        $page1=($pageNumber*5)-5;
+                    }
+
+                    foreach ( $resident->selectAllResident($page1) as $Data){?>
                     <div class="card-body">
                             <div class="panel panel-info">
                                 <div class="panel-heading">
@@ -84,8 +98,27 @@ $resident=new \App\resident\residents();
                 <?php }?>
 
             </div>
+
+                <?php
+                $total= $resident->selectTotalResident();
+                $perPage=$total/2;
+                for($i=1;$i<=$perPage;$i++){
+                    ?>
+                    <div class="pagination" style="display: inline-block;">
+                        <a href="http://localhost/BITM/bitm-final-project/view/manager/view/admin/manager/resident/view.php?page=<?php echo $i?>" style="color: black;float: left;padding: 8px 16px;text-decoration: none; border: 1px solid #ddd"><?php echo $i?></a>
+                    </div>
+                <?php } ?>
+
         </div>
+        </div>
+
+
     </div>
+
 </section>
+
+
+
+
 
 <?php include_once('../../../../includes/footer.php'); ?>

@@ -13,14 +13,16 @@ $datetime=strtotime(date("Y/m/d"));
     <meta name="robots" content="all,follow">
 	<!-- Base path -->
 	<base href="http://localhost/BITM/bitm-final-project/"/>
-    <!-- Bootstrap CSS-->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+
     <!-- Google fonts - Roboto -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
     <!-- theme stylesheet-->
     <link rel="stylesheet" href="assets/css/style.default.css" id="theme-stylesheet">
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="assets/css/custom.css">
+
+
 
     <!-- Favicon-->
     <link rel="shortcut icon" href="assets/img/favicon.ico">
@@ -29,6 +31,10 @@ $datetime=strtotime(date("Y/m/d"));
     <script src="assets/use.fontawesome.com/99347ac47f.js"></script>
     <!-- Font Icons CSS-->
 
+    <!-- Bootstrap CSS-->
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
 
     <link rel="stylesheet" href="assets/file.myfontastic.com/da58YPMQ7U5HY8Rb6UxkNf/icons.css">
 

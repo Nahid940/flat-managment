@@ -123,8 +123,8 @@ class residents
     }
 
 
-    public function selectAllResident(){
-        $sql="select r.resident_id,name,phn,email,nid,flat_no from resident r , residentflat rf where r.resident_id=rf.resident_id";
+    public function selectAllResident($limit){
+        $sql="select r.resident_id,name,phn,email,nid,flat_no from resident r , residentflat rf where r.resident_id=rf.resident_id limit $limit,2";
         $stmt=DBConnection::myQuery($sql);
         $stmt->execute();
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
