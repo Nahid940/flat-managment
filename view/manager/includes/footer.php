@@ -122,14 +122,45 @@
              });
          });
      }
+
+
+     //check existing manager ID
+
+     function checkExistingResidentID(){
+            var resident_id=document.getElementById("resident_id").value;
+            if(resident_id!=''){
+                $.ajax({
+                    type:'post',
+                    url:"http://localhost/BITM/bitm-final-project/view/manager/view/admin/manager/resident/cehckexistIngResident.php",
+                    data:{
+                        resident_id:resident_id
+                    },
+                    success:function (response) {
+                        $('#residentExist').html(response);
+//                        $('#resident_id').css('border-color','red');
+
+                        if(response=='Available'){
+                            $('#residentExist').css({'color':'green','font-weight':'bold'});
+                            $('#resident_id').css('border-color','green');
+
+                            document.getElementById("addNewResidents").disabled = false;
+
+                            return true;
+                        }else{
+                            $('#residentExist').css('color','red');
+                            $('#resident_id').css('border-color','red');
+                            document.getElementById("addNewResidents").disabled = true;
+                            return false;
+                        }
+
+                    }
+                });
+            }
+     }
+
  </script>
 
  <script>
-
-
-
-
-
 
 
      function validateStaffInfoForm()

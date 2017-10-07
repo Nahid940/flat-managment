@@ -125,13 +125,26 @@ class residents
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
     }
 
+
+    public function selectExistingResident($resident_id){
+        $sql="select resident_id from resident where resident_id='$resident_id'";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->execute();
+        if($stmt->rowCount()==0){
+            return "Available";
+
+        }else{
+            return "ID already exist, try alternative...";
+        }
+    }
+
+
     public function selectTotalResident(){
         $sql="select * from resident";
         $stmt=DBConnection::myQuery($sql);
         $stmt->execute();
         return $stmt->rowCount();
     }
-
 
     public function ResidentLogin(){
 

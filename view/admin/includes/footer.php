@@ -265,9 +265,6 @@
 
 //     check existing manager id---------------------------------------------------------------------
 
-
-
-
      function checkExistingID()
      {
          var manager_id=document.getElementById( "manager_id" ).value;

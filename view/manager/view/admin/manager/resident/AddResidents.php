@@ -65,7 +65,8 @@ include_once('../../../../includes/header.php');
                                     <div class="form-group">
                                         <span id="IDvalidatorModal"></span>
                                         <label>Assign ID</label>
-                                        <input type="text" name="resident_id" id="resident_id"  placeholder="Assign ID Eg: res01" class="form-control">
+                                        <span id="residentExist"></span>
+                                        <input type="text" name="resident_id" id="resident_id" onkeyup="checkExistingResidentID()"  placeholder="Assign ID Eg: res01" class="form-control">
                                     </div>
 
 
