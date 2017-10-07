@@ -56,7 +56,13 @@
 <!--//------------------------------Check the validity of add new manager modal form data------------------------------------//-->
  <script>
 
+
+
      $(document).ready(function () {
+         $('#SatffSalaryList').DataTable();
+         $('#ManagerSalaryList').DataTable();
+         $('#expenditureList').DataTable();
+
          $('.alert').delay(5000).fadeOut(1000,function () {
              $(this).alert('close');
          });
@@ -134,7 +140,7 @@
          $(".checkevent").on('click',function(e){
              e.preventDefault();
              var query_no = jQuery(this).prevAll('input[name="query_no"]').val();
-             alert(query_no);
+
              $.ajax({
                  type: "POST",
                  data:{
@@ -143,7 +149,7 @@
                  url: "view/admin/view/admin/owner/query/jsondata/CheckedQuery.php",
 
                  success: function(response){
-                     alert(response);
+
                  },
 
              });
@@ -303,6 +309,31 @@
              $( '#IDvalidatorModal' ).html("");
              return false;
          }
+     }
+
+//Check manager salary paid already
+     function CheckMonthlySalary(){
+         var manager_id=document.getElementById( "manager_id" ).value;
+         $.ajax({
+            type:'POST',
+             data:{
+                manager_id:manager_id
+             },
+             url:'http://localhost/BITM/bitm-final-project/view/admin/view/admin/owner/manager/checkManagerMonthlySalary.php',
+             success:function (response) {
+                 if(response==1){
+                     $('#check').html("Salary alreeady paid for this month !!");
+                     $('#check').css({'color':'red','font-weight':'bold'});
+                     $('#manager_id').css({'border-color':'red'});
+                     return false;
+                 }else{
+                     return true;
+                 }
+
+
+             }
+
+         });
      }
 
 

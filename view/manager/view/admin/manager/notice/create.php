@@ -12,7 +12,10 @@ include_once('../../../../includes/header.php');
 		<section class="forms">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-lg-8">
+					<div class="col-lg-10 offset-1">
+                        <?php echo \App\Session::get('managerNotice');
+                        \App\Session::UnsetKeySession('managerNotice');
+                        ?>
                   <div class="card">
                     <div class="card-close">
                       <div class="dropdown">
@@ -21,30 +24,21 @@ include_once('../../../../includes/header.php');
                       </div>
                     </div>
                     <div class="card-header d-flex align-items-center">
-                      <h3 class="h4">Owner Message</h3>
+                      <h3 class="h4">Post your valuable notice for all residents</h3>
                     </div>
                     <div class="card-body">
-                      <p>Lorem ipsum dolor sit amet consectetur.</p>
-                      <form>
-                        <div class="form-group">
-                          <label class="form-control-label">Name</label>
-                          <input type="text" placeholder="Full Name" class="form-control">
-                        </div>
+
+                      <form method="post" action="view/manager/view/admin/manager/notice/postNotice.php">
+
 						<div class="form-group">
-                          <label class="form-control-label">Email</label>
-                          <input type="email" placeholder="Email Address" class="form-control">
+                          <label class="form-control-label"><strong>Write your notice</strong></label>
+                          <textarea placeholder="Write here...." class="form-control" rows="10" name="notice"></textarea>
                         </div>
-						<div class="form-group">
-                          <label class="form-control-label">Phone</label>
-                          <input type="text" placeholder="Phone Number" class="form-control">
+						<div class="form-group pull-right">
+                          <input type="submit" value="Post notice" class="btn btn-primary">
                         </div>
-						<div class="form-group">
-                          <label class="form-control-label">Message</label>
-                          <textarea placeholder="Write here...." class="form-control"></textarea> 
-                        </div>
-						<div class="form-group">       
-                          <input type="submit" value="Send Message" class="btn btn-primary">
-                        </div>
+
+
                       </form>
                     </div>
                   </div>
@@ -53,4 +47,4 @@ include_once('../../../../includes/header.php');
 			</div>
 		</section>
 		
-<?php include_once('../../../../includes/header.php'); ?>
+<?php include_once('../../../../includes/footer.php'); ?>

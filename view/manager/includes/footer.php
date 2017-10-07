@@ -162,7 +162,6 @@
 
  <script>
 
-
      function validateStaffInfoForm()
      {
          var mailformat = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
@@ -255,6 +254,7 @@
          var mailformat = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
          var resident_id=document.forms["addResidentform"]["resident_id"].value;
          var name=document.forms["addResidentform"]["name"].value;
+         var fmember=document.forms["addResidentform"]["fmember"].value;
          var nid=document.forms["addResidentform"]["nid"].value;
          var phn=document.forms["addResidentform"]["phn"].value;
          var password=document.forms["addResidentform"]["password"].value;
@@ -274,6 +274,11 @@
          else if(name==''){
              $('#namevalidatorModal').text("Staff name required !");
              $('#namevalidatorModal').css({"color": "red", "font-weight": "bold"});
+             return false;
+         }
+         else if(fmember=='' || isNaN(fmember)){
+             $('#fmemberVaidate').text("Enter total family member !");
+             $('#fmemberVaidate').css({"color": "red", "font-weight": "bold"});
              return false;
          }
 

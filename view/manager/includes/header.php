@@ -120,9 +120,9 @@ $datetime=strtotime(date("Y/m/d"));
 
 
             <li> <a href="view/manager/view/admin/manager/expenditure/view.php"> <i class="fa fa-book" aria-hidden="true"></i>Expenditure </a></li>
-              <li> <a href="view/manager/view/admin/manager/resPaymentList/view.php"> <i class="fa fa-inbox" aria-hidden="true"></i></i>Residents payment list</a></li>
+              <li> <a href="view/manager/view/admin/manager/resPaymentList/view.php"> <i class="fa fa-list" aria-hidden="true"></i> Residents payment list</a></li>
               <li> <a href="view/manager/view/admin/manager/query/view.php"> <i class="fa fa-inbox" aria-hidden="true"></i></i>Residents query</a></li>
-			  <li> <a href="view/manager/view/admin/manager/sendmessage/create.php"> <i class="fa fa-comments-o" aria-hidden="true"></i>Send Message</a></li>
+			  <li> <a href="view/manager/view/admin/manager/notice/create.php"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i>Post notice</a></li>
 			   
           <!--  <li> <a href="assets/charts.html"> <i class="fa fa-bar-chart"></i>Charts </a></li>
             <li> <a href="assets/forms.html"> <i class="icon-padnote"></i>Forms </a></li>

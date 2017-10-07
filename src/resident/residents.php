@@ -16,6 +16,7 @@ class residents
 
     private $resident_id;
     private $name;
+    private $fmember;
     private $age;
     private $phn;
     private $nid;
@@ -35,6 +36,9 @@ class residents
         }
         if(array_key_exists('name',$data)){
             $this->name=$data['name'];
+        }
+        if(array_key_exists('fmember',$data)){
+            $this->fmember=$data['fmember'];
         }
         if(array_key_exists('age',$data)){
             $this->age=$data['age'];
@@ -82,10 +86,11 @@ class residents
             header('location:Addresidents.php');
         }else {
 
-            $sql = "insert into resident (resident_id,name,phn,nid,email,attempt,timestamp,password,image,uniqueid) values(:resident_id,:name,:phn,:nid,:email,:attempt,:timestamp,:password,:image,:uniqueid)";
+            $sql = "insert into resident (resident_id,name,fmember,phn,nid,email,attempt,timestamp,password,image,uniqueid) values(:resident_id,:name,:fmember,:phn,:nid,:email,:attempt,:timestamp,:password,:image,:uniqueid)";
             $stmt = DBConnection::myQuery($sql);
             $stmt->bindValue(':resident_id', $this->resident_id);
             $stmt->bindValue(':name', $this->name);
+            $stmt->bindValue(':fmember', $this->fmember);
             $stmt->bindValue(':phn', $this->phn);
             $stmt->bindValue(':nid', $this->nid);
             $stmt->bindValue(':email', $this->email);
@@ -205,6 +210,13 @@ class residents
             Session::set('resident-login-failure',"<div class='alert alert-default colorOrange'>Invalid login</div>");
             header('location:login.php');
         }
+    }
+
+    public function totalMember(){
+        $sql="select sum(fmember) as 'total' from resident";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->execute();
+        return $stmt->fetchColumn();
     }
 
 

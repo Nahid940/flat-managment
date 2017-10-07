@@ -110,8 +110,9 @@
                   <li class="active"> <a href="view/residents/index.php"><i class="icon-home"></i>Home</a></li>
 
                   <li> <a href="view/residents/profile/profile.php"> <i class="fa fa-book" aria-hidden="true"></i>Your prifile </a></li>
-                  <li> <a href="view/residents/query/query.php"> <i class="fa fa-inbox" aria-hidden="true"></i></i>Inform your problem</a></li>
-                  <li> <a href="view/residents/query/view.php"> <i class="fa fa-inbox" aria-hidden="true"></i></i>All messages</a></li>
+                  <li> <a href="view/residents/query/query.php"> <i class="fa fa-inbox" aria-hidden="true"></i>Inform your problem</a></li>
+                  <li> <a href="view/residents/query/view.php"> <i class="fa fa-inbox" aria-hidden="true"></i>All messages</a></li>
+                  <li> <a href="view/residents/notice/view.php"> <i class="fa fa-file-text-o" aria-hidden="true"></i>Notice  <span class="badge bg-red" id="newNotice">1</span></a> </li>
 
               </ul>
           </nav>

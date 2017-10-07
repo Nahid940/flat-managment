@@ -4,6 +4,7 @@ include_once '../../vendor/autoload.php';
 \App\Session::init();
 \App\Session::checkSession();
 $flat=new \App\flats\Flat();
+$resident=new App\resident\residents();
 
 include_once('includes/header.php');
 
@@ -14,7 +15,7 @@ include_once('includes/header.php');
                 <div class="container-fluid">
                     <div class="row bg-white has-shadow">
                         <!-- Item -->
-                        <div class="col-xl-3 col-sm-6">
+                        <div class="col-xl-4 col-sm-6">
                             <div class="item d-flex align-items-center">
                                 <div class="icon bg-violet"><i class="icon-user"></i></div>
                                 <div class="title"><span>Total flat</span>
@@ -24,7 +25,7 @@ include_once('includes/header.php');
                             </div>
                         </div>
                         <!-- Item -->
-                        <div class="col-xl-3 col-sm-6">
+                        <div class="col-xl-4 col-sm-6">
                             <div class="item d-flex align-items-center">
                                 <div class="icon bg-red"><i class="icon-padnote"></i></div>
                                 <div class="title"><span>Total booked flat</span>
@@ -34,25 +35,16 @@ include_once('includes/header.php');
                             </div>
                         </div>
                         <!-- Item -->
-                        <div class="col-xl-3 col-sm-6">
+                        <div class="col-xl-4 col-sm-6">
                             <div class="item d-flex align-items-center">
                                 <div class="icon bg-green"><i class="icon-bill"></i></div>
-                                <div class="title"><span>New<br>Invoices</span>
+                                <div class="title"><span>Total<br>family member</span>
 
                                 </div>
-                                <div class="number"><strong>44</strong></div>
+                                <div class="number"><strong><?php echo $resident->totalMember()?></strong></div>
                             </div>
                         </div>
-                        <!-- Item -->
-                        <div class="col-xl-3 col-sm-6">
-                            <div class="item d-flex align-items-center">
-                                <div class="icon bg-orange"><i class="icon-check"></i></div>
-                                <div class="title"><span>Open<br>Cases</span>
 
-                                </div>
-                                <div class="number"><strong>35</strong></div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </section>

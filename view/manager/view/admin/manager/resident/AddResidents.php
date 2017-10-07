@@ -75,6 +75,11 @@ include_once('../../../../includes/header.php');
                                         <label>Name</label>
                                         <input type="text" name="name" id="name" placeholder="Enter person name" class="form-control">
                                     </div>
+                                    <div class="form-group">
+                                        <span id="fmemberVaidate"></span>
+                                        <label>Total family member</label>
+                                        <input type="text" name="fmember" id="fmember" placeholder="Enter family member" class="form-control">
+                                    </div>
 
 
 

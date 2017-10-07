@@ -366,7 +366,8 @@ nav.side-navbar a[aria-expanded="true"]::before {
 nav.side-navbar a i {
     font-size: 1.2em;
     margin-right: 10px;
-    transition: none
+    transition: none;
+    color: #015f87;
 }
 
 nav.side-navbar .sidebar-header {

@@ -96,6 +96,15 @@
          $('.alert').delay(5000).fadeOut(1000, function () {
              $(this).alert('close');
          });
+
+         //New notice
+         $.ajax({
+             type:'get',
+             url:"view/residents/notice/newNotice.php",
+             success:function (response) {
+                 $('#newNotice').html(response);
+             }
+         });
      });
 
 

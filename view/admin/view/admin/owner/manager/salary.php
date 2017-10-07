@@ -63,7 +63,8 @@ include_once('../../../../includes/header.php');
                                 <div class="form-group">
                                     <span id="ManagerIDValidator"></span>
                                         <label for="manager_id">Select manager name:</label>
-                                        <select class="form-control" name="manager_id">
+                                    <span id="check"></span>
+                                        <select class="form-control" name="manager_id" id="manager_id" onchange="CheckMonthlySalary()">
                                             <option value="">Select Manager</option>
                                             <?php foreach ($manager->getAllmanagers() as $managers) { ?>
                                                 <option value="<?php echo $managers['manager_id']?>"><?php echo $managers['name']?></option>

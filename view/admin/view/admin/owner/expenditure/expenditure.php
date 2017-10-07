@@ -32,7 +32,7 @@ $managerSlaray=new \App\manager\Manager();
                             <h3 class="h4">Maintenance cost list</h3>
                         </div>
                         <div class="card-body">
-                            <table class="table" id="expenditureList">
+                            <table class="table table-bordered" id="expenditureList">
 
                                 <thead>
                                 <tr>
@@ -72,7 +72,7 @@ $managerSlaray=new \App\manager\Manager();
                                         <td><?php echo $totalData['carpenter_cost']?></td>
                                         <td><?php echo $totalData['masonry_cost']?></td>
                                         <td><?php echo $totalData['others_cost']?></td>
-                                        <td><?php echo $totalData['Total']?></td>
+                                        <td style="color: #490000;font-weight: bold"><?php echo $totalData['Total']?></td>
 
                                     </tr>
 
@@ -103,7 +103,7 @@ $managerSlaray=new \App\manager\Manager();
                             <h3 class="h4">Manager monthly salary list</h3>
                         </div>
                         <!--                            <div class="card-body">-->
-                        <table class="table" id="SatffSalaryList">
+                        <table class="table table-bordered" id="ManagerSalaryList">
                             <thead>
 
                             <tr>
@@ -133,7 +133,7 @@ $managerSlaray=new \App\manager\Manager();
                                     <td><?php echo $totalDataList['month']?></td>
                                     <td><?php echo $totalDataList['date']?></td>
                                     <td><?php echo $totalDataList['year']?></td>
-                                    <td><?php echo $totalDataList['amount']?></td>
+                                    <td style="color: #490000;font-weight: bold"><?php echo $totalDataList['amount']?></td>
                                 </tr>
 
                             <?php }?>
@@ -160,7 +160,7 @@ $managerSlaray=new \App\manager\Manager();
                             <h3 class="h4">Staff monthly salary list</h3>
                         </div>
                         <!--                            <div class="card-body">-->
-                        <table class="table" id="SatffSalaryList">
+                        <table class="table table-bordered" id="SatffSalaryList">
                             <thead>
 
                             <tr>
@@ -190,7 +190,7 @@ $managerSlaray=new \App\manager\Manager();
                                     <td><?php echo $totalDataList['month']?></td>
                                     <td><?php echo $totalDataList['date']?></td>
                                     <td><?php echo $totalDataList['year']?></td>
-                                    <td><?php echo $totalDataList['amount']?></td>
+                                    <td style="color: #490000;font-weight: bold"><?php echo $totalDataList['amount']?></td>
                                 </tr>
 
                             <?php }?>

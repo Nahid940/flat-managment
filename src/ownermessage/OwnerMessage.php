@@ -48,7 +48,7 @@ class OwnerMessage
 
     public function getAllmessage(){
 //        Session::init();
-        $sql="select message from owner_message where resident_id=:resident_id and checks='no'";
+        $sql="select message from owner_message where resident_id=:resident_id and checks='no' order by message_id desc limit 5";
         $stmt=DBConnection::myQuery($sql);
         $stmt->bindValue('resident_id',Session::get('resident_id'));
         $stmt->execute();
@@ -64,6 +64,5 @@ class OwnerMessage
         $stmt->execute();
         return $stmt->fetchColumn();
     }
-
 
 }

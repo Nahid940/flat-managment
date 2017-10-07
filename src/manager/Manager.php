@@ -242,4 +242,17 @@ class Manager
         return $stmt->fetch(\PDO::FETCH_ASSOC);
     }
 
+    public function checkManagerMonthlySalaryPayment($manager_id,$month,$year){
+        $sql="select * from manager_salary where manager_id='$manager_id' and month='$month' and year='$year'";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->execute();
+        if($stmt->rowCount()==1){
+            return 1;
+        }else{
+            return 0;
+        }
+
+
+    }
+
 }
