@@ -89,7 +89,7 @@ class ResidentPayment
     }
 
     public function getPaymentListMonthly(){
-        $sql="select name,date,phn,email,flat_no,flat_rent,electricity_bill,other_bill, sum(flat_rent+electricity_bill+other_bill) as 'total' from resident r,residentflat rf, resident_payment rp where
+        $sql="select name,uniqueid,date,phn,email,flat_no,flat_rent,electricity_bill,other_bill,month,year, sum(flat_rent+electricity_bill+other_bill) as 'total' from resident r,residentflat rf, resident_payment rp where
         r.resident_id=rf.resident_id and r.resident_id=rp.resident_id group by(payment_no) desc";
         $stmt=DBConnection::myQuery($sql);
         $stmt->execute();
@@ -117,6 +117,15 @@ class ResidentPayment
         $stmt=DBConnection::myQuery($sql);
         $stmt->execute();
         return $stmt->fetchColumn();
+    }
+
+
+    public function getPaymentInfoMonthly($uniqueId,$month,$year){
+        $sql="select name,uniqueid,date,phn,email,flat_no,flat_rent,electricity_bill,other_bill, sum(flat_rent+electricity_bill+other_bill) as 'total' from resident r,residentflat rf, resident_payment rp where
+        r.resident_id=rf.resident_id and r.resident_id=rp.resident_id and r.uniqueid='$uniqueId' and month='$month' and year='$year'";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->execute();
+        return $stmt->fetch(\PDO::FETCH_ASSOC);
     }
 
 

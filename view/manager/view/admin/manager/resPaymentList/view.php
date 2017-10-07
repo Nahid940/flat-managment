@@ -41,6 +41,7 @@ include_once('../../../../includes/header.php');
                                     <tr>
                                         <th>Resident name</th>
                                         <th>Date</th>
+                                        <th>Month</th>
                                         <th>Phone no.</th>
                                         <th>Flat No.</th>
                                         <th>Flat rent</th>
@@ -66,6 +67,7 @@ include_once('../../../../includes/header.php');
                                     <tr>
                                         <td><?php echo $totalData['name']?></td>
                                         <td><?php echo $totalData['date']?></td>
+                                        <td><?php echo $totalData['month']?></td>
                                         <td><?php echo $totalData['phn']?></td>
                                         <td><?php echo $totalData['flat_no']?></td>
                                         <td><?php echo $totalData['flat_rent']?></td>
@@ -73,9 +75,7 @@ include_once('../../../../includes/header.php');
                                         <td><?php echo $totalData['other_bill']?></td>
                                         <td><?php echo $totalData['total']?></td>
                                         <td>
-                                            <form action="view/manager/view/admin/manager/resPaymentList/print.php" method="post">
-                                                <button class="btn btn-warning" type="submit">Print</button>
-                                            </form>
+                                            <a href="view/manager/view/admin/manager/resPaymentList/print.php?uniqueid=<?php echo $totalData['uniqueid']?>&amp;month=<?php echo $totalData['month']?>&amp;year=<?php echo $totalData['year']?>" class="btn btn-info"><i class="fa fa-print" aria-hidden="true"></i> Print</a>
                                         </td>
 
                                     </tr>

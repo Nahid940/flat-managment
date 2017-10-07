@@ -7,6 +7,14 @@ namespace Composer\Autoload;
 class ComposerStaticInitb5a00959ad246f91faa7b3a1b4fe5684
 {
     public static $prefixLengthsPsr4 = array (
+        'F' => 
+        array (
+            'FontLib\\' => 8,
+        ),
+        'D' => 
+        array (
+            'Dompdf\\' => 7,
+        ),
         'A' => 
         array (
             'App\\' => 4,
@@ -14,10 +22,41 @@ class ComposerStaticInitb5a00959ad246f91faa7b3a1b4fe5684
     );
 
     public static $prefixDirsPsr4 = array (
+        'FontLib\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phenx/php-font-lib/src/FontLib',
+        ),
+        'Dompdf\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/dompdf/dompdf/src',
+        ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
+    );
+
+    public static $prefixesPsr0 = array (
+        'S' => 
+        array (
+            'Svg\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/phenx/php-svg-lib/src',
+            ),
+            'Sabberworm\\CSS' => 
+            array (
+                0 => __DIR__ . '/..' . '/sabberworm/php-css-parser/lib',
+            ),
+        ),
+    );
+
+    public static $classMap = array (
+        'Cpdf' => __DIR__ . '/..' . '/dompdf/dompdf/lib/Cpdf.php',
+        'HTML5_Data' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/Data.php',
+        'HTML5_InputStream' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/InputStream.php',
+        'HTML5_Parser' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/Parser.php',
+        'HTML5_Tokenizer' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/Tokenizer.php',
+        'HTML5_TreeBuilder' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/TreeBuilder.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
@@ -25,6 +64,8 @@ class ComposerStaticInitb5a00959ad246f91faa7b3a1b4fe5684
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitb5a00959ad246f91faa7b3a1b4fe5684::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitb5a00959ad246f91faa7b3a1b4fe5684::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitb5a00959ad246f91faa7b3a1b4fe5684::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitb5a00959ad246f91faa7b3a1b4fe5684::$classMap;
 
         }, null, ClassLoader::class);
     }
