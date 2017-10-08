@@ -1,11 +1,10 @@
 <?php
-
-include_once '../../../../../vendor/autoload.php';
+include_once '../../../vendor/autoload.php';
 \App\Session::init();
 \App\Session::checksession();
-$resident=new App\resident\residents();
+$residentPayment=new \App\flatrentPayment\ResidentPayment();
 
-include_once('../../../includes/header.php');
+include_once('../includes/header.php');
 
 ?>
     <!-- Breadcrumb-->
@@ -18,9 +17,6 @@ include_once('../../../includes/header.php');
     <section class="tables">
         <div class="container-fluid">
             <div class="row">
-                <?php echo \App\Session::get('permDelete');
-                \App\Session::UnsetKeySession('permDelete');
-                ?>
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-close">
@@ -33,20 +29,21 @@ include_once('../../../includes/header.php');
                             <h3 class="h4">Maintenance cost list</h3>
                         </div>
                         <div class="card-body">
-                            <table class="table" id="expenditureList">
+                            <table class="table" id="ResidentexpenditureList">
 
                                 <thead>
                                 <tr>
-
+                                    <td colspan="9" style="color:#3a0000"><strong>Total cost : <?php ?></strong></td>
                                 </tr>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Phn</th>
-                                    <th>NID</th>
-                                    <th>Flat no.</th>
-                                    <th>Email</th>
-                                    <th>Action</th>
 
+                                    <th>Flat no</th>
+                                    <th>Month</th>
+                                    <th>Year</th>
+                                    <th>Flat rent</th>
+                                    <th>Electricity bill</th>
+                                    <th>Other bill</th>
+                                    <th>Total</th>
                                 </tr>
                                 </thead>
 
@@ -55,22 +52,20 @@ include_once('../../../includes/header.php');
 
                                 <?php
 
-
-                                foreach ($resident->trashData() as $trashData){
-
+                                foreach ($residentPayment->getPaymentListMonthlyOFparticularResident(\App\Session::get('resident_id')) as $totalData){
                                     ?>
                                     <tr>
-                                        <td><?php echo $trashData['name']?></td>
-                                        <td><?php echo $trashData['phn']?></td>
-                                        <td><?php echo $trashData['nid']?></td>
-                                        <td><?php echo $trashData['flat_no']?></td>
-                                        <td><?php echo $trashData['email']?></td>
-
-                                        <td><a href="view/manager/view/admin/manager/resident/deletePermanently.php?uniqueid=<?php echo $trashData['uniqueid']?>" class="btn btn-danger">Delete permanently</a></td>
-
+                                        <td><?php echo $totalData['flat_no']?></td>
+                                        <td><?php echo $totalData['month']?></td>
+                                        <td><?php echo $totalData['year']?></td>
+                                        <td><?php echo $totalData['flat_rent']?></td>
+                                        <td><?php echo $totalData['electricity_bill']?></td>
+                                        <td><?php echo $totalData['other_bill']?></td>
+                                        <td><?php echo $totalData['total']?></td>
                                     </tr>
 
                                 <?php }?>
+
 
                                 </tbody>
 
@@ -82,12 +77,4 @@ include_once('../../../includes/header.php');
 
             </div>
 
-
-
-
-        </div>
-
-    </section>
-
-
-<?php include_once('../../../includes/footer.php'); ?>
+<?php include_once('../includes/footer.php'); ?>

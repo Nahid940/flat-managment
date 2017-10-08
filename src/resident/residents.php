@@ -100,8 +100,6 @@ class residents
             $stmt->bindValue(':image', $this->image);
             $stmt->bindValue(':uniqueid', $this->uniqueid);
             if ($stmt->execute()) {
-
-
                 $sql="insert into residentflat(flat_no,resident_id)values(:flat_no,:resident_id)";
                 $stmt=DBConnection::myQuery($sql);
                 $stmt->bindValue(':flat_no',$this->flat_no);
@@ -123,7 +121,7 @@ class residents
 
 
     public function selectAllResident($limit){
-        $sql="select r.resident_id,name,uniqueid,phn,email,nid,flat_no from resident r , residentflat rf where r.resident_id=rf.resident_id and deleted_at='0000-00-00 00:00:00' limit $limit,2";
+        $sql="select r.resident_id,name,uniqueid,phn,email,nid,flat_no,image from resident r , residentflat rf where r.resident_id=rf.resident_id and deleted_at='0000-00-00 00:00:00' limit $limit,5";
         $stmt=DBConnection::myQuery($sql);
         $stmt->execute();
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
@@ -246,6 +244,20 @@ class residents
         $stmt=DBConnection::myQuery($sql);
         $stmt->execute();
         return $stmt->fetchColumn();
+    }
+
+    public function getParticularResidentInfo($residentid){
+        $sql="select count(month) as 'totalmonth' from resident r,resident_payment rp where r.resident_id=rp.resident_id and r.resident_id='$residentid'";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->execute();
+        return $stmt->fetchColumn();
+    }
+
+    public function getparticularResInfo($residentid){
+        $sql="select * from resident where resident_id='$residentid'";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->execute();
+        return $stmt->fetch(\PDO::FETCH_ASSOC);
     }
 
 

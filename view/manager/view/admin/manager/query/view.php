@@ -4,6 +4,7 @@ include_once '../../../../../../vendor/autoload.php';
 \App\Session::checksession();
 $query=new \App\query\query();
 
+
 include_once('../../../../includes/header.php');
 ?>
     <div class="modal fade" id="sendMessage" role="dialog">
@@ -22,7 +23,7 @@ include_once('../../../../includes/header.php');
                             <textarea name="message" id="" cols="5" rows="5" class="form-control"></textarea>
                         </div>
                         <div class="form-group pull-right">
-                            <input type="hidden" id="resid" name="resid">
+                            <input type="hidden" id="resid" name="resident_id">
                             <button type="submit" class="btn btn-primary">Send message</button>
                             <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
                         </div>
@@ -52,8 +53,8 @@ include_once('../../../../includes/header.php');
     <div class="row">
         <div class="col-md-12">
             <?php
-            echo  \App\Session::get('messageSend');
-            \App\Session::UnsetKeySession('messageSend');
+            echo  \App\Session::get('messagesend');
+            \App\Session::UnsetKeySession('messagesend');
             ?>
         </div>
     </div>

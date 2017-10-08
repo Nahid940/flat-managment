@@ -11,6 +11,7 @@ include_once '../../vendor/autoload.php';
 \App\Session::init();
 \App\Session::checkSession();
 $residentPayment=new \App\flatrentPayment\ResidentPayment();
+$resident=new App\resident\residents();
 
 
 include_once('includes/header.php');
@@ -36,51 +37,30 @@ include_once('includes/header.php');
             <div class="row bg-white has-shadow">
 
                 <!-- Item -->
-                <div class="col-xl-3 col-sm-6">
+                <div class="col-xl-4 col-sm-6">
                     <div class="item d-flex align-items-center">
-                        <div class="icon bg-violet"><i class="icon-user"></i></div>
-                        <div class="title"><span>New<br>Clients</span>
-                            <div class="progress">
-                                <div role="progressbar" style="width: 25%; height: 4px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-violet"></div>
-                            </div>
+                        <div class="icon bg-violet"><i class="fa fa-calendar" aria-hidden="true"></i></div>
+                        <div class="title">Total  <span style="color: #013277;font-weight: bold" class="number"><?php echo $resident->getParticularResidentInfo(\App\Session::get('resident_id'))?> </span> months your are living here
                         </div>
-                        <div class="number"><strong>25</strong></div>
+
                     </div>
                 </div>
                 <!-- Item -->
-                <div class="col-xl-3 col-sm-6">
+                <div class="col-xl-4 col-sm-6">
                     <div class="item d-flex align-items-center">
                         <div class="icon bg-red"><i class="icon-padnote"></i></div>
-                        <div class="title"><span>Work<br>Orders</span>
-                            <div class="progress">
-                                <div role="progressbar" style="width: 25%; height: 4px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-red"></div>
-                            </div>
+                        <div class="title">
+                            Total flat rent you have paid till now <span style="color: #013277;font-weight: bold" class="number"><?php echo $residentPayment->getTotalPaymentOfEachResident(\App\Session::get('resident_id'))?> </span>
                         </div>
-                        <div class="number"><strong>70</strong></div>
                     </div>
                 </div>
                 <!-- Item -->
-                <div class="col-xl-3 col-sm-6">
+                <div class="col-xl-4 col-sm-6">
                     <div class="item d-flex align-items-center">
                         <div class="icon bg-green"><i class="icon-bill"></i></div>
-                        <div class="title"><span>New<br>Invoices</span>
-                            <div class="progress">
-                                <div role="progressbar" style="width: 25%; height: 4px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-green"></div>
-                            </div>
+                        <div class="title">
+                            Total expenditure till now <span style="color: #013277;font-weight: bold" class="number"><?php echo $residentPayment->getTotalExpenditureEachResident(\App\Session::get('resident_id'))?> </span>
                         </div>
-                        <div class="number"><strong>44</strong></div>
-                    </div>
-                </div>
-                <!-- Item -->
-                <div class="col-xl-3 col-sm-6">
-                    <div class="item d-flex align-items-center">
-                        <div class="icon bg-orange"><i class="icon-check"></i></div>
-                        <div class="title"><span>Open<br>Cases</span>
-                            <div class="progress">
-                                <div role="progressbar" style="width: 25%; height: 4px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-orange"></div>
-                            </div>
-                        </div>
-                        <div class="number"><strong>35</strong></div>
                     </div>
                 </div>
             </div>
@@ -88,43 +68,7 @@ include_once('includes/header.php');
     </section>
 
 
-    <section class="dashboard-header">
-        <div class="container-fluid">
-            <div class="row">
-                <!-- Statistics -->
-                <div class="statistics col-lg-4">
 
-                    <div class="statistic d-flex align-items-center bg-white has-shadow">
-                        <div class="icon bg-red"><i class="fa fa-tasks"></i></div>
-                        <div class="text"><strong class="Ajaxdata"></strong><br><small>New feedback</small></div>
-                    </div>
-
-                    <div class="statistic d-flex align-items-center bg-white has-shadow">
-                        <div class="icon bg-green"><i class="fa fa-calendar-o"></i></div>
-                        <div class="text"><strong>152</strong><br><small>Interviews</small></div>
-                    </div>
-                    <div class="statistic d-flex align-items-center bg-white has-shadow">
-                        <div class="icon bg-orange"><i class="fa fa-paper-plane-o"></i></div>
-                        <div class="text"><strong>147</strong><br><small>Forwards</small></div>
-                    </div>
-                </div>
-
-
-                <div class="chart col-lg-8 col-12">
-                    <!-- Bar Chart   -->
-                    <div class="bar-chart has-shadow bg-white">
-                        <div class="title"><strong class="text-violet">95%</strong><br><small>Monthly expenditure</small></div>
-                        <canvas id="barChartHome"></canvas>
-                    </div>
-                    <!-- Numbers-->
-                    <div class="statistic d-flex align-items-center bg-white has-shadow">
-                        <div class="icon bg-green"><i class="fa fa-line-chart"></i></div>
-                        <div class="text"><strong>99.9%</strong><br><small>Success Rate</small></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Projects Section-->
     <section class="projects no-padding-top">
@@ -133,14 +77,7 @@ include_once('includes/header.php');
 
         </div>
     </section>
-    <!-- Client Section-->
-    <section class="client no-padding-top">
-        <div class="container-fluid">
-            <div class="row">
-            </div>
-        </div>
-    </section>
-    <!-- Feeds Section-->
+
 
     <section class="feeds no-padding-top">
         <div class="container-fluid">

@@ -328,7 +328,10 @@
      $(document).on('click','.delete',function () {
          var uniqueid=$(this);
          $('#uniqueid').val(uniqueid.data('id'));
-
+     });
+     $(document).on('click','.sendmsg',function () {
+         var uniqueid=$(this);
+         $('#resid').val(uniqueid.data('id'));
      });
 
  </script>

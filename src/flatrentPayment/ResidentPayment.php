@@ -95,6 +95,13 @@ class ResidentPayment
         $stmt->execute();
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
     }
+    public function getPaymentListMonthlyOFparticularResident($residentid){
+        $sql="select name,flat_no,flat_rent,electricity_bill,other_bill,month,year, sum(flat_rent+electricity_bill+other_bill) as 'total' from resident r,residentflat rf, resident_payment rp where
+        r.resident_id=rf.resident_id and r.resident_id=rp.resident_id and r.resident_id='$residentid' group by(payment_no) desc";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    }
 
     public function PaymentComplete(){
         $datetime=strtotime(date("Y/m/d"));
@@ -120,6 +127,23 @@ class ResidentPayment
     }
 
 
+
+    public function getTotalPaymentOfEachResident($residentid){
+        $sql="select sum(flat_rent)as 'Total' from resident_payment where resident_id='$residentid'";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->execute();
+        return $stmt->fetchColumn();
+    }
+
+    public function getTotalExpenditureEachResident($residentid){
+        $sql="select sum(flat_rent+electricity_bill+other_bill)as 'Total' from resident_payment where resident_id='$residentid'";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->execute();
+        return $stmt->fetchColumn();
+    }
+
+
+
     public function getPaymentInfoMonthly($uniqueId,$month,$year){
         $sql="select name,uniqueid,date,phn,email,flat_no,flat_rent,electricity_bill,other_bill, sum(flat_rent+electricity_bill+other_bill) as 'total' from resident r,residentflat rf, resident_payment rp where
         r.resident_id=rf.resident_id and r.resident_id=rp.resident_id and r.uniqueid='$uniqueId' and month='$month' and year='$year'";
@@ -127,6 +151,8 @@ class ResidentPayment
         $stmt->execute();
         return $stmt->fetch(\PDO::FETCH_ASSOC);
     }
+
+
 
 
 

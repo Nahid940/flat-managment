@@ -101,6 +101,12 @@ include_once('../../../../includes/header.php');
                                         <input type="text" name="email" id="email" placeholder="Enter person email" class="form-control">
                                     </div>
 
+                                    <div class="form-group">
+                                        <span id="imageValidator"></span>
+                                        <label for="image">Image</label>
+                                        <input type="file" name="image" class="form-control">
+                                    </div>
+
 
                                     <div class="form-group">
                                         <span id="PasswordValidatorModal"></span>

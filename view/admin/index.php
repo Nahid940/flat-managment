@@ -220,10 +220,7 @@ include_once('includes/header.php');
                                 <div class="title"><strong class="text-violet">Monthly maintenance cost</strong></div>
                                 <canvas id="barChartHome"></canvas>
                             </div>
-                            <div class="statistic d-flex align-items-center bg-white has-shadow">
-                                <div class="icon bg-green"><i class="fa fa-line-chart"></i></div>
-                                <div class="text"><strong>99.9%</strong><br><small>Success Rate</small></div>
-                            </div>
+
                         </div>
                     </div>
                 </div>

@@ -5,6 +5,8 @@ include_once '../../../vendor/autoload.php';
 \App\Session::init();
 \App\Session::checksession();
 include_once('../includes/header.php');
+$resident=new App\resident\residents();
+$res=$resident->getparticularResInfo(\App\Session::get('resident_id'));
 
 
 ?>
@@ -12,7 +14,7 @@ include_once('../includes/header.php');
     <section class="forms">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-8 offset-2">
                     <?php
                     echo \App\Session::get('newStaffInsert');
                     \App\Session::UnsetKeySession('newStaffInsert');
@@ -36,30 +38,30 @@ include_once('../includes/header.php');
                                     </div>
                                     <div class="panel-body">
                                         <div class="row">
-                                            <div class="col-md-12 col-lg-12 " align="center">
+                                            <div class="col-md-12" align="center">
                                                 <table class="table table-user-information">
                                                     <tbody>
-
                                                     <tr>
-                                                        <td><img src="" alt=""></td>
+                                                        <td>Image</td>
+                                                        <td><img src="<?php echo $res['image']?>" alt="" style="border-radius: 50px"></td>
                                                     </tr>
 
-                                                    <tr>
-                                                        <td>Age:</td>
-                                                        <td></td>
-                                                    </tr>
 
+                                                    <tr>
+                                                        <td>Name:</td>
+                                                        <td><?php echo $res['name']?></td>
+                                                    </tr>
                                                     <tr>
                                                         <td>Mobile:</td>
-                                                        <td></td>
+                                                        <td><?php echo $res['phn']?></td>
                                                     </tr>
                                                     <tr>
                                                         <td>NID No.:</td>
-                                                        <td></td>
+                                                        <td><?php echo $res['nid']?></td>
                                                     </tr>
                                                     <tr>
                                                         <td>Email :</td>
-                                                        <td></td>
+                                                        <td><?php echo $res['email']?></td>
                                                     </tr>
                                                     </tbody>
                                                 </table>

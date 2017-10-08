@@ -60,7 +60,7 @@ $resident=new \App\resident\residents();
                         </div>
                     </div>
                     <div class="card-header d-flex align-items-center">
-                        <h3 class="h4">All the personnel info</h3>
+                        <h3 class="h4">All the resident's info</h3>
 
 
                     </div>
@@ -85,7 +85,7 @@ $resident=new \App\resident\residents();
                     <div class="card-body">
                             <div class="panel panel-info">
                                 <div class="panel-heading">
-                                    <h3 class="panel-title">Staff <?php echo $Data['name']?></h3>
+                                    <h3 class="panel-title">Resident <?php echo $Data['name']?></h3>
                                 </div>
                                 <div class="panel-body">
                                     <div class="row">
@@ -94,7 +94,8 @@ $resident=new \App\resident\residents();
                                                 <tbody>
 
                                                 <tr>
-                                                    <td><img src="<?php echo $Data['image']?>" alt=""></td>
+                                                    <td>Image</td>
+                                                    <td><img src="<?php echo $Data['image']?>" alt="" style="height: 180px; width: 150px"></td>
                                                 </tr>
 
 
@@ -133,7 +134,7 @@ $resident=new \App\resident\residents();
 
                 <?php
                 $total= $resident->selectTotalResident();
-                $perPage=$total/2;
+                $perPage=$total/1;
                 for($i=1;$i<=$perPage;$i++){
                     ?>
                     <div class="pagination" style="display: inline-block;">

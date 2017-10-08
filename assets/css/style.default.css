@@ -331,7 +331,7 @@ input {
 }
 
 nav.side-navbar {
-    background: #fff;
+    background: #edf4ff;
     min-width: 250px;
     max-width: 250px;
     color: #686a76;
@@ -415,17 +415,18 @@ nav.side-navbar ul a {
 }
 
 nav.side-navbar ul a:hover {
-    background: #796AEE;
-    border-left: 4px solid #3b25e6;
+    background: #00183a;
+    border-left: 4px solid #fff;
     color: #fff
 }
+
 
 nav.side-navbar ul li.active a {
     background: #EEF5F9
 }
 
 nav.side-navbar ul li.active a:hover {
-    background: #796AEE
+    background: #00183a
 }
 
 nav.side-navbar ul ul {

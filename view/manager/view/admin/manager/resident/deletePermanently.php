@@ -7,4 +7,7 @@
  */
 include_once '../../../../../../vendor/autoload.php';
 $resident=new App\resident\residents();
+$helper=new \App\Helper();
+$helper->deleteImage('resident',$_GET['uniqueid']);
+
 $resident->permanent_Delete($_GET['uniqueid']);

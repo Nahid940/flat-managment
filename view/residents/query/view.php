@@ -3,6 +3,7 @@ include_once '../../../vendor/autoload.php';
 \App\Session::init();
 \App\Session::checksession();
 $ownerMessage=new App\ownermessage\OwnerMessage();
+$managerMessage=new \App\manager\managerMessage();
 
 include_once('../includes/header.php');
 ?>
@@ -43,7 +44,7 @@ include_once('../includes/header.php');
                       </div>
                     </div>
                     <div class="card-header d-flex align-items-center">
-                      <h3 class="h4">Message from owner...</h3>
+                      <h3 class="h4">Message from manager...</h3>
                     </div>
                     <div class="card-body">
                       <table class="table table-striped">
@@ -54,14 +55,11 @@ include_once('../includes/header.php');
                           </tr>
                           </thead>
                         <tbody>
-                        <?php foreach ($ownerMessage->getAllmessage() as $ownerMsg){?>
+                        <?php foreach ($managerMessage->getAllmessage(\App\Session::get('resident_id')) as $mngrMessage){?>
                           <tr class="record">
-                              <td><?php echo $ownerMsg['message']?></td>
+                              <td><?php echo $mngrMessage['manager_message']?></td>
                               <td>
-<!--                                  <form action="" method="post">-->
-<!--                                      <input type="hidden" value="--><?php //echo $queries['query_no']?><!--" name="query_no">-->
-<!--                                      <input type="button" value="Checked" name="checkquery" class="btn btn-primary checkevent" id="button">-->
-<!--                                  </form>-->
+
                               </td>
 
 <!--                              <td><a href="" data-toggle="modal" data-target="#sendMessage" data-id="--><?php //echo $queries['resident_id']?><!--" class="btn btn-info sendmsg">Send message</a></td>-->
@@ -92,7 +90,7 @@ include_once('../includes/header.php');
                                 </div>
                             </div>
                             <div class="card-header d-flex align-items-center">
-                                <h3 class="h4">Message from Mmanager...</h3>
+                                <h3 class="h4">Message from Manager...</h3>
                             </div>
                             <div class="card-body">
                                 <table class="table table-striped">

@@ -1,4 +1,9 @@
+<?php
 
+//include_once '../../../vendor/autoload.php';
+//\App\Session::init();
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,6 +30,8 @@
     <script src="assets/use.fontawesome.com/99347ac47f.js"></script>
     <!-- Font Icons CSS-->
     <link rel="stylesheet" href="assets/file.myfontastic.com/da58YPMQ7U5HY8Rb6UxkNf/icons.css">
+
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
 
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -63,7 +70,7 @@
 
                 <!-- Notifications-->
                 <li class="nav-item dropdown">
-                    <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link">
+                    <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link" title="Owner's message">
                         <i class="fa fa-envelope"></i>
                         <span class="badge bg-red" id="newMessage"></span></a>
                   <ul aria-labelledby="notifications" class="dropdown-menu">
@@ -76,10 +83,26 @@
                             </div>
                         </a>
                     </li>
-
-<!--                <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong>view all notifications</strong></a></li>-->
                   </ul>
                 </li>
+
+
+                  <li class="nav-item dropdown">
+                      <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link" title="Manager's message">
+                          <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                          <span class="badge bg-red" id="newMnrgMessage"></span></a>
+                      <ul aria-labelledby="notifications" class="dropdown-menu">
+                          <li>
+                              <a rel="nofollow" href="view/residents/query/view.php" class="dropdown-item">
+                                  <div class="notification">
+                                      <div class="message-content-mrg">
+                                          <i class="fa fa-envelope bg-green"></i>
+                                      </div>
+                                  </div>
+                              </a>
+                          </li>
+                      </ul>
+                  </li>
 
                 <!-- Logout    -->
 <!--                  view/admin/login.php?action=logout-->
@@ -100,7 +123,7 @@
           <nav class="side-navbar">
 <!--              Sidebar Header-->
               <div class="sidebar-header d-flex align-items-center">
-                  <div class="avatar"><img src="assets/img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
+                  <div class="avatar"><img src="<?php //echo $res['image']?>" alt="" class="img-fluid rounded-circle"></div>
                   <div class="title">
                       <h1 class="h4">Welcome <?php echo \App\Session::get('name')?></h1>
                       <p>Resident</p>
@@ -109,8 +132,9 @@
               <ul class="list-unstyled">
                   <li class="active"> <a href="view/residents/index.php"><i class="icon-home"></i>Home</a></li>
 
-                  <li> <a href="view/residents/profile/profile.php"> <i class="fa fa-book" aria-hidden="true"></i>Your prifile </a></li>
-                  <li> <a href="view/residents/query/query.php"> <i class="fa fa-inbox" aria-hidden="true"></i>Inform your problem</a></li>
+                  <li> <a href="view/residents/profile/profile.php"> <i class="fa fa-address-card" aria-hidden="true"></i> Your prifile </a></li>
+                  <li> <a href="view/residents/expense/expenditure.php"> <i class="fa fa-list-alt" aria-hidden="true"></i> Your expenditure list</a></li>
+                  <li> <a href="view/residents/query/query.php"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Inform your problem</a></li>
                   <li> <a href="view/residents/query/view.php"> <i class="fa fa-inbox" aria-hidden="true"></i>All messages</a></li>
                   <li> <a href="view/residents/notice/view.php"> <i class="fa fa-file-text-o" aria-hidden="true"></i>Notice  <span class="badge bg-red" id="newNotice">1</span></a> </li>
 
