@@ -9,16 +9,48 @@ $resident=new \App\resident\residents();
 
 ?>
 
+
+<div class="modal fade" id="myModalRes" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+                <p>Do you want to delete this account?</p>
+
+                <form action="view/manager/view/admin/manager/resident/tmpDelete.php" method="post">
+                    <div class="form-group pull-right">
+                        <input type="hidden" id="uniqueid" name="uniqueid">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
 <section class="forms">
     <div class="container-fluid">
+
+
+
+
+
+
+
         <div class="row">
             <div class="col-lg-12">
 
                 <div class="card">
                     <?php
 
-                    echo \App\Session::get('newResidentInsert');
-                    \App\Session::UnsetKeySession('newResidentInsert');
+                    echo \App\Session::get('tmpDelete');
+                    \App\Session::UnsetKeySession('tmpDelete');
                     ?>
 
                     <div class="card-close">
@@ -84,8 +116,8 @@ $resident=new \App\resident\residents();
                                                     <td></td>
                                                     <td></td>
                                                     <td>
-                                                        <a href="view/manager/view/admin/manager/staff/edit.php?uniqueid=<?php echo $staffData['uniqueid']?>" class="btn btn-info">Edit</a>
-                                                        <a href="view/manager/view/admin/manager/staff/delete.php?uniqueid=<?php echo $staffData['uniqueid']?>" class="btn btn-danger">Delete</a>
+                                                        <a  data-id="<?php echo $Data['uniqueid']?>" class="btn btn-info">Edit</a>
+                                                        <a data-id="<?php echo $Data['uniqueid']?>" data-toggle="modal" data-target="#myModalRes" class="btn btn-danger delete">Delete</a>
                                                     </td>
                                                 </tr>
                                                 </tbody>

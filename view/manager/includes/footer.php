@@ -325,6 +325,12 @@
      }
      }
 
+     $(document).on('click','.delete',function () {
+         var uniqueid=$(this);
+         $('#uniqueid').val(uniqueid.data('id'));
+
+     });
+
  </script>
   </body>
 </html>

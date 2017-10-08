@@ -86,7 +86,7 @@ class residents
             header('location:Addresidents.php');
         }else {
 
-            $sql = "insert into resident (resident_id,name,fmember,phn,nid,email,attempt,timestamp,password,image,uniqueid) values(:resident_id,:name,:fmember,:phn,:nid,:email,:attempt,:timestamp,:password,:image,:uniqueid)";
+            $sql = "insert into resident (resident_id,name,fmember,phn,nid,email,attempt,timestamp,password,image,uniqueid,created_at,deleted_at) values(:resident_id,:name,:fmember,:phn,:nid,:email,:attempt,:timestamp,:password,:image,:uniqueid,now(),'0000-00-00 00:00:00')";
             $stmt = DBConnection::myQuery($sql);
             $stmt->bindValue(':resident_id', $this->resident_id);
             $stmt->bindValue(':name', $this->name);
@@ -114,7 +114,6 @@ class residents
                     $stmt->execute();
                 }
 
-
                 Session::init();
                 Session::set('newResidentInsert', "<div class='alert alert-success'>New resident info added !!</div>");
                 header('location:view.php');
@@ -124,10 +123,40 @@ class residents
 
 
     public function selectAllResident($limit){
-        $sql="select r.resident_id,name,phn,email,nid,flat_no from resident r , residentflat rf where r.resident_id=rf.resident_id limit $limit,2";
+        $sql="select r.resident_id,name,uniqueid,phn,email,nid,flat_no from resident r , residentflat rf where r.resident_id=rf.resident_id and deleted_at='0000-00-00 00:00:00' limit $limit,2";
         $stmt=DBConnection::myQuery($sql);
         $stmt->execute();
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    }
+
+    public function trashData(){
+        $sql="select r.resident_id,name,uniqueid,phn,email,nid,flat_no from resident r , residentflat rf where r.resident_id=rf.resident_id and deleted_at!='0000-00-00 00:00:00'";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    }
+
+    public function temporary_Delete($uniqueid){
+        $sql="update resident set deleted_at=now() where uniqueid='$uniqueid'";
+        $stmt=DBConnection::myQuery($sql);
+        if( $stmt->execute()){
+            $sql=" update flats f, residentflat,resident set booked='no' where f.flat_no=residentflat.flat_no and residentflat.resident_id=resident.resident_id and resident.uniqueid='$uniqueid'";
+            $stmt=DBConnection::myQuery($sql);
+            $stmt->execute();
+            Session::init();
+            Session::set("tmpDelete","<div class='alert alert-danger'>Data moved to trash !!</div>");
+            header('location:view.php');
+        }
+    }
+
+    public function permanent_Delete($uniqueid){
+        $sql="delete from resident where uniqueid='$uniqueid'";
+        $stmt=DBConnection::myQuery($sql);
+        if( $stmt->execute()){
+            Session::init();
+            Session::set("permDelete","<div class='alert alert-danger'>Permanently deleted !!</div>");
+            header('location:../trash.php');
+        }
     }
 
 
@@ -213,7 +242,7 @@ class residents
     }
 
     public function totalMember(){
-        $sql="select sum(fmember) as 'total' from resident";
+        $sql="select sum(fmember) as 'total' from resident where deleted_at='0000-00-00 00:00:00'";
         $stmt=DBConnection::myQuery($sql);
         $stmt->execute();
         return $stmt->fetchColumn();
