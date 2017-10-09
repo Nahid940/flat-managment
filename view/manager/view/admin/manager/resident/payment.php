@@ -64,7 +64,7 @@ include_once('../../../../includes/header.php');
                             <label for="resident_id">Select resident's name:</label>
                             <select class="form-control" name="resident_id">
                                 <option value="">Select name</option>
-                                <?php foreach ($resident->selectAllResident() as $allResident) { ?>
+                                <?php foreach ($resident->selectAllResidentForPayment() as $allResident) { ?>
                                     <option value="<?php echo $allResident['resident_id']?>"><?php echo $allResident['name']?></option>
                                 <?php }
                                 ?>

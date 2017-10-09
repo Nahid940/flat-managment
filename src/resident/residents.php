@@ -127,6 +127,16 @@ class residents
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
     }
 
+    public function selectAllResidentForPayment(){
+        $sql="select r.resident_id,name,uniqueid,phn,email,nid,flat_no,image from resident r , residentflat rf where r.resident_id=rf.resident_id and deleted_at='0000-00-00 00:00:00'";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    }
+
+
+
+
     public function trashData(){
         $sql="select r.resident_id,name,uniqueid,phn,email,nid,flat_no from resident r , residentflat rf where r.resident_id=rf.resident_id and deleted_at!='0000-00-00 00:00:00'";
         $stmt=DBConnection::myQuery($sql);
