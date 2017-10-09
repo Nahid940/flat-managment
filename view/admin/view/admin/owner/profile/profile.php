@@ -57,7 +57,6 @@ $res=$owner->selectOwner(\App\Session::get('owner_email'));
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>

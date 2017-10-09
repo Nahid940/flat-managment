@@ -114,7 +114,7 @@ class residents
 
                 Session::init();
                 Session::set('newResidentInsert', "<div class='alert alert-success'>New resident info added !!</div>");
-                header('location:Message.php');
+                header('location:AddResidents.php');
             }
         }
     }

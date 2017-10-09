@@ -41,6 +41,8 @@ include_once('../../../../includes/header.php');
         <?php
         echo \App\Session::get('residentExist');
         \App\Session::UnsetKeySession('residentExist');
+        echo \App\Session::get('newResidentInsert');
+        \App\Session::UnsetKeySession('newResidentInsert');
         ?>
 
         <div class="row">
