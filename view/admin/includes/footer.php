@@ -158,6 +158,27 @@
          });
      });
 
+     function validateOwnerMessage(){
+         var resid=document.forms["MngrMessage"]["resid"].value;
+         var msg=document.forms["MngrMessage"]["message"].value;
+
+
+         if(resid==''){
+             $('#ResValidator').html('Select resident whom you want  to send message !!');
+             $('#ResValidator').css({'color':'red','font-weight':'bold'});
+             return false;
+         }
+         else if(msg==''){
+             $('#ValidateMessage').html('Write something !!');
+             $('#ValidateMessage').css({'color':'red','font-weight':'bold'});
+             return false;
+         }
+         else{
+             return true;
+         }
+
+     }
+
 
 
 
@@ -327,6 +348,9 @@
                      $('#manager_id').css({'border-color':'red'});
                      return false;
                  }else{
+                     $('#check').html("Salary not paid yet !!");
+                     $('#check').css({'color':'green','font-weight':'bold'});
+                     $('#manager_id').css({'border-color':'green'});
                      return true;
                  }
 

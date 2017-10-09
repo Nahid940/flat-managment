@@ -13,23 +13,24 @@
         </div>
       </div>
     </div>
-   <button type="button" data-toggle="collapse" data-target="#style-switch" id="style-switch-button" class="btn btn-primary btn-sm hidden-xs hidden-sm"><i class="fa fa-cog fa-2x"></i></button>
-    <div id="style-switch" class="collapse">
-      <h4 class="mb-3">Select theme colour</h4>
-      <form class="mb-3">
-        <select name="colour" id="colour" class="form-control">
-          <option value="">select colour variant</option>
-          <option value="default">violet</option>
-          <option value="pink">pink</option>
-          <option value="red">red</option>
-          <option value="green">green</option>
-          <option value="sea">sea</option>
-          <option value="blue">blue</option>
-        </select>
-      </form>
-      <p><img src="assets/img/template-mac.png" alt="" class="img-fluid"></p>
-      <p class="text-muted text-small"> <small>Stylesheet switching is done via JavaScript and can cause a blink while page loads. This will not happen in your production code.</small></p>
-    </div>
+ 
+<!--   <button type="button" data-toggle="collapse" data-target="#style-switch" id="style-switch-button" class="btn btn-primary btn-sm hidden-xs hidden-sm"><i class="fa fa-cog fa-2x"></i></button>-->
+<!--    <div id="style-switch" class="collapse">-->
+<!--      <h4 class="mb-3">Select theme colour</h4>-->
+<!--      <form class="mb-3">-->
+<!--        <select name="colour" id="colour" class="form-control">-->
+<!--          <option value="">select colour variant</option>-->
+<!--          <option value="default">violet</option>-->
+<!--          <option value="pink">pink</option>-->
+<!--          <option value="red">red</option>-->
+<!--          <option value="green">green</option>-->
+<!--          <option value="sea">sea</option>-->
+<!--          <option value="blue">blue</option>-->
+<!--        </select>-->
+<!--      </form>-->
+<!--      <p><img src="assets/img/template-mac.png" alt="" class="img-fluid"></p>-->
+<!--      <p class="text-muted text-small"> <small>Stylesheet switching is done via JavaScript and can cause a blink while page loads. This will not happen in your production code.</small></p>-->
+<!--    </div>-->
     <!-- Javascript files-->
     <script src="assets/ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="assets/js/tether.min.js"></script>

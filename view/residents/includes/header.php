@@ -58,9 +58,7 @@
               <div class="navbar-header">
                 <!-- Navbar Brand --><a href="index.html" class="navbar-brand">
                   <div class="brand-text brand-big hidden-lg-down"><span>Your  </span><strong> Dashboard</strong></div>
-                  <div class="brand-text brand-small"><strong>My villa</strong></div></a>
-
-
+                      <a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
                 <!-- Toggle Button-->
 <!--                  <a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>-->
               </div>
@@ -104,6 +102,12 @@
                       </ul>
                   </li>
 
+                  <li class="nav-item dropdown">
+                      <a id="" data-target="#" href="view/residents/notice/view.php"  aria-haspopup="true" aria-expanded="false" class="nav-link" title="New notice">
+                          <i class="fa fa-sticky-note-o" aria-hidden="true"></i>
+                          <span class="badge bg-red" id="newNotice" </span></a>
+                  </li>
+
                 <!-- Logout    -->
 <!--                  view/admin/login.php?action=logout-->
 
@@ -123,7 +127,7 @@
           <nav class="side-navbar">
 <!--              Sidebar Header-->
               <div class="sidebar-header d-flex align-items-center">
-                  <div class="avatar"><img src="<?php //echo $res['image']?>" alt="" class="img-fluid rounded-circle"></div>
+                  <div class="avatar"><img src="<?php echo \App\Session::get('image')?>" alt="" class="img-fluid rounded-circle"></div>
                   <div class="title">
                       <h1 class="h4">Welcome <?php echo \App\Session::get('name')?></h1>
                       <p>Resident</p>
@@ -136,7 +140,7 @@
                   <li> <a href="view/residents/expense/expenditure.php"> <i class="fa fa-list-alt" aria-hidden="true"></i> Your expenditure list</a></li>
                   <li> <a href="view/residents/query/query.php"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Inform your problem</a></li>
                   <li> <a href="view/residents/query/view.php"> <i class="fa fa-inbox" aria-hidden="true"></i>All messages</a></li>
-                  <li> <a href="view/residents/notice/view.php"> <i class="fa fa-file-text-o" aria-hidden="true"></i>Notice  <span class="badge bg-red" id="newNotice">1</span></a> </li>
+                  <li> <a href="view/residents/notice/view.php"> <i class="fa fa-file-text-o" aria-hidden="true"></i>Notice </a> </li>
 
               </ul>
           </nav>

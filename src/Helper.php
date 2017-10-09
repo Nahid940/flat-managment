@@ -21,6 +21,14 @@ class Helper
         unlink("../../../../../../".$image_name['image']);
     }
 
+
+    public function getPreviousImage($uniqueid){
+        $sql="select image from manager where uniqueid='$uniqueid'";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->execute();
+        return $stmt->fetchColumn();
+    }
+
     public function uploadImage($folder){
         $_POST['image']=$_FILES['image']['name'];
         $filelocation=$_FILES['image']['tmp_name'];

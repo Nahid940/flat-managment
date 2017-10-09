@@ -80,4 +80,11 @@ class Owner
             header('location:login.php');
         }
     }
+
+    public function selectOwner($owner_email){
+        $sql="select * from owner where owner_email='$owner_email'";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->execute();
+        return $stmt->fetch(\PDO::FETCH_ASSOC);
+    }
 }

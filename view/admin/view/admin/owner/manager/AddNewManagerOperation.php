@@ -12,11 +12,11 @@ $helper=new \App\Helper();
 
 
 $_POST['uniqueid']=$uniqueid=md5(time());
-$helper->uploadImage();
+//$helper->uploadImage();
 $AddNewManager=new \App\manager\Manager();
 $helper=new \App\Helper();
 
-$helper->uploadImage();
+$helper->uploadImage('manager');
 
 $AddNewManager->set($_POST);
 $AddNewManager->insertNewManager();

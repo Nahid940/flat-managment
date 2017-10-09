@@ -114,7 +114,7 @@ class residents
 
                 Session::init();
                 Session::set('newResidentInsert', "<div class='alert alert-success'>New resident info added !!</div>");
-                header('location:view.php');
+                header('location:Message.php');
             }
         }
     }
@@ -153,7 +153,7 @@ class residents
             $stmt->execute();
             Session::init();
             Session::set("tmpDelete","<div class='alert alert-danger'>Data moved to trash !!</div>");
-            header('location:view.php');
+            header('location:Message.php');
         }
     }
 
@@ -210,6 +210,7 @@ class residents
                     Session::init();
                     Session::set("login",true);
                     Session::set('name',$res->name);
+                    Session::set('image',$res->image);
                     Session::set('resident_id',$this->resident_id);
                     header('location:index.php');
 

@@ -38,16 +38,14 @@ class OwnerMessage
         $stmt->bindValue(':message',$this->message);
         $stmt->bindValue(':resident_id',$this->resid);
         $stmt->bindValue(':checks',$this->checks);
-
         if($stmt->execute()){
             Session::init();
             Session::set('messageSend',"<div class='alert alert-success'>Message send !</div>");
-            header('location:view.php');
+            header('location:Message.php');
         }
     }
 
     public function getAllmessage(){
-//        Session::init();
         $sql="select message from owner_message where resident_id=:resident_id and checks='no' order by message_id desc limit 5";
         $stmt=DBConnection::myQuery($sql);
         $stmt->bindValue('resident_id',Session::get('resident_id'));

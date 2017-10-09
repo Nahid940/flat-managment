@@ -59,14 +59,18 @@
 
                                 <div class="form-group">
                                     <label for="confirmpassword" id="label8">Confirm password</label>
-
                                     <span id="confirmpasswordWarning"></span>
-
                                     <input type="password" name="confirmpassword" id="confirmpassword" tabindex="2" class="form-control" placeholder="Confirm Password">
                                 </div>
 
                                 <div class="form-group">
-                                    <button class="btn btn-lg btn-login btn-block button" type="submit" name="register">Register</button>
+                                    <label for="image">Image</label>
+                                    <span id="checkImageSize"></span>
+                                    <input type="file" name="image" class="form-control" id="image">
+                                </div>
+
+                                <div class="form-group">
+                                    <button class="btn btn-lg btn-login btn-block button" type="submit" name="register" id="reg">Register</button>
                                 </div>
                                 Already registered? go to <a href="login.php">Login</a>
                             </form>
@@ -202,7 +206,35 @@
             }
 
         }
-//    || (mailformat.test(email))
+
+
+    var myFile = document.getElementById('image');
+    myFile.addEventListener('change', function() {
+        var file = this.files[0];
+        var fileType = file["type"];
+        var ValidImageTypes = ["image/gif", "image/jpeg", "image/png"];
+        if((this.files[0].size)>50000){
+            $('#checkImageSize').show();
+            $('#checkImageSize').text("50 kb is allowed !");
+            $('#image').css({"border-color":"#ff0000","box-shadow":'0 0 10px #ff0000'});
+            document.getElementById('image').value="";
+
+        }else if($.inArray(fileType, ValidImageTypes) < 0){
+            $('#checkImageSize').show();
+            $('#checkImageSize').text("File format is not supported !");
+            $('#checkImageSize').css({'color':'red','font-weight':'bold'});
+            $('#image').css({"border-color":"#ff0000","box-shadow":'0 0 10px #ff0000'});
+            document.getElementById('image').value="";
+        }
+        else{
+            $('#checkImageSize').hide();
+            $('#image').css({"border-color":"green","box-shadow":'0 0 10px green'});
+            return true;
+        }
+
+    });
+
+    //    || (mailformat.test(email))
 </script>
 
 </body>

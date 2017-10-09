@@ -13,10 +13,7 @@ include_once '../../vendor/autoload.php';
 $residentPayment=new \App\flatrentPayment\ResidentPayment();
 $resident=new App\resident\residents();
 
-
 include_once('includes/header.php');
-
-
 
 ?>
     <!-- Dashboard Header Section    -->

@@ -90,9 +90,6 @@
          });
      });
 
-
-
-
      function timeOut(){
          setTimeout(function(){
              update();
@@ -142,9 +139,18 @@
              url:"view/residents/notice/newNotice.php",
              success:function (response) {
                  $('#newNotice').html(response);
+//                 alert(response);
              }
          });
      });
+
+     setInterval(function(){
+         $('#newNotice').load('view/residents/notice/newNotice.php');
+     },8000);
+
+
+      // This will run on page load
+
 
 
 

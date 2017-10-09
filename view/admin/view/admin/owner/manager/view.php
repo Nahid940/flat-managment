@@ -54,6 +54,8 @@ $manager=new \App\manager\Manager();
 
                         echo \App\Session::get('managerDelete');
                         \App\Session::UnsetKeySession('managerDelete');
+                        echo \App\Session::get('managareDataupdate');
+                        \App\Session::UnsetKeySession('managareDataupdate');
 //
                     ?>
                     <?php foreach ($manager->getAllmanagers() as $managerData){
@@ -66,8 +68,6 @@ $manager=new \App\manager\Manager();
                                     <h3 class="panel-title">Manager  <span style="color:#074870"><?php echo $managerData['name']?></span></h3>
                                 </div>
 
-
-
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-md-12 col-lg-12 " align="center">
@@ -75,7 +75,7 @@ $manager=new \App\manager\Manager();
                                                 <tbody>
 
                                                 <tr>
-                                                    <td><img src="<?php echo $managerData['image']?>" alt="image"></td>
+                                                    <td><img src="<?php echo $managerData['image']?>" alt="image" style="width: 150px;height: 150px"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Email:</td>

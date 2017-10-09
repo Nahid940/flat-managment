@@ -101,7 +101,7 @@ class Manager
             if ($stmt->execute()) {
                 Session::init();
                 Session::set('newManagerInsert', "<div class='alert alert-success'>New manager info added !!</div>");
-                header('location:view.php');
+                header('location:AddInfo.php');
             }
         }
     }
@@ -166,6 +166,13 @@ class Manager
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
     }
 
+    public function getOnemanagers($uniqueId){
+        $sql="select * from manager where uniqueid='$uniqueId'";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->execute();
+        return $stmt->fetch(\PDO::FETCH_ASSOC);
+    }
+
 
     public function getTotalManager(){
         $sql="select count('manager_id') as 'totalmanager' from manager";
@@ -196,7 +203,7 @@ class Manager
         if($stmt->execute()){
             Session::init();
             Session::set("managerDelete","<div class='alert alert-info'>Account deleted</div>");
-            header('location:view.php');
+            header('location:Message.php');
         }
     }
 
@@ -251,8 +258,22 @@ class Manager
         }else{
             return 0;
         }
+    }
 
+    public function updateManager($uniqueid){
+        $sql="update manager set name=:name,phn=:phn,nid=:nid,email=:email,image=:image where uniqueid='$uniqueid'";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->bindValue('name',$this->name);
+        $stmt->bindValue('phn',$this->phn);
+        $stmt->bindValue('nid',$this->nid);
+        $stmt->bindValue('email',$this->email);
+        $stmt->bindValue('image',$this->image);
 
+        if($stmt->execute()){
+            Session::init();
+            Session::set("managareDataupdate","<div class='alert alert-success'>Info updated!!</div>");
+            header('location:view.php');
+        }
     }
 
 }
