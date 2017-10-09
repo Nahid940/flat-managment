@@ -73,7 +73,7 @@
 
 
      $(document).ready(function () {
-         timeOut();
+         timeOut1();
          $.ajax({
              url:"http://localhost/BITM/bitm-final-project/view/residents/mngrmessage.php",
              method:"POST",
@@ -96,8 +96,16 @@
      function timeOut(){
          setTimeout(function(){
              update();
+             update1();
              timeOut();
-         },3000);
+         },5000);
+     }
+
+     function timeOut1(){
+         setTimeout(function(){
+             update1();
+             timeOut1();
+         },5000);
      }
 
      //update real time notification
@@ -106,6 +114,14 @@
              $.each(data,function (){
                  $("#newMessage").html(data.total);
                  $(".message-content").html(data.notify);
+             });
+         });
+     }
+     function update1(){
+         $.getJSON('http://localhost/BITM/bitm-final-project/view/residents/mngrmessage.php',function(data){
+             $.each(data,function (){
+                 $("#newMnrgMessage").html(data.total);
+                 $(".message-content-mrg").html(data.notify);
              });
          });
      }

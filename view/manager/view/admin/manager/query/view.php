@@ -40,8 +40,6 @@ include_once('../../../../includes/header.php');
         </div>
     </header>
 
-
-
     <!-- Breadcrumb-->
     <ul class="breadcrumb">
         <div class="container-fluid">
@@ -74,6 +72,12 @@ include_once('../../../../includes/header.php');
                             <h3 class="h4">New queries</h3>
                         </div>
                         <div class="card-body">
+
+                            <?php
+                            if($query->selectAllUnseenQuery()==array()){
+                                echo "<div class='alert alert-info'>No new query found !!</div>";
+                            }else {
+                            ?>
                             <table class="table table-striped">
 
                                 <thead>
@@ -88,24 +92,38 @@ include_once('../../../../includes/header.php');
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <?php foreach ($query->selectAllUnseenQuery() as $queries){?>
+                                <?php
 
-                                    <tr class="record">
-                                        <td><?php echo $queries['name']?></td>
-                                        <td><?php echo $queries['query']?></td>
-                                        <td><?php echo $queries['date']?></td>
-                                        <td><?php echo $queries['flat_no']?></td>
-                                        <td><?php echo $queries['floor_no']?></td>
-                                        <td>
-                                            <form action="">
-                                                <input type="hidden" value="<?php echo $queries['query_no']?>" name="query_no">
-                                                <input type="button" value="Checked" name="checkquery" class="btn btn-primary checkevent" id="button">
-                                            </form>
-                                        </td>
+//                                var_dump($query->selectAllUnseenQuery());
 
-                                        <td><a href="" data-toggle="modal" data-target="#sendMessage" data-id="<?php echo $queries['resident_id']?>" class="btn btn-info sendmsg">Send message</a></td>
-                                    </tr>
-                                <?php }?>
+
+
+
+                                    foreach ($query->selectAllUnseenQuery() as $queries) {
+                                        ?>
+
+                                        <tr class="record">
+                                            <td><?php echo $queries['name'] ?></td>
+                                            <td><?php echo $queries['query'] ?></td>
+                                            <td><?php echo $queries['date'] ?></td>
+                                            <td><?php echo $queries['flat_no'] ?></td>
+                                            <td><?php echo $queries['floor_no'] ?></td>
+                                            <td>
+                                                <form action="">
+                                                    <input type="hidden" value="<?php echo $queries['query_no'] ?>"
+                                                           name="query_no">
+                                                    <input type="button" value="Checked" name="checkquery"
+                                                           class="btn btn-primary checkevent" id="button">
+                                                </form>
+                                            </td>
+
+                                            <td><a href="" data-toggle="modal" data-target="#sendMessage"
+                                                   data-id="<?php echo $queries['resident_id'] ?>"
+                                                   class="btn btn-info sendmsg">Send message</a></td>
+                                        </tr>
+                                    <?php }
+                                }
+                                ?>
                                 </tbody>
                             </table>
                         </div>

@@ -67,7 +67,7 @@
          $(".checkevent").on('click',function(e){
              e.preventDefault();
              var query_no = jQuery(this).prevAll('input[name="query_no"]').val();
-             alert(query_no);
+//             alert(query_no);
              $.ajax({
                  type: "POST",
                  data:{
