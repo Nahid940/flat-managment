@@ -107,7 +107,8 @@ $datetime=strtotime(date("Y/m/d"));
          
             <li> <a href="view/admin/view/admin/owner/expenditure/expenditure.php"> <i class="fa fa-book" aria-hidden="true"></i>Expenditure </a></li>
               <li> <a href="view/admin/view/admin/owner/query/view.php"> <i class="fa fa-inbox" aria-hidden="true"></i>Residents query</a></li>
-              <li> <a href="view/admin/view/admin/owner/notice/create.php"> <i class="fa fa-inbox" aria-hidden="true"></i>Post notice</a></li>
+              <li> <a href="view/admin/view/admin/owner/notice/create.php"> <i class="fa fa-pencil-square-o" aria-hidden="true"> </i>Post notice</a></li>
+              <li> <a href="view/admin/view/admin/owner/message/sendMessage.php"> <i class="fa fa-paper-plane-o" aria-hidden="true"></i>Send message</a></li>
 <!--			  <li> <a href="view/admin/view/admin/owner/sendmessage/create.php"> <i class="fa fa-comments-o" aria-hidden="true"></i>Send Message</a></li>-->
 			   
 
