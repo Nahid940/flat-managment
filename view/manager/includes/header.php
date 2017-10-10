@@ -69,9 +69,9 @@ $datetime=strtotime(date("Y/m/d"));
               <!-- Navbar Menu -->
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
                 <!-- Search-->
-                <li class="nav-item d-flex align-items-center"><a id="search" href="#"><i class="icon-search"></i></a></li>
+                <li class="nav-item d-flex align-items-center"><a id="search" href=""><i class="icon-search"></i></a></li>
                 <!-- Notifications-->
-                <li class="nav-item dropdown"> <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link">
+                <li class="nav-item dropdown"> <a id="notifications" rel="nofollow" data-target="#" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link">
                         <i class="fa fa-bell-o"></i>
                         <span class="badge bg-red" id="managerquery">
 

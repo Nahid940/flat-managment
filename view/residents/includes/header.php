@@ -53,8 +53,6 @@
           <div class="container-fluid">
             <div class="navbar-holder d-flex align-items-center justify-content-between">
               <!-- Navbar Header-->
-
-
               <div class="navbar-header">
                 <!-- Navbar Brand --><a href="view/residents/index.php" class="navbar-brand">
                   <div class="brand-text brand-big hidden-lg-down"><span>Your  </span><strong> Dashboard</strong></div>
