@@ -44,7 +44,7 @@ include_once('../../../../includes/header.php');
                                     <textarea placeholder="Write here...." class="form-control" rows="10" name="message"></textarea>
                                 </div>
                                 <div class="form-group pull-right">
-                                    <input type="submit" value="Post notice" class="btn btn-primary">
+                                    <input type="submit" value="Send notice" class="btn btn-primary">
                                 </div>
                             </form>
                         </div>

@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="052b9746-a99d-4b23-8488-ef9b2be3047d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/view/admin/owner/message/Message.php" afterPath="$PROJECT_DIR$/view/admin/view/admin/owner/message/Message.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/residents/notice/view.php" afterPath="$PROJECT_DIR$/view/residents/notice/view.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,46 +19,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Manager.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/manager/Manager.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="245" column="185" lean-forward="false" selection-start-line="245" selection-start-column="185" selection-end-line="245" selection-end-column="185" />
-              <folding>
-                <marker date="1507625187116" expanded="true" signature="1853:1912" ph="select manag... manager" />
-                <marker date="1507625187116" expanded="true" signature="2291:2483" ph="insert into manager... " />
-                <marker date="1507625187116" expanded="true" signature="3466:3516" ph="select * fro... manager" />
-                <marker date="1507625187116" expanded="true" signature="4134:4226" ph="update manag... " />
-                <marker date="1507625187116" expanded="true" signature="4814:4878" ph="update manag... " />
-                <marker date="1507625187116" expanded="true" signature="5388:5451" ph="update manag... " />
-                <marker date="1507625187116" expanded="true" signature="6157:6178" ph="select * fro... manager" />
-                <marker date="1507625187116" expanded="true" signature="6369:6417" ph="select * fro... manager" />
-                <marker date="1507625187116" expanded="true" signature="6598:6655" ph="select count... manager" />
-                <marker date="1507625187116" expanded="true" signature="6829:6888" ph="select manag... manager" />
-                <marker date="1507625187116" expanded="true" signature="7214:7258" ph="delete from " />
-                <marker date="1507625187116" expanded="true" signature="7663:7752" ph="select * fro... manager_salary" />
-                <marker date="1507625187116" expanded="true" signature="8227:8337" ph="insert into manager_salary... " />
-                <marker date="1507625187116" expanded="true" signature="8973:9130" ph="select name,... " />
-                <marker date="1507625187116" expanded="true" signature="9340:9495" ph="select name,... " />
-                <marker date="1507625187116" expanded="true" signature="9340:9515" ph="select name,... " />
-                <marker date="1507625187116" expanded="true" signature="9707:9801" ph="select month... " />
-                <marker date="1507625187116" expanded="true" signature="10022:10117" ph="select * fro... manager_salary" />
-                <marker date="1507625187116" expanded="true" signature="10359:10459" ph="update manag... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="payment.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/manager/view/admin/manager/paymentList/payment.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="31" column="85" lean-forward="false" selection-start-line="31" selection-start-column="64" selection-end-line="31" selection-end-column="85" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/manager/includes/footer.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -123,25 +85,49 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="view.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/residents/notice/view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="23" lean-forward="false" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+            <state relative-caret-position="221">
+              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding>
-                <marker date="1507627740429" expanded="true" signature="1255:1270" ph="..." />
-                <marker date="1507627740429" expanded="true" signature="3117:3132" ph="..." />
+                <marker date="1507627912034" expanded="true" signature="1253:1268" ph="..." />
+                <marker date="1507627912034" expanded="true" signature="3115:3130" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/manager/includes/header.php">
+      <file leaf-file-name="send.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/admin/view/admin/owner/message/send.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="132" column="75" lean-forward="false" selection-start-line="132" selection-start-column="75" selection-end-line="132" selection-end-column="75" />
+            <state relative-caret-position="238">
+              <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Message.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/view/admin/view/admin/owner/message/Message.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="268">
+              <caret line="45" column="61" lean-forward="false" selection-start-line="45" selection-start-column="61" selection-end-line="45" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OwnerMessage.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ownermessage/OwnerMessage.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="34" column="59" lean-forward="false" selection-start-line="34" selection-start-column="59" selection-end-line="34" selection-end-column="59" />
+              <folding>
+                <marker date="1507569421481" expanded="true" signature="683:798" ph="insert into owner_message... " />
+                <marker date="1507569421481" expanded="true" signature="1332:1445" ph="select messa... owner_message" />
+                <marker date="1507569421481" expanded="true" signature="1689:1791" ph="select count... owner_message" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -165,7 +151,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/view/admin/view/admin/owner/message/sendMessage.php" />
-        <option value="$PROJECT_DIR$/view/admin/view/admin/owner/message/send.php" />
         <option value="$PROJECT_DIR$/src/ownermessage/OwnerMessage.php" />
         <option value="$PROJECT_DIR$/view/residents/index.php" />
         <option value="$PROJECT_DIR$/view/admin/view/admin/owner/manager/AddNewManagerOperation.php" />
@@ -188,7 +173,6 @@
         <option value="$PROJECT_DIR$/view/admin/view/admin/owner/query/view.php" />
         <option value="$PROJECT_DIR$/view/admin/view/admin/owner/staff/view.php" />
         <option value="$PROJECT_DIR$/view/admin/view/admin/owner/manager/view.php" />
-        <option value="$PROJECT_DIR$/view/admin/view/admin/owner/message/Message.php" />
         <option value="$PROJECT_DIR$/view/admin/view/admin/owner/manager/AddInfo.php" />
         <option value="$PROJECT_DIR$/view/manager/view/admin/manager/expenditure/view.php" />
         <option value="$PROJECT_DIR$/view/manager/view/admin/manager/manager/create.php" />
@@ -215,6 +199,8 @@
         <option value="$PROJECT_DIR$/view/admin/view/admin/owner/notice/create.php" />
         <option value="$PROJECT_DIR$/view/manager/view/admin/manager/notice/postNotice.php" />
         <option value="$PROJECT_DIR$/view/residents/notice/view.php" />
+        <option value="$PROJECT_DIR$/view/admin/view/admin/owner/message/send.php" />
+        <option value="$PROJECT_DIR$/view/admin/view/admin/owner/message/Message.php" />
       </list>
     </option>
   </component>
@@ -275,8 +261,22 @@
               <option name="myItemId" value="view" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="residents" />
+              <option name="myItemId" value="bitm-final-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitm-final-project" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -294,11 +294,19 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="residents" />
+              <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="notice" />
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="owner" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -313,6 +321,58 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="owner" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="message" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitm-final-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitm-final-project" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitm-final-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitm-final-project" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ownermessage" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -430,12 +490,12 @@
       <workItem from="1507473827799" duration="12388000" />
       <workItem from="1507538439704" duration="2792000" />
       <workItem from="1507567240125" duration="12746000" />
-      <workItem from="1507612308564" duration="12263000" />
+      <workItem from="1507612308564" duration="12510000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="205388000" />
+    <option name="totallyTimeSpent" value="205635000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -472,25 +532,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/view/admin/ownerReg.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Helper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="53" column="25" lean-forward="true" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
-          <folding>
-            <marker date="1507615512460" expanded="true" signature="194:243" ph="select image... ${$table}" />
-            <marker date="1507615512460" expanded="true" signature="547:599" ph="select image... manager" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/admin/owner/Owner.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
@@ -551,14 +592,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/admin/view/admin/owner/message/Message.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -943,12 +976,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/residents/notice/view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="23" lean-forward="false" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+        <state relative-caret-position="221">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
-            <marker date="1507627740429" expanded="true" signature="1255:1270" ph="..." />
-            <marker date="1507627740429" expanded="true" signature="3117:3132" ph="..." />
+            <marker date="1507627912034" expanded="true" signature="1253:1268" ph="..." />
+            <marker date="1507627912034" expanded="true" signature="3115:3130" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ownermessage/OwnerMessage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="34" column="59" lean-forward="false" selection-start-line="34" selection-start-column="59" selection-end-line="34" selection-end-column="59" />
+          <folding>
+            <marker date="1507569421481" expanded="true" signature="683:798" ph="insert into owner_message... " />
+            <marker date="1507569421481" expanded="true" signature="1332:1445" ph="select messa... owner_message" />
+            <marker date="1507569421481" expanded="true" signature="1689:1791" ph="select count... owner_message" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/admin/view/admin/owner/message/send.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/admin/view/admin/owner/message/Message.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="45" column="61" lean-forward="false" selection-start-line="45" selection-start-column="61" selection-end-line="45" selection-end-column="61" />
+          <folding />
         </state>
       </provider>
     </entry>

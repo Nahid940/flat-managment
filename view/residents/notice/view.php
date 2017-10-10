@@ -6,8 +6,6 @@ $Notice=new \App\manager\Notice();
 
 include_once('../includes/header.php');
 ?>
-
-
         <header class="page-header">
             <div class="container-fluid">
                 <h2 class="no-margin-bottom">Notice board</h2>
