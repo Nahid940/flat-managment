@@ -22,14 +22,16 @@ include_once('../../../../includes/header.php');
                     </div>
                     <div class="card-header d-flex align-items-center">
                       <h3 class="h4">Post your valuable notice for all residents</h3>
+
                     </div>
                     <div class="card-body">
+                        <span id="validateNotice"></span>
 
-                      <form method="post" action="view/manager/view/admin/manager/notice/postNotice.php">
+                      <form method="post" name="mngrNoticeForm" action="view/manager/view/admin/manager/notice/postNotice.php" onsubmit="return validateMngrNotice()">
 
 						<div class="form-group">
                           <label class="form-control-label"><strong>Write your notice</strong></label>
-                          <textarea placeholder="Write here...." class="form-control" rows="10" name="notice"></textarea>
+                          <textarea placeholder="Write here...." class="form-control" rows="10" name="notice" id="mngrNotice"></textarea>
                         </div>
 						<div class="form-group pull-right">
                           <input type="submit" value="Post notice" class="btn btn-primary">

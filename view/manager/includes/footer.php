@@ -335,6 +335,18 @@
          $('#resid').val(uniqueid.data('id'));
      });
 
+     function validateMngrNotice(){
+         var notice=document.forms["mngrNoticeForm"]["notice"].value;
+         if(notice==''){
+             $('#validateNotice').html("Write something");
+             $('#validateNotice').css({'color':'red','font-weight':'bold'});
+             return false;
+         }
+         else{
+             return true;
+         }
+     }
+
  </script>
   </body>
 </html>
