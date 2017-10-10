@@ -58,6 +58,7 @@
 
          $("#expenditureList").DataTable();
          $("#SatffSalaryList").DataTable();
+         $("#EachManagerSalaryList").DataTable();
 
          $('.alert').delay(5000).fadeOut(1000, function () {
              $(this).alert('close');

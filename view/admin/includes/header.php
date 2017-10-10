@@ -52,7 +52,7 @@ $datetime=strtotime(date("Y/m/d"));
             <div class="navbar-holder d-flex align-items-center justify-content-between">
               <!-- Navbar Header-->
               <div class="navbar-header">
-                <!-- Navbar Brand --><a href="index.html" class="navbar-brand">
+                <!-- Navbar Brand --><a href="view/admin/index.php" class="navbar-brand">
                   <div class="brand-text brand-big hidden-lg-down"><span>Owner's </span><strong>Dashboard</strong></div>
                   <div class="brand-text brand-small"><strong>BD</strong></div></a>
                 <!-- Toggle Button--><a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>

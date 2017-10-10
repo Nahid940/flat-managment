@@ -35,18 +35,18 @@ class Notice
         }
     }
 
-    public function insertNotice(){
-        $sql="insert into notice (manager_id,date,notice)VALUES (:manager_id,:date,:notice)";
-        $stmt=DBConnection::myQuery($sql);
-        $stmt->bindValue(':manager_id',$this->manager_id);
-        $stmt->bindValue(':date',$this->date);
-        $stmt->bindValue(':notice',$this->notice);
-        if($stmt->execute()){
-            Session::init();
-            Session::set("managerNotice","<div class='alert alert-success'>Notice posted !!</div>");
-            header('location:create.php');
-        }
-    }
+//    public function insertNotice(){
+//        $sql="insert into notice (manager_id,date,notice)VALUES (:manager_id,:date,:notice)";
+//        $stmt=DBConnection::myQuery($sql);
+//        $stmt->bindValue(':manager_id',$this->manager_id);
+//        $stmt->bindValue(':date',$this->date);
+//        $stmt->bindValue(':notice',$this->notice);
+//        if($stmt->execute()){
+//            Session::init();
+//            Session::set("managerNotice","<div class='alert alert-success'>Notice posted !!</div>");
+//            header('location:create.php');
+//        }
+//    }
     public function insertNoticeByManager(){
         $sql="insert into notice (owner_email,date,notice)VALUES (:owner_email,:date,:notice)";
         $stmt=DBConnection::myQuery($sql);

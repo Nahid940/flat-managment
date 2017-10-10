@@ -26,22 +26,12 @@ include_once '../../vendor/autoload.php';
    <div class="container">
    <div class="row">
 
-
-<!--   <div class="col-md-6 col-sm-4 wrapper">-->
-<!--      <div class="jumbotron">-->
-<!--       -->
-<!--        <h2>-->
-<!--           Manage your residence smartly !!-->
-<!--       </h2>-->
-<!--      <img src="images/buildings.png" alt="" style="width:300px;height:300px">-->
-<!--      </div>   -->
-<!--   </div>-->
    
    <div class="col-md-8 col-md-offset-2 wrapper">
        <div class="panel panel-login">
            <div class="panel-heading">
                <div class="row">
-                       <a href="#loginform" class="active" id="login-form-link">Sign in</a>
+                       <a href="#loginform" class="active" id="login-form-link">Owner login</a>
                </div>
                <hr/>
            </div>

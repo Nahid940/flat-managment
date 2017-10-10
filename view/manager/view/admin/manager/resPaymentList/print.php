@@ -14,16 +14,77 @@ $year =$_GET['year'];
 $monthlyPayment=new \App\flatrentPayment\ResidentPayment();
 
 $res=$monthlyPayment->getPaymentInfoMonthly($uniqueid,$month,$year);
-$html="<table style='border-collapse: collapse;
-    width: 80%;background-color: #ede4dc'>
-<tr style='text-align: center;border-bottom: 1px solid #ddd'><td>Name</td><td>".$res['name']."</td></tr>
-<tr style='text-align: center;border-bottom: 1px solid #ddd''><td>Date</td><td>".$res['date']."</td></tr>
-<tr style='text-align: center;border-bottom: 1px solid #ddd''><td>Flat no.</td><td>".$res['flat_no']."</td></tr>
-<tr style='text-align: center;border-bottom: 1px solid #ddd''><td>Flat rent</td><td>".$res['flat_rent']."</td></tr>
-<tr style='text-align: center;border-bottom: 1px solid #ddd''><td>Electricity bill</td><td>".$res['electricity_bill']."</td></tr>
-<tr style='text-align: center;border-bottom: 1px solid #ddd''><td>Other bill</td><td>".$res['other_bill']."</td></tr>
-<tr style='text-align: center;border-bottom: 1px solid #ddd''><td>Total amount</td><td>".$res['total']."</td></tr>
-</table>";
+$html="
+<html>
+<head>
+<style>
+table, td, th {    
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+
+</style>
+</head>
+
+<body>
+<center><strong>Your monthly bill receipt</strong></center>
+<table>
+  <tr>
+    <td>Name</td>
+    <td>".$res['name']."</td>
+    
+  </tr>
+  <tr>
+    <td>Date</td>
+    <td>".$res['date']."</td>
+  </tr>
+  <tr>
+    <td>Flat no.</td>
+    <td>".$res['flat_no']."</td>
+  </tr>
+  <tr>
+    <td>Flat rent</td>
+    <td>".$res['flat_rent']."</td>
+  </tr>
+  
+   <tr>
+    <td>Electricity bill</td>
+    <td>".$res['electricity_bill']."</td>
+  </tr>
+  <tr>
+    <td>Other bill</td>
+    <td>".$res['other_bill']."</td>
+  </tr>
+  <tr>
+    <td>Total bill</td>
+    <td>".$res['total']."</td>
+  </tr>
+</table>
+</body>
+</html>
+";
+
+//<table style='border-collapse: collapse;
+//    width: 80%;background-color: #ede4dc'>
+//<tr style='text-align: center;border-bottom: 1px solid #ddd'><td>Name</td><td>\".$res['name'].\"</td></tr>
+//<tr style='text-align: center;border-bottom: 1px solid #ddd''><td>Date</td><td>\".$res['date'].\"</td></tr>
+//<tr style='text-align: center;border-bottom: 1px solid #ddd''><td>Flat no.</td><td>\".$res['flat_no'].\"</td></tr>
+//<tr style='text-align: center;border-bottom: 1px solid #ddd''><td>Flat rent</td><td>\".$res['flat_rent'].\"</td></tr>
+//<tr style='text-align: center;border-bottom: 1px solid #ddd''><td>Electricity bill</td><td>\".$res['electricity_bill'].\"</td></tr>
+//<tr style='text-align: center;border-bottom: 1px solid #ddd''><td>Other bill</td><td>\".$res['other_bill'].\"</td></tr>
+//<tr style='text-align: center;border-bottom: 1px solid #ddd''><td>Total amount</td><td>\".$res['total'].\"</td></tr>
+//</table>\"
+
 
 $domPdf=new \Dompdf\Dompdf();
 

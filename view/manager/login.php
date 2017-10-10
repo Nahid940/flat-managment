@@ -29,7 +29,7 @@ include_once '../../vendor/autoload.php';
        <div class="panel panel-login">
            <div class="panel-heading">
                <div class="row">
-                       <a href="login.php" class="active" id="login-form-link">Manager log in</a>
+                       <a href="login.php" class="active" id="login-form-link">Manager login</a>
                </div>
                <hr/>
            </div>

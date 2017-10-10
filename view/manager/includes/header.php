@@ -61,7 +61,7 @@ $datetime=strtotime(date("Y/m/d"));
             <div class="navbar-holder d-flex align-items-center justify-content-between">
               <!-- Navbar Header-->
               <div class="navbar-header">
-                <!-- Navbar Brand --><a href="index.html" class="navbar-brand">
+                <!-- Navbar Brand --><a href="view/manager/index.php" class="navbar-brand">
                   <div class="brand-text brand-big hidden-lg-down"><span>Your  </span><strong> Dashboard</strong></div>
                   <div class="brand-text brand-small"><strong>BD</strong></div></a>
                 <!-- Toggle Button--><a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
@@ -130,6 +130,7 @@ $datetime=strtotime(date("Y/m/d"));
               <li> <a href="view/manager/view/admin/manager/query/view.php"> <i class="fa fa-inbox" aria-hidden="true"></i></i>Residents query</a></li>
 			  <li> <a href="view/manager/view/admin/manager/notice/create.php"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i>Post notice</a></li>
 			  <li> <a href="view/manager/view/admin/manager/trash.php"> <i class="fa fa-trash" aria-hidden="true"></i>Trash</a></li>
+			  <li> <a href="view/manager/view/admin/manager/paymentList/payment.php"> <i class="fa fa-money" aria-hidden="true"></i> Check your payment</a></li>
 
           <!--  <li> <a href="assets/charts.html"> <i class="fa fa-bar-chart"></i>Charts </a></li>
             <li> <a href="assets/forms.html"> <i class="icon-padnote"></i>Forms </a></li>

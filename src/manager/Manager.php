@@ -242,6 +242,13 @@ class Manager
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
     }
 
+    public function getEachManagerMonthlySalaryList($manager_id){
+        $sql="select name,month,year,date,amount ,sum(amount) as 'Total' from manager m,manager_salary ms where m.manager_id=ms.manager_id and m.manager_id='$manager_id' order by month desc";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->execute();
+        return $stmt->fetch(\PDO::FETCH_ASSOC);
+    }
+
     public function getManagerMonthlySalaryCost(){
         $sql="select month,year, sum(amount) as 'Total' from manager_salary group by month,year desc limit 1";
         $stmt=DBConnection::myQuery($sql);
