@@ -3,7 +3,7 @@ include_once '../../../../../../vendor/autoload.php';
 \App\Session::init();
 \App\Session::checksession();
 $manager=new \App\manager\Manager();
-$res=$manager->getEachManagerMonthlySalaryList(\App\Session::get('manager_id'));
+//$res=$manager->getEachManagerMonthlySalaryList(\App\Session::get('manager_id'));
 include_once('../../../../includes/header.php');
 
 
@@ -44,6 +44,7 @@ include_once('../../../../includes/header.php');
                             </tr>
                             </thead>
 
+                            <?php foreach ($manager->getEachManagerMonthlySalaryList(\App\Session::get('manager_id')) as $res){?>
 
                             <tbody>
 
@@ -58,6 +59,7 @@ include_once('../../../../includes/header.php');
 
 
                             </tbody>
+    <?php }?>
                         </table>
                     </div>
                 </div>

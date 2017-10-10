@@ -1,11 +1,12 @@
 <?php
 
-include_once '../../../../../vendor/autoload.php';
+
+include_once '../../../../../../vendor/autoload.php';
 \App\Session::init();
 \App\Session::checksession();
-$resident=new App\resident\residents();
+$manager=new \App\manager\Manager();
 
-include_once('../../../includes/header.php');
+include_once('../../../../includes/header.php');
 
 ?>
     <!-- Breadcrumb-->
@@ -20,6 +21,8 @@ include_once('../../../includes/header.php');
             <div class="row">
                 <?php echo \App\Session::get('permDelete');
                 \App\Session::UnsetKeySession('permDelete');
+                echo \App\Session::get('delete');
+                \App\Session::UnsetKeySession('delete');
                 ?>
                 <div class="col-lg-12">
                     <div class="card">
@@ -40,7 +43,6 @@ include_once('../../../includes/header.php');
                                     <th>Name</th>
                                     <th>Phn</th>
                                     <th>NID</th>
-                                    <th>Flat no.</th>
                                     <th>Email</th>
                                     <th>Action</th>
 
@@ -53,17 +55,16 @@ include_once('../../../includes/header.php');
                                 <?php
 
 
-                                foreach ($resident->trashData() as $trashData){
+                                foreach ($manager->getDeletedmanagers() as $trashData){
 
                                     ?>
                                     <tr>
                                         <td><?php echo $trashData['name']?></td>
                                         <td><?php echo $trashData['phn']?></td>
                                         <td><?php echo $trashData['nid']?></td>
-                                        <td><?php echo $trashData['flat_no']?></td>
                                         <td><?php echo $trashData['email']?></td>
-
-                                        <td><a href="view/manager/view/admin/manager/resident/deletePermanently.php?uniqueid=<?php echo $trashData['uniqueid']?>" class="btn btn-danger">Delete permanently</a></td>
+                                        <td><a href="view/admin/view/admin/owner/trash/restore.php?uniqueid=<?php echo $trashData['uniqueid']?>" class="btn btn-info">Restore</a>
+                                        <a href="view/admin/view/admin/owner/trash/delete.php?uniqueid=<?php echo $trashData['uniqueid']?>" class="btn btn-danger">Delete permanently</a></td>
 
                                     </tr>
 
@@ -87,4 +88,4 @@ include_once('../../../includes/header.php');
     </section>
 
 
-<?php include_once('../../../includes/footer.php'); ?>
+<?php include_once('../../../../includes/footer.php'); ?>

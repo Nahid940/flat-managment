@@ -54,7 +54,7 @@ include_once '../../vendor/autoload.php';
                         <form class="form-signin" method="post" id="loginform" name ="loginform" action="loginOperation.php" onsubmit=" return validateForm()">
 
                                 <div class="form-group">
-                                    <label for="manager_id">Your ID or email</label>
+                                    <label for="manager_id">Enter your ID</label>
                                     <input type="text" class="form-control" name="resident_id" id="resident_id" placeholder="Your ID" value="<?php if(isset($_COOKIE["res_login"])) { echo $_COOKIE["res_login"]; } ?>" autofocus="" />
                                 </div>
                             <div class="form-group">

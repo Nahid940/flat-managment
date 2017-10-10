@@ -46,7 +46,7 @@ include_once('../../../../includes/header.php');
         ?>
 
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-7 offset-2">
 
                     <div class="card-header d-flex align-items-center">
                         <h3 class="h4">Click to add new residents info</h3>

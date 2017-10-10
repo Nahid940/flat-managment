@@ -114,7 +114,6 @@ $resident=new \App\resident\residents();
                                                     <td></td>
                                                     <td></td>
                                                     <td>
-                                                        <a  data-id="<?php echo $Data['uniqueid']?>" class="btn btn-info">Edit</a>
                                                         <a data-id="<?php echo $Data['uniqueid']?>" data-toggle="modal" data-target="#myModalRes" class="btn btn-danger delete">Delete</a>
                                                     </td>
                                                 </tr>

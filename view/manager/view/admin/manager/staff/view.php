@@ -38,7 +38,7 @@ $staff=new \App\staff\Staff();
                                                 <tbody>
 
                                                 <tr>
-                                                    <td><img src="<?php echo $staffData['image']?>" alt=""></td>
+                                                    <td><img src="<?php echo $staffData['image']?>" alt="" style="height: 120px;width: 120px"></td>
                                                 </tr>
 
                                                 <tr>

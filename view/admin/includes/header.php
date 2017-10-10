@@ -110,6 +110,7 @@ $datetime=strtotime(date("Y/m/d"));
               <li> <a href="view/admin/view/admin/owner/notice/create.php"> <i class="fa fa-pencil-square-o" aria-hidden="true"> </i>Post notice</a></li>
               <li> <a href="view/admin/view/admin/owner/message/Message.php"> <i class="fa fa-paper-plane-o" aria-hidden="true"></i>Send message</a></li>
               <li> <a href="view/admin/view/admin/owner/profile/profile.php"> <i class="fa fa-user-o" aria-hidden="true"></i> View your profile</a></li>
+              <li> <a href="view/admin/view/admin/owner/trash/trash.php"> <i class="fa fa-trash" aria-hidden="true"></i> Trash</a></li>
 <!--			  <li> <a href="view/admin/view/admin/owner/sendmessage/create.php"> <i class="fa fa-comments-o" aria-hidden="true"></i>Send Message</a></li>-->
 			   
 

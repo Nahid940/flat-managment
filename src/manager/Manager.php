@@ -85,7 +85,7 @@ class Manager
             header('location:Addinfo.php');
         }else {
 
-            $sql = "insert into manager (manager_id,name,age,phn,nid,email,attempt,timestamp,password,image,uniqueid) values(:manager_id,:name,:age,:phn,:nid,:email,:attempt,:timestamp,:password,:image,:uniqueid)";
+            $sql = "insert into manager (manager_id,name,age,phn,nid,email,attempt,timestamp,password,image,uniqueid,deleted_at) values(:manager_id,:name,:age,:phn,:nid,:email,:attempt,:timestamp,:password,:image,:uniqueid,'0000:00:00 00:00:00')";
             $stmt = DBConnection::myQuery($sql);
             $stmt->bindValue(':manager_id', $this->manager_id);
             $stmt->bindValue(':name', $this->name);
@@ -160,7 +160,15 @@ class Manager
     }
 
     public function getAllmanagers(){
-        $sql="select * from manager";
+        $sql="select * from manager where deleted_at='0000:00:00 00:00:00'";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    }
+
+
+    public function getDeletedmanagers(){
+        $sql="select * from manager where deleted_at!='0000:00:00 00:00:00'";
         $stmt=DBConnection::myQuery($sql);
         $stmt->execute();
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
@@ -175,7 +183,7 @@ class Manager
 
 
     public function getTotalManager(){
-        $sql="select count('manager_id') as 'totalmanager' from manager";
+        $sql="select count('manager_id') as 'totalmanager' from manager where deleted_at='0000:00:00 00:00:00'";
         $stmt=DBConnection::myQuery($sql);
         $stmt->execute();
         return $stmt->fetchColumn();
@@ -196,13 +204,13 @@ class Manager
     }
 
     public function deleteManager(){
-        $sql="delete from manager where uniqueid=:uniqueid";
+        $sql="update manager set deleted_at=now() where uniqueid=:uniqueid";
         $stmt=DBConnection::myQuery($sql);
         $stmt->bindValue(":uniqueid",$this->uniqueid);
         $stmt->execute();
         if($stmt->execute()){
             Session::init();
-            Session::set("managerDelete","<div class='alert alert-info'>Account deleted</div>");
+            Session::set("managerDelete","<div class='alert alert-info'>Account moved to trash! </div>");
             header('location:view.php');
         }
     }
@@ -243,10 +251,10 @@ class Manager
     }
 
     public function getEachManagerMonthlySalaryList($manager_id){
-        $sql="select name,month,year,date,amount ,sum(amount) as 'Total' from manager m,manager_salary ms where m.manager_id=ms.manager_id and m.manager_id='$manager_id' order by month desc";
+        $sql="select name,month,year,date,amount from manager m,manager_salary ms where m.manager_id=ms.manager_id and m.manager_id='$manager_id' order by month";
         $stmt=DBConnection::myQuery($sql);
         $stmt->execute();
-        return $stmt->fetch(\PDO::FETCH_ASSOC);
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
     }
 
     public function getManagerMonthlySalaryCost(){
@@ -254,6 +262,12 @@ class Manager
         $stmt=DBConnection::myQuery($sql);
         $stmt->execute();
         return $stmt->fetch(\PDO::FETCH_ASSOC);
+    }
+    public function TotalmanagerSalaryPayemnt(){
+        $sql="select sum(amount) as 'Total' from manager_salary";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->execute();
+        return $stmt->fetchColumn();
     }
 
     public function checkManagerMonthlySalaryPayment($manager_id,$month,$year){
@@ -280,6 +294,25 @@ class Manager
             Session::init();
             Session::set("managareDataupdate","<div class='alert alert-success'>Info updated!!</div>");
             header('location:view.php');
+        }
+    }
+
+    public function restore($uniqueid){
+        $sql="update manager set deleted_at='0000:00:00 00:00:00' where uniqueid='$uniqueid'";
+        $stmt=DBConnection::myQuery($sql);
+        if($stmt->execute()){
+            Session::init();
+            Session::set("restore","<div class='alert alert-success'>Account restored!</div> ");
+            header('location:../manager/view.php');
+        }
+    }
+    public function permanentDelete($uniqueid){
+        $sql="delete from manager where  uniqueid='$uniqueid'";
+        $stmt=DBConnection::myQuery($sql);
+        if($stmt->execute()){
+            Session::init();
+            Session::set("delete","<div class='alert alert-info'>Account deleted permanently!</div> ");
+            header('location:trash.php');
         }
     }
 

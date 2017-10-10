@@ -101,7 +101,7 @@ $managerSlaray=new \App\manager\Manager();
                             <thead>
 
                             <tr>
-                                <td colspan="9" style="color:#3a0000"><strong>Total paid till now : <?php echo $staffPayment->TotalPayment()?></strong></td>
+                                <td colspan="9" style="color:#3a0000"><strong>Total paid till now : <?php echo$res= $managerSlaray->TotalmanagerSalaryPayemnt()?></strong></td>
                             </tr>
                             <tr>
                                 <th>Staff Name</th>

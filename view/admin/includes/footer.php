@@ -92,6 +92,12 @@
 
      });
 
+     $(document).on('click','.editOwnerProfile',function () {
+         var owner_email=$(this);
+         $('#owner_email').val(owner_email.data('id'));
+
+     });
+
      //Send message
 
      $(document).on('click','.sendmsg',function () {

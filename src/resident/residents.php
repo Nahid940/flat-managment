@@ -189,8 +189,7 @@ class residents
     }
 
     public function ResidentLogin(){
-
-        $sql="select * from resident where resident_id=:resident_id or email=:resident_id";
+        $sql="select * from resident where resident_id=:resident_id";
         $stmt=DBConnection::myQuery($sql);
         $stmt->bindValue(':resident_id',$this->resident_id);
         $stmt->execute();

@@ -29,6 +29,13 @@ class Helper
         return $stmt->fetchColumn();
     }
 
+    public function getOwnerPreviousImage($uniqueid){
+        $sql="select image from owner where uniqueid='$uniqueid'";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->execute();
+        return $stmt->fetchColumn();
+    }
+
     public function uploadImage($folder){
         $_POST['image']=$_FILES['image']['name'];
         $filelocation=$_FILES['image']['tmp_name'];

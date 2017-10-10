@@ -69,7 +69,7 @@ include_once('../../../../includes/header.php');
                             <label for="resident_id">Select staff's name:</label>
                             <select class="form-control" name="staff_id">
                                 <option value="">Select staff name</option>
-                                <?php foreach ($staff->getAllStaff() as $allStaff) { ?>
+                                <?php foreach ($staff->getAllStaffList() as $allStaff) { ?>
                                     <option value="<?php echo $allStaff['staff_id']?>"><?php echo $allStaff['name']?></option>
                                 <?php }
                                 ?>
@@ -80,7 +80,6 @@ include_once('../../../../includes/header.php');
                             <label for="amount">Enter amount</label>
                             <input type="text" name="amount" class="form-control">
                         </div>
-
 
                         <div class="form-group pull-right">
                             <input type="submit" value="Insert data" id="addResidentPayment" class="btn btn-primary" >

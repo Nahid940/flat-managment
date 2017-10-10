@@ -53,6 +53,9 @@ $manager=new \App\manager\Manager();
                         \App\Session::UnsetKeySession('managerDelete');
                         echo \App\Session::get('managareDataupdate');
                         \App\Session::UnsetKeySession('managareDataupdate');
+
+                        echo \App\Session::get('restore');
+                        \App\Session::UnsetKeySession('restore');
 //
                     ?>
                     <?php foreach ($manager->getAllmanagers() as $managerData){

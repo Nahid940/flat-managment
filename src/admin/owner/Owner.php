@@ -129,4 +129,18 @@ class Owner
         $stmt->execute();
         return $stmt->fetch(\PDO::FETCH_ASSOC);
     }
+
+    public function updateProfile(){
+        $sql="update owner set name=:name,image=:image where uniqueid=:uniqueid";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->bindValue(':name',$this->name);
+
+        $stmt->bindValue(':uniqueid',$this->uniqueid);
+        $stmt->bindValue(':image',$this->image);
+        if($stmt->execute()){
+            Session::init();
+            Session::set("profileUpdate","<div class='alert alert-success'>Profile updated!!</div>");
+            header('location:profile.php');
+        }
+    }
 }

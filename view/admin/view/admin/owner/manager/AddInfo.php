@@ -150,7 +150,7 @@ include_once('../../../../includes/header.php');
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" data-dismiss="modal" class="btn btn-secondary">Close</button>
-                                        <button type="button" class="btn btn-primary">Save changes</button>
+
                                     </div>
                                 </div>
                             </div>
