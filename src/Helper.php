@@ -41,4 +41,18 @@ class Helper
         return $_POST['image'];
     }
 
+
+
+    public function uploadImageOwnerReg($folder){
+        $_POST['image']=$_FILES['image']['name'];
+        $filelocation=$_FILES['image']['tmp_name'];
+        $div=explode('.',$_POST['image']);
+        $fileExtension=strtolower(end($div));
+        $uniqueName=substr(md5(time()), 0, 10).'.'.$fileExtension;
+        $uploaded_image = "images/".$folder."/".$uniqueName;
+        $_POST['image']=$uploaded_image;
+        move_uploaded_file($filelocation,"../../".$uploaded_image);
+        return $_POST['image'];
+    }
+
 }

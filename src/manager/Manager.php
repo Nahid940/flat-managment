@@ -203,7 +203,7 @@ class Manager
         if($stmt->execute()){
             Session::init();
             Session::set("managerDelete","<div class='alert alert-info'>Account deleted</div>");
-            header('location:Message.php');
+            header('location:view.php');
         }
     }
 

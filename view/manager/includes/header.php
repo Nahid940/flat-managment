@@ -80,7 +80,7 @@ $datetime=strtotime(date("Y/m/d"));
                     <li>
                         <a rel="nofollow" href="view/manager/view/admin/manager/query/view.php" class="dropdown-item">
                             <div class="notification">
-                              <div class="notification-content"><i class="fa fa-envelope bg-green"></i>You have 6 new messages </div>
+                              <div class="notification-content"><i class="fa fa-envelope bg-green"></i></div>
 
                             </div>
                         </a>

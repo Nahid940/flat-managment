@@ -1,5 +1,6 @@
 <?php
-
+include_once '../../vendor/autoload.php';
+\App\Session::init();
 
 ?>
 
@@ -22,6 +23,10 @@
     <div class="row">
 
         <div class="col-md-8 col-md-offset-2 wrapper">
+            <?php
+            echo \App\Session::get('RegComplete');
+            \App\Session::UnsetKeySession('RegComplete');
+            ?>
             <div class="panel panel-login">
                 <div class="panel-heading">
                     <h2>Registration form</h2>
@@ -30,11 +35,10 @@
 
                 <div class="panel-body">
 
-
                     <div class="row">
                         <div class="col-lg-12">
 
-                            <form id="registerform" name="regform" action="" method="post" role="form" class="register-form" onsubmit="return validateForm();" enctype="multipart/form-data">
+                            <form id="registerform" name="regform" action="ownerReg.php" method="post" role="form" class="register-form" onsubmit="return validateForm();" enctype="multipart/form-data">
 
                                 <div class="form-group">
                                     <span id="nameValid" style="color:red;font-weight:bold"></span>
@@ -43,10 +47,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="email" id="label2">Enter your email:</label>
-                                    <input type="email" name="email" id="email1" tabindex="1" class="form-control" placeholder="Email" value="">
+                                    <input type="email" name="owner_email" id="email1" tabindex="1" class="form-control" placeholder="Email" value="">
                                 </div>
-
-
 
                                 <div class="form-group">
 
@@ -141,13 +143,13 @@
         $('#password').keyup(function () {
             var $this = $(this);
             var insertedVal = $this.val();
-            if (insertedVal != '' && insertedVal.length >= 10) {
+            if (insertedVal != '' && insertedVal.length >= 6) {
                 $this.css('box-shadow', '0 0 10px green');
                 $this.css({"color": "green", "border": "1px solid green"});
                 $('#wrongpassword').hide();
             } else {
                 $('#wrongpassword').show();
-                $('#wrongpassword').text('Password must be 10 characters long !!');
+                $('#wrongpassword').text('Password must be 6 characters long !!');
                 $this.css('box-shadow', '0 0 10px #ff0000');
                 $this.css({"color": "#ff0000", "border": "1px solid #ff0000"})
             }

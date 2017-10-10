@@ -55,44 +55,44 @@ table {
     color: #666
 }
 
-.card-close {
-    position: absolute;
-    top: 15px;
-    right: 15px
-}
+/*.card-close {*/
+    /*position: absolute;*/
+    /*top: 15px;*/
+    /*right: 15px*/
+/*}*/
 
-.card-close .dropdown-toggle {
-    color: #999;
-    background: none;
-    border: none
-}
+/*.card-close .dropdown-toggle {*/
+    /*color: #999;*/
+    /*background: none;*/
+    /*border: none*/
+/*}*/
 
-.card-close .dropdown-toggle:after {
-    display: none
-}
+/*.card-close .dropdown-toggle:after {*/
+    /*display: none*/
+/*}*/
 
-.card-close .dropdown-menu {
-    border: none;
-    min-width: auto;
-    font-size: 0.9em;
-    border-radius: 0;
-    transform: translateX(calc(-100% + 5px));
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1), -2px -2px 3px rgba(0, 0, 0, 0.1)
-}
+/*.card-close .dropdown-menu {*/
+    /*border: none;*/
+    /*min-width: auto;*/
+    /*font-size: 0.9em;*/
+    /*border-radius: 0;*/
+    /*transform: translateX(calc(-100% + 5px));*/
+    /*box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1), -2px -2px 3px rgba(0, 0, 0, 0.1)*/
+/*}*/
 
-.card-close .dropdown-menu a {
-    color: #999 !important
-}
+/*.card-close .dropdown-menu a {*/
+    /*color: #999 !important*/
+/*}*/
 
-.card-close .dropdown-menu a:hover {
-    background: #796AEE;
-    color: #fff !important
-}
+/*.card-close .dropdown-menu a:hover {*/
+    /*background: #796AEE;*/
+    /*color: #fff !important*/
+/*}*/
 
-.card-close .dropdown-menu a i {
-    margin-right: 10px;
-    transition: none
-}
+/*.card-close .dropdown-menu a i {*/
+    /*margin-right: 10px;*/
+    /*transition: none*/
+/*}*/
 
 .content-inner {
     width: calc(100% - 250px)

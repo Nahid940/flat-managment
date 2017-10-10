@@ -118,7 +118,7 @@
      function update(){
          $.getJSON('view/manager/view/admin/manager/query/jsondata/allNewquery.php',function(data){
              $.each(data,function (){
-                 $("#newquery").html(data.total);
+                 $("#managerquery").html(data.total);
                  $(".notification-content").html(data.notify);
              });
          });

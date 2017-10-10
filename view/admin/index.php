@@ -1,7 +1,6 @@
 <?php
 include_once '../../vendor/autoload.php';
 
-
 \App\Session::init();
 \App\Session::checkSession();
 $flat=new \App\flats\Flat();
@@ -24,16 +23,7 @@ include_once('includes/header.php');
         </div>
     </header>
 
-<!--    <ul class="breadcrumb">-->
-<!--        <div class="container-fluid">-->
-<!--            --><?php
-//            $url = "$_SERVER[REQUEST_URI]";
-//            $last=explode("/",$url);
-//            $lastelement=rtrim(end($last),'.php');
-//            ?>
-<!--            <li class="breadcrumb-item"><a href="--><?php //echo $url?><!--">Home</a></li>-->
-<!--        </div>-->
-<!--    </ul>-->
+
 
             <section class="dashboard-counts no-padding-bottom">
                 <div class="container-fluid">

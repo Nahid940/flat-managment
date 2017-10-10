@@ -17,15 +17,36 @@ class Owner
 
     }
 
+    private $name;
     private $owner_email;
     private $password;
+    private $attempt=0;
+    private $timestamp=0;
+    private $image;
+    private $uniqueid;
+
 
     public function set($data=array()){
+        if(array_key_exists('name',$data)){
+            $this->name=$data['name'];
+        }
         if(array_key_exists('owner_email',$data)){
             $this->owner_email=$data['owner_email'];
         }
         if(array_key_exists('password',$data)){
             $this->password=$data['password'];
+        }
+        if(array_key_exists('attempt',$data)){
+            $this->attempt=$data['attempt'];
+        }
+        if(array_key_exists('timestamp',$data)){
+            $this->timestamp=$data['timestamp'];
+        }
+        if(array_key_exists('image',$data)){
+            $this->image=$data['image'];
+        }
+        if(array_key_exists('uniqueid',$data)){
+            $this->uniqueid=$data['uniqueid'];
         }
     }
 
@@ -50,7 +71,9 @@ class Owner
                         Session::init();
                         Session::set('login',true);
                         Session::set('ownername',$res->name);
+                        Session::set('Ownerimage',$res->image);
                         Session::set('owner_email',$this->owner_email);
+
                         header('location:index.php');
                     }
                 }else{
@@ -80,6 +103,25 @@ class Owner
             header('location:login.php');
         }
     }
+
+
+    public function ownerReg(){
+        $sql="insert into owner (name,owner_email,password,attempt,timestamp,image,uniqueid) values(:name,:owner_email,:password,:attempt,:timestamp,:image,:uniqueid)";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->bindValue(':name',$this->name);
+        $stmt->bindValue(':owner_email',$this->owner_email);
+        $stmt->bindValue(':password',$this->password);
+        $stmt->bindValue(':attempt',$this->attempt);
+        $stmt->bindValue(':timestamp',$this->timestamp);
+        $stmt->bindValue(':image',$this->image);
+        $stmt->bindValue(':uniqueid',$this->uniqueid);
+        if($stmt->execute()){
+            Session::init();
+            Session::set("RegComplete","<div class='alert alert-success'>Registration complete. Go to login to access the system</div>");
+            header('location:registration.php');
+        }
+    }
+
 
     public function selectOwner($owner_email){
         $sql="select * from owner where owner_email='$owner_email'";
