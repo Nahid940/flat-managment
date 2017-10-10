@@ -13,8 +13,8 @@ include_once('../../../../includes/header.php');
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-lg-10 offset-1">
-                        <?php echo \App\Session::get('OwnerNotice');
-                        \App\Session::UnsetKeySession('OwnerNotice');
+                        <?php echo \App\Session::get('ownerNotice');
+                        \App\Session::UnsetKeySession('ownerNotice');
                         ?>
                   <div class="card">
                     <div class="card-close">

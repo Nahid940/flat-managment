@@ -7,4 +7,4 @@ $managerNotice=new \App\manager\Notice();
 //var_dump($_POST);
 
 $managerNotice->set($_POST);
-$managerNotice->insertNotice();
+$managerNotice->insertNoticeByManager();

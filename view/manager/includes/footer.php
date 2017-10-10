@@ -55,7 +55,6 @@
 
  <script>
      $(document).ready(function () {
-
          $("#expenditureList").DataTable();
          $("#SatffSalaryList").DataTable();
          $("#EachManagerSalaryList").DataTable();
