@@ -16,6 +16,9 @@ $staff=new \App\staff\Staff();
                 <?php
                 echo \App\Session::get('newStaffInsert');
                 \App\Session::UnsetKeySession('newStaffInsert');
+
+                echo \App\Session::get('StaffUpdate');
+                \App\Session::UnsetKeySession('StaffUpdate');
                 ?>
 
                 <div class="card">

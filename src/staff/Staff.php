@@ -125,4 +125,19 @@ class Staff
         return $stmt->rowCount();
     }
 
+
+    public function updateStaff($uniqueId){
+        $sql="update staff set name=:name, nid=:nid,phn=:phn,email=:email where uniqueid='$uniqueId'";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->bindValue('name',$this->name);
+        $stmt->bindValue('nid',$this->nid);
+        $stmt->bindValue('phn',$this->phn);
+        $stmt->bindValue('email',$this->email);
+        if($stmt->execute()){
+            Session::init();
+            Session::set("StaffUpdate","<div class='alert alert-success'>Updated successfully</div>");
+            header('location:view.php');
+        }
+
+    }
 }

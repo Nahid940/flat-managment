@@ -52,48 +52,6 @@ include_once('includes/header.php');
 
 
 
-            <section class="dashboard-counts no-padding-bottom">
-                <div class="container-fluid">
-                    <div class="row bg-white has-shadow">
-                        <!-- Item -->
-                        <div class="col-xl-4 col-sm-6">
-                            <div class="item d-flex align-items-center">
-                                <div class="icon bg-violet"><i class="icon-user"></i></div>
-                                <div class="title"><span>Total flat</span>
-
-                                </div>
-                                <div class="number"><strong><?php echo $flat->totalFlat()?></strong></div>
-                            </div>
-                        </div>
-                        <!-- Item -->
-                        <div class="col-xl-4 col-sm-6">
-                            <div class="item d-flex align-items-center">
-                                <div class="icon bg-red"><i class="icon-padnote"></i></div>
-                                <div class="title"><span>Total booked flat</span>
-
-                                </div>
-                                <div class="number"><strong><?php echo $flat->totalBookedFlat()?></strong></div>
-                            </div>
-                        </div>
-                        <!-- Item -->
-                        <div class="col-xl-4 col-sm-6">
-                            <div class="item d-flex align-items-center">
-                                <div class="icon bg-green"><i class="icon-bill"></i></div>
-                                <div class="title"><span>Total<br>family member</span>
-
-                                </div>
-                                <div class="number"><strong><?php echo $resident->totalMember()?></strong></div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-
-
-
-
 
           <!-- Projects Section-->
           <section class="projects no-padding-top">
@@ -123,6 +81,6 @@ include_once('includes/header.php');
 
 
           <!-- Page Footer-->
-     <?php include_once('includes/footer.php');
+<!--     --><?php //include_once('includes/footer.php');
 
      ?>

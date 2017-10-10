@@ -18,8 +18,7 @@ $res=$staff->getSingleStaff();
         <div class="row">
             <div class="col-lg-12">
                 <?php
-                //echo \App\Session::get('newStaffInsert');
-                //\App\Session::UnsetKeySession('newStaffInsert');
+
 
                 ?>
 
@@ -35,22 +34,14 @@ $res=$staff->getSingleStaff();
                     <form method="post" name="addStaffModalform"  enctype="multipart/form-data" action="view/manager/view/admin/manager/staff/update.php">
 
                         <input type="hidden" value="<?php echo $res['uniqueid']?>" name="uniqueid">
-                                    <div class="form-group">
-                                        <span id="IDvalidatorModal"></span>
-                                        <label>Assign ID</label>
-                                        <input type="text" name="staff_id" id="staff_id" value="<?php echo $res['staff_id']?>" placeholder="Assign ID" class="form-control">
-                                    </div>
+
                                     <div class="form-group">
                                         <span id="namevalidatorModal"></span>
                                         <label>Name</label>
                                         <input type="text" name="name" id="name" value="<?php echo $res['name']?>" placeholder="Enter person name" class="form-control">
                                     </div>
 
-                                    <div class="form-group">
-                                        <span id="AgevalidatorModal"></span>
-                                        <label>Age</label>
-                                        <input type="text" name="age" id="age" placeholder="Enter person age" value="<?php echo $res['age']?>" class="form-control">
-                                    </div>
+
 
                                     <div class="form-group">
                                         <span id="NIDvalidatorModal"></span>

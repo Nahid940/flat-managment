@@ -99,7 +99,7 @@ class ManagerCostList
     }
 
     public function costListMonthly(){
-        $sql="select Month,year(date) as 'Year',sum(plumber_cost+electrician_bill+tool_cost+carpenter_cost+masonry_cost+others_cost) as 'Total' from manager_expenditure group by month(date),year(date)";
+        $sql="select Month,year(date) as 'Year',sum(plumber_cost+electrician_bill+tool_cost+carpenter_cost+masonry_cost+others_cost) as 'Total' from manager_expenditure group by Month";
         $stmt=DBConnection::myQuery($sql);
         $stmt->execute();
         $res=$stmt->fetchAll(\PDO::FETCH_ASSOC);

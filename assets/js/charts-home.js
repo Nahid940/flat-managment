@@ -2,8 +2,6 @@
 $(document).ready(function () {
 
     'use strict';
-
-
     $.ajax({
         url:"http://localhost/BITM/bitm-final-project/view/admin/monthlyexp.php",
         method:"GET",
@@ -48,7 +46,7 @@ $(document).ready(function () {
                                 '#014451',
 
                             borderColor:
-                                'fff',
+                                '#fff',
                             borderWidth: 1,
                             data:total
 
