@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="052b9746-a99d-4b23-8488-ef9b2be3047d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/charts-home.js" afterPath="$PROJECT_DIR$/assets/js/charts-home.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/manager/ManagerCostList.php" afterPath="$PROJECT_DIR$/src/manager/ManagerCostList.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/staff/Staff.php" afterPath="$PROJECT_DIR$/src/staff/Staff.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/manager/index.php" afterPath="$PROJECT_DIR$/view/manager/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/manager/view/admin/manager/staff/edit.php" afterPath="$PROJECT_DIR$/view/manager/view/admin/manager/staff/edit.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/manager/view/admin/manager/staff/update.php" afterPath="$PROJECT_DIR$/view/manager/view/admin/manager/staff/update.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/manager/view/admin/manager/staff/view.php" afterPath="$PROJECT_DIR$/view/manager/view/admin/manager/staff/view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/manager/Manager.php" afterPath="$PROJECT_DIR$/src/manager/Manager.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/manager/includes/header.php" afterPath="$PROJECT_DIR$/view/manager/includes/header.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -55,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Staff.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Staff.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/staff/Staff.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="132" column="25" lean-forward="false" selection-start-line="132" selection-start-column="25" selection-end-line="132" selection-end-column="25" />
+            <state relative-caret-position="384">
+              <caret line="133" column="31" lean-forward="false" selection-start-line="133" selection-start-column="31" selection-end-line="133" selection-end-column="31" />
               <folding>
                 <marker date="1507649571225" expanded="true" signature="1410:1461" ph="select staff... staff" />
                 <marker date="1507649571225" expanded="true" signature="1832:2018" ph="insert into staff... " />
@@ -116,51 +111,45 @@
       <file leaf-file-name="Manager.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/manager/Manager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="253" column="160" lean-forward="false" selection-start-line="253" selection-start-column="160" selection-end-line="253" selection-end-column="160" />
+            <state relative-caret-position="384">
+              <caret line="130" column="46" lean-forward="false" selection-start-line="130" selection-start-column="34" selection-end-line="130" selection-end-column="46" />
               <folding>
-                <marker date="1507645994987" expanded="true" signature="1853:1912" ph="select manag... manager" />
-                <marker date="1507645994987" expanded="true" signature="2291:2516" ph="insert into manager... " />
-                <marker date="1507645994987" expanded="true" signature="3499:3549" ph="select * fro... manager" />
-                <marker date="1507645994987" expanded="true" signature="4167:4259" ph="update manag... " />
-                <marker date="1507645994987" expanded="true" signature="4847:4911" ph="update manag... " />
-                <marker date="1507645994987" expanded="true" signature="5421:5484" ph="update manag... " />
-                <marker date="1507645994987" expanded="true" signature="6190:6250" ph="select * fro... manager" />
-                <marker date="1507645994987" expanded="true" signature="6437:6498" ph="select * fro... manager" />
-                <marker date="1507645994987" expanded="true" signature="6689:6737" ph="select * fro... manager" />
-                <marker date="1507645994987" expanded="true" signature="6918:6975" ph="select count... manager" />
-                <marker date="1507645994987" expanded="true" signature="6918:7014" ph="select count... manager" />
-                <marker date="1507645994987" expanded="true" signature="7188:7247" ph="select manag... manager" />
-                <marker date="1507645994987" expanded="true" signature="7573:7633" ph="update manag... " />
-                <marker date="1507645994987" expanded="true" signature="8047:8136" ph="select * fro... manager_salary" />
-                <marker date="1507645994987" expanded="true" signature="8611:8721" ph="insert into manager_salary... " />
-                <marker date="1507645994987" expanded="true" signature="9357:9514" ph="select name,... " />
-                <marker date="1507645994987" expanded="true" signature="9724:9855" ph="select name,... " />
-                <marker date="1507645994987" expanded="true" signature="9724:9870" ph="select name,... " />
-                <marker date="1507645994987" expanded="true" signature="10065:10159" ph="select month... " />
-                <marker date="1507645994987" expanded="true" signature="10348:10397" ph="select sum(a... manager_salary" />
-                <marker date="1507645994987" expanded="true" signature="10607:10702" ph="select * fro... manager_salary" />
-                <marker date="1507645994987" expanded="true" signature="10944:11044" ph="update manag... " />
-                <marker date="1507645994987" expanded="true" signature="11596:11674" ph="update manag... " />
-                <marker date="1507645994987" expanded="true" signature="12006:12053" ph="delete from " />
-                <marker date="1507645994987" expanded="true" signature="12032:12053" ph="update manag... " />
+                <marker date="1507649828742" expanded="true" signature="1853:1912" ph="select manag... manager" />
+                <marker date="1507649828742" expanded="true" signature="2291:2516" ph="insert into manager... " />
+                <marker date="1507649828742" expanded="true" signature="3499:3549" ph="select * fro... manager" />
+                <marker date="1507649828742" expanded="true" signature="4167:4259" ph="update manag... " />
+                <marker date="1507649828742" expanded="true" signature="4909:4973" ph="update manag... " />
+                <marker date="1507649828742" expanded="true" signature="5483:5546" ph="update manag... " />
+                <marker date="1507649828742" expanded="true" signature="6252:6312" ph="select * fro... manager" />
+                <marker date="1507649828742" expanded="true" signature="6499:6560" ph="select * fro... manager" />
+                <marker date="1507649828742" expanded="true" signature="6751:6799" ph="select * fro... manager" />
+                <marker date="1507649828742" expanded="true" signature="6980:7037" ph="select count... manager" />
+                <marker date="1507649828742" expanded="true" signature="6980:7076" ph="select count... manager" />
+                <marker date="1507649828742" expanded="true" signature="7250:7309" ph="select manag... manager" />
+                <marker date="1507649828742" expanded="true" signature="7635:7695" ph="update manag... " />
+                <marker date="1507649828742" expanded="true" signature="8109:8198" ph="select * fro... manager_salary" />
+                <marker date="1507649828742" expanded="true" signature="8673:8783" ph="insert into manager_salary... " />
+                <marker date="1507649828742" expanded="true" signature="9419:9576" ph="select name,... " />
+                <marker date="1507649828742" expanded="true" signature="9786:9917" ph="select name,... " />
+                <marker date="1507649828742" expanded="true" signature="9786:9932" ph="select name,... " />
+                <marker date="1507649828742" expanded="true" signature="10127:10221" ph="select month... " />
+                <marker date="1507649828742" expanded="true" signature="10410:10459" ph="select sum(a... manager_salary" />
+                <marker date="1507649828742" expanded="true" signature="10669:10764" ph="select * fro... manager_salary" />
+                <marker date="1507649828742" expanded="true" signature="11006:11106" ph="update manag... " />
+                <marker date="1507649828742" expanded="true" signature="11658:11736" ph="update manag... " />
+                <marker date="1507649828742" expanded="true" signature="12068:12115" ph="delete from " />
+                <marker date="1507649828742" expanded="true" signature="12094:12115" ph="update manag... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ManagerCostList.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/manager/ManagerCostList.php">
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/view/manager/includes/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="99" column="0" lean-forward="true" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-              <folding>
-                <marker date="1507648219928" expanded="true" signature="1695:1960" ph="insert into manager_expenditure... " />
-                <marker date="1507648219928" expanded="true" signature="2879:3173" ph="select date,... " />
-                <marker date="1507648219928" expanded="true" signature="3401:3532" ph="select sum(p... manager_expenditure" />
-                <marker date="1507648219928" expanded="true" signature="3720:3889" ph="select Month... " />
-                <marker date="1507648219928" expanded="true" signature="4176:4377" ph="select month... " />
-              </folding>
+            <state relative-caret-position="370">
+              <caret line="118" column="53" lean-forward="false" selection-start-line="118" selection-start-column="53" selection-end-line="118" selection-end-column="53" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -195,7 +184,6 @@
         <option value="$PROJECT_DIR$/view/residents/includes/header.php" />
         <option value="$PROJECT_DIR$/view/manager/view/admin/manager/resPaymentList/print.php" />
         <option value="$PROJECT_DIR$/view/residents/query/view.php" />
-        <option value="$PROJECT_DIR$/view/manager/includes/header.php" />
         <option value="$PROJECT_DIR$/view/manager/includes/footer.php" />
         <option value="$PROJECT_DIR$/view/admin/view/admin/owner/notice/postNotice.php" />
         <option value="$PROJECT_DIR$/src/manager/Notice.php" />
@@ -221,7 +209,6 @@
         <option value="$PROJECT_DIR$/view/admin/view/admin/owner/expenditure/expenditure.php" />
         <option value="$PROJECT_DIR$/view/admin/view/admin/owner/profile/profile.php" />
         <option value="$PROJECT_DIR$/view/manager/view/admin/manager/paymentList/payment.php" />
-        <option value="$PROJECT_DIR$/src/manager/Manager.php" />
         <option value="$PROJECT_DIR$/view/manager/view/admin/manager/resident/AddResidents.php" />
         <option value="$PROJECT_DIR$/view/manager/view/admin/manager/resident/view.php" />
         <option value="$PROJECT_DIR$/view/manager/view/admin/manager/staff/create.php" />
@@ -234,6 +221,8 @@
         <option value="$PROJECT_DIR$/view/manager/view/admin/manager/staff/edit.php" />
         <option value="$PROJECT_DIR$/view/manager/view/admin/manager/staff/view.php" />
         <option value="$PROJECT_DIR$/src/staff/Staff.php" />
+        <option value="$PROJECT_DIR$/src/manager/Manager.php" />
+        <option value="$PROJECT_DIR$/view/manager/includes/header.php" />
       </list>
     </option>
   </component>
@@ -332,81 +321,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="manager" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bitm-final-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bitm-final-project" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="manager" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="manager" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="staff" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bitm-final-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bitm-final-project" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bitm-final-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bitm-final-project" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="staff" />
+              <option name="myItemId" value="includes" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -524,16 +439,16 @@
       <workItem from="1507538439704" duration="2792000" />
       <workItem from="1507567240125" duration="12746000" />
       <workItem from="1507612308564" duration="13225000" />
-      <workItem from="1507637176025" duration="11812000" />
+      <workItem from="1507637176025" duration="12124000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="218162000" />
+    <option name="totallyTimeSpent" value="218474000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21028744" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -585,14 +500,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1466">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/manager/includes/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="132" column="75" lean-forward="false" selection-start-line="132" selection-start-column="75" selection-end-line="132" selection-end-column="75" />
           <folding />
         </state>
       </provider>
@@ -950,40 +857,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/manager/Manager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="253" column="160" lean-forward="false" selection-start-line="253" selection-start-column="160" selection-end-line="253" selection-end-column="160" />
-          <folding>
-            <marker date="1507645994987" expanded="true" signature="1853:1912" ph="select manag... manager" />
-            <marker date="1507645994987" expanded="true" signature="2291:2516" ph="insert into manager... " />
-            <marker date="1507645994987" expanded="true" signature="3499:3549" ph="select * fro... manager" />
-            <marker date="1507645994987" expanded="true" signature="4167:4259" ph="update manag... " />
-            <marker date="1507645994987" expanded="true" signature="4847:4911" ph="update manag... " />
-            <marker date="1507645994987" expanded="true" signature="5421:5484" ph="update manag... " />
-            <marker date="1507645994987" expanded="true" signature="6190:6250" ph="select * fro... manager" />
-            <marker date="1507645994987" expanded="true" signature="6437:6498" ph="select * fro... manager" />
-            <marker date="1507645994987" expanded="true" signature="6689:6737" ph="select * fro... manager" />
-            <marker date="1507645994987" expanded="true" signature="6918:6975" ph="select count... manager" />
-            <marker date="1507645994987" expanded="true" signature="6918:7014" ph="select count... manager" />
-            <marker date="1507645994987" expanded="true" signature="7188:7247" ph="select manag... manager" />
-            <marker date="1507645994987" expanded="true" signature="7573:7633" ph="update manag... " />
-            <marker date="1507645994987" expanded="true" signature="8047:8136" ph="select * fro... manager_salary" />
-            <marker date="1507645994987" expanded="true" signature="8611:8721" ph="insert into manager_salary... " />
-            <marker date="1507645994987" expanded="true" signature="9357:9514" ph="select name,... " />
-            <marker date="1507645994987" expanded="true" signature="9724:9855" ph="select name,... " />
-            <marker date="1507645994987" expanded="true" signature="9724:9870" ph="select name,... " />
-            <marker date="1507645994987" expanded="true" signature="10065:10159" ph="select month... " />
-            <marker date="1507645994987" expanded="true" signature="10348:10397" ph="select sum(a... manager_salary" />
-            <marker date="1507645994987" expanded="true" signature="10607:10702" ph="select * fro... manager_salary" />
-            <marker date="1507645994987" expanded="true" signature="10944:11044" ph="update manag... " />
-            <marker date="1507645994987" expanded="true" signature="11596:11674" ph="update manag... " />
-            <marker date="1507645994987" expanded="true" signature="12006:12053" ph="delete from " />
-            <marker date="1507645994987" expanded="true" signature="12032:12053" ph="update manag... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/manager/ManagerCostList.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="129">
@@ -1058,8 +931,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/staff/Staff.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="132" column="25" lean-forward="false" selection-start-line="132" selection-start-column="25" selection-end-line="132" selection-end-column="25" />
+        <state relative-caret-position="384">
+          <caret line="133" column="31" lean-forward="false" selection-start-line="133" selection-start-column="31" selection-end-line="133" selection-end-column="31" />
           <folding>
             <marker date="1507649571225" expanded="true" signature="1410:1461" ph="select staff... staff" />
             <marker date="1507649571225" expanded="true" signature="1832:2018" ph="insert into staff... " />
@@ -1069,6 +942,48 @@
             <marker date="1507649571225" expanded="true" signature="3815:3834" ph="select * fro... staff" />
             <marker date="1507649571225" expanded="true" signature="4006:4092" ph="update staff... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/manager/Manager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="130" column="46" lean-forward="false" selection-start-line="130" selection-start-column="34" selection-end-line="130" selection-end-column="46" />
+          <folding>
+            <marker date="1507649828742" expanded="true" signature="1853:1912" ph="select manag... manager" />
+            <marker date="1507649828742" expanded="true" signature="2291:2516" ph="insert into manager... " />
+            <marker date="1507649828742" expanded="true" signature="3499:3549" ph="select * fro... manager" />
+            <marker date="1507649828742" expanded="true" signature="4167:4259" ph="update manag... " />
+            <marker date="1507649828742" expanded="true" signature="4909:4973" ph="update manag... " />
+            <marker date="1507649828742" expanded="true" signature="5483:5546" ph="update manag... " />
+            <marker date="1507649828742" expanded="true" signature="6252:6312" ph="select * fro... manager" />
+            <marker date="1507649828742" expanded="true" signature="6499:6560" ph="select * fro... manager" />
+            <marker date="1507649828742" expanded="true" signature="6751:6799" ph="select * fro... manager" />
+            <marker date="1507649828742" expanded="true" signature="6980:7037" ph="select count... manager" />
+            <marker date="1507649828742" expanded="true" signature="6980:7076" ph="select count... manager" />
+            <marker date="1507649828742" expanded="true" signature="7250:7309" ph="select manag... manager" />
+            <marker date="1507649828742" expanded="true" signature="7635:7695" ph="update manag... " />
+            <marker date="1507649828742" expanded="true" signature="8109:8198" ph="select * fro... manager_salary" />
+            <marker date="1507649828742" expanded="true" signature="8673:8783" ph="insert into manager_salary... " />
+            <marker date="1507649828742" expanded="true" signature="9419:9576" ph="select name,... " />
+            <marker date="1507649828742" expanded="true" signature="9786:9917" ph="select name,... " />
+            <marker date="1507649828742" expanded="true" signature="9786:9932" ph="select name,... " />
+            <marker date="1507649828742" expanded="true" signature="10127:10221" ph="select month... " />
+            <marker date="1507649828742" expanded="true" signature="10410:10459" ph="select sum(a... manager_salary" />
+            <marker date="1507649828742" expanded="true" signature="10669:10764" ph="select * fro... manager_salary" />
+            <marker date="1507649828742" expanded="true" signature="11006:11106" ph="update manag... " />
+            <marker date="1507649828742" expanded="true" signature="11658:11736" ph="update manag... " />
+            <marker date="1507649828742" expanded="true" signature="12068:12115" ph="delete from " />
+            <marker date="1507649828742" expanded="true" signature="12094:12115" ph="update manag... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/manager/includes/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="118" column="53" lean-forward="false" selection-start-line="118" selection-start-column="53" selection-end-line="118" selection-end-column="53" />
+          <folding />
         </state>
       </provider>
     </entry>

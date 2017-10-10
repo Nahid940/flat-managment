@@ -128,6 +128,7 @@ class Manager
                     Session::init();
                     Session::set("login",true);
                     Session::set('managername',$res->name);
+                    Session::set('managerImage',$res->image);
                     Session::set('manager_id',$this->manager_id);
                     header('location:index.php');
                 }
