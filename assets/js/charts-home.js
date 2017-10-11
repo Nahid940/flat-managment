@@ -3,7 +3,8 @@ $(document).ready(function () {
 
     'use strict';
     $.ajax({
-        url:"http://localhost/BITM/bitm-final-project/view/admin/monthlyexp.php",
+        // url:"http://localhost/BITM/bitm-final-project/view/admin/monthlyexp.php",
+        url:"view/admin/monthlyexp.php",
         method:"GET",
         success:function(data){
             data = JSON.parse(data);

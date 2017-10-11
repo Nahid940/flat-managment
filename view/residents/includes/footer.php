@@ -56,7 +56,7 @@
      $(document).ready(function () {
          timeOut();
          $.ajax({
-             url:"http://localhost/bitm/bitm-final-project/view/residents/allNewMessage.php",
+             url:"view/residents/allNewMessage.php",
              method:"POST",
              dataType:"json",
              success:function (data) {
@@ -75,7 +75,7 @@
      $(document).ready(function () {
          timeOut1();
          $.ajax({
-             url:"http://localhost/BITM/bitm-final-project/view/residents/mngrmessage.php",
+             url:"view/residents/mngrmessage.php",
              method:"POST",
              dataType:"json",
              success:function (data) {
@@ -115,7 +115,7 @@
          });
      }
      function update1(){
-         $.getJSON('http://localhost/BITM/bitm-final-project/view/residents/mngrmessage.php',function(data){
+         $.getJSON('view/residents/mngrmessage.php',function(data){
              $.each(data,function (){
                  $("#newMnrgMessage").html(data.total);
                  $(".message-content-mrg").html(data.notify);

@@ -70,7 +70,7 @@
 //         Count total managers and staffs...........................................................
 
              $.ajax({
-                 url:"http://localhost/BITM/bitm-final-project/view/admin/view/admin/owner/manager/jsonData/totalManagerandStaff.php",
+                 url:"view/admin/view/admin/owner/manager/jsonData/totalManagerandStaff.php",
                  method:"POST",
 //                  data:{view:view},
                  dataType:"json",
@@ -108,7 +108,7 @@
      $(document).ready(function () {
          timeOut();
          $.ajax({
-             url:"http://localhost/BITM/bitm-final-project/view/admin/view/admin/owner/query/jsondata/allNewquery.php",
+             url:"view/admin/view/admin/owner/query/jsondata/allNewquery.php",
              method:"POST",
 //                  data:{view:view},
              dataType:"json",
@@ -346,7 +346,8 @@
              data:{
                 manager_id:manager_id
              },
-             url:'http://localhost/BITM/bitm-final-project/view/admin/view/admin/owner/manager/checkManagerMonthlySalary.php',
+//             url:'http://localhost/BITM/bitm-final-project/view/admin/view/admin/owner/manager/checkManagerMonthlySalary.php',
+             url:'view/admin/view/admin/owner/manager/checkManagerMonthlySalary.php',
              success:function (response) {
                  if(response==1){
                      $('#check').html("Salary alreeady paid for this month !!");

@@ -86,7 +86,7 @@
      $(document).ready(function () {
          timeOut();
          $.ajax({
-             url:"http://localhost/BITM/bitm-final-project/view/manager/view/admin/manager/query/jsondata/allNewquery.php",
+             url:"view/manager/view/admin/manager/query/jsondata/allNewquery.php",
              method:"POST",
 //                  data:{view:view},
              dataType:"json",
@@ -131,7 +131,7 @@
             if(resident_id!=''){
                 $.ajax({
                     type:'post',
-                    url:"http://localhost/BITM/bitm-final-project/view/manager/view/admin/manager/resident/cehckexistIngResident.php",
+                    url:"view/manager/view/admin/manager/resident/cehckexistIngResident.php",
                     data:{
                         resident_id:resident_id
                     },
