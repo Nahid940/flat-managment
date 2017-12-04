@@ -38,7 +38,7 @@ include_once '../../vendor/autoload.php';
                     <div class="row">
                         <div class="col-lg-12">
 
-                            <form id="registerform" name="regform" action="ownerReg.php" method="post" role="form" class="register-form" onsubmit="return validateForm();" enctype="multipart/form-data">
+                            <form id="registerform" name="regform" action="ownerReg.php" method="post" role="form" class="register-form" onsubmit="return validateRegForm();" enctype="multipart/form-data">
 
                                 <div class="form-group">
                                     <span id="nameValid" style="color:red;font-weight:bold"></span>
@@ -46,7 +46,7 @@ include_once '../../vendor/autoload.php';
                                     <input type="text" class="form-control" id="name1" placeholder="Enter name" name="name" >
                                 </div>
                                 <div class="form-group">
-                                    <label for="email" id="label2">Enter your email:</label>
+                                    <label for="owner_email" id="label2">Enter your email:</label>
                                     <input type="email" name="owner_email" id="email1" tabindex="1" class="form-control" placeholder="Email" value="">
                                 </div>
 
@@ -179,12 +179,15 @@ include_once '../../vendor/autoload.php';
 
     });
 
-        function validateForm() {
+    
+        function validateRegForm() {
+            
+           
 
             var mailformat = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
             var name=document.forms["regform"]["name"].value;
-            var email=document.forms["regform"]["email"].value;
+            var email=document.forms["regform"]["owner_email"].value;
             var password=document.forms['regform']['password'].value;
             var confirmpassword=document.forms['regform']['confirmpassword'].value;
 
@@ -196,8 +199,8 @@ include_once '../../vendor/autoload.php';
                 $('#validator').text('Enter your email');
                 return false;
             }
-            else if (password == '') {
-                $('#validator').text('Enter password');
+            else if (password == '' || password.length<10) {
+                $('#validator').text('Enter valid password');
                 return false;
             }
             else if (confirmpassword == '' || confirmpassword!=password) {

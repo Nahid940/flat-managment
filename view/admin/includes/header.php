@@ -67,7 +67,7 @@ $datetime=strtotime(date("Y/m/d"));
                         <span class="badge bg-red" id="newquery"></span></a>
                   <ul aria-labelledby="notifications" class="dropdown-menu">
                     <li>
-                        <a rel="nofollow" href="view/admin/view/admin/owner/query/view.php" class="dropdown-item">
+                        <a rel="nofollow" href="view/admin/view/admin/owner/query/Message.php" class="dropdown-item">
                             <div class="notification">
                               <div class="notification-content">
                                   <i class="fa fa-envelope bg-green"></i>

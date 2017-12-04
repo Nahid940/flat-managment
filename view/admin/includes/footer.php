@@ -109,7 +109,7 @@
          timeOut();
          $.ajax({
              url:"view/admin/view/admin/owner/query/jsondata/allNewquery.php",
-             method:"POST",
+             method:"GET",
 //                  data:{view:view},
              dataType:"json",
              success:function (data) {

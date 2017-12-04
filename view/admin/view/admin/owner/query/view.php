@@ -84,6 +84,7 @@ include_once('../../../../includes/header.php');
                           </tr>
                           </thead>
                         <tbody>
+
                         <?php foreach ($query->selectAllUnseenQuery() as $queries){?>
 
                           <tr class="record">

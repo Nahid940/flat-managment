@@ -32,6 +32,12 @@ class query
     }
 
 
+    public function selectAllNewUnseenQuery(){
+        $sql="select query from resident_query where checks='no'";
+        $stmt=DBConnection::myQuery($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    }
     public function selectAllUnseenQuery(){
         $sql="select r.resident_id,name,query,query_no,date,f.flat_no,floor_no,uniqueid from resident r, flats f, ResidentFlat rf, resident_query rq where r.resident_id=rf.resident_id and f.flat_no=rf.flat_no and r.resident_id=rq.resident_id and rq.checks='no'";
         $stmt=DBConnection::myQuery($sql);
